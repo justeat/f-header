@@ -1,15 +1,41 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "index.js",
-  "scripts": {
-    "test": "gulp scripts:test"
+  "homepage": "https://github.com/justeat/f-header",
+  "contributors": [
+    "Github contributors <https://github.com/justeat/f-header/graphs/contributors>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:justeat/f-header.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justeat/f-header/issues"
   },
   "license": "Apache-2.0",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "prestart": "yarn",
+    "test": "gulp scripts:test"
+  },
   "dependencies": {
+    "@justeat/fozzie-colour-palette": "^0.1.1",
     "@justeat/gulp-build-fozzie": "^1.14.0",
     "babel-preset-es2015": "^6.24.1"
+  },
+  "keywords": [
+    "fozzie",
+    "eyeglass-module"
+  ],
+  "eyeglass": {
+    "name": "f-header",
+    "sassDir": "src/scss",
+    "needs": "^1.1.2",
+    "exports": false
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"
