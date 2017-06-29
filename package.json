@@ -1,7 +1,7 @@
 {
-  "name": "f-header",
+  "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "scripts": {
     "test": "gulp scripts:test"
