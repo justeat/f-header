@@ -1,1 +1,0 @@
-﻿This is where the images will go :city_sunrise:
