@@ -1,20 +1,74 @@
+/**
+ * f-header
+ * =================================
+ * Header Component for Just Eat projects
+ *
+ * This component allows a project to 'install' via a mixin the styles required
+ * to show the Just Eat header at the top of their site or application.
+ *
+ * Documentation: tbc
+ * Repo: https://github.com/justeat/f-header
+ *
+ * Index:
+ * - Components Variables
+ * - Imports
+ *  - Colour palette
+ *  - Partials
+ * - Base Component styles
+ *
+ */
+
 @import 'fozzie-colour-palette';
+@import 'kickoff-utils'; // imports a set of helper functions and mixins – https://github.com/TryKickoff/kickoff-utils.scss
+@import 'include-media'; // Cleaner media query declarations – http://include-media.com
 
-.header {
-    border-bottom: 4px solid $red;
-}
 
-    .logo {
-        & > a {
-            display: block;
-            display: flex;
-            align-items: center;
-            height: 76px;
+/* stylelint-disable */
+$breakpoints: ko-map-to-em((
+    narrow   : 414px,    // narrow devices
+    mid      : 768px,    // mid bp
+    wide     : 1025px,   // wide bp
+    huge     : 1280px    // huge bp
+), 16); // set to 16 as this is default browser size
+/* stylelint-enable */
+
+$header-height--narrow  : 56px;
+$header-height          : 76px;
+$header-bg              : $white !default;
+$header-separator       : 4px;
+
+
+@import 'partials/logo';
+@import 'partials/nav';
+
+
+.c-header {
+    border-bottom: $header-separator solid $red;
+    background-color: $header-bg;
+    min-width : 300px;
+
+    // when the navigation is active on mobile
+    // we fix the page header to the top of the screen
+    .is-navInView & {
+        @include media('<mid') {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: zIndex(high);
         }
     }
-    .logo-img {
-        width: 152px;
-        height: 30px;
+}
+    .c-header-wrap {
+        position: relative;
+        min-height: $header-height--narrow;
+
+        @include media('>=mid') {
+            display: flex;
+            min-height: $header-height;
+        }
     }
+
+
 
 
