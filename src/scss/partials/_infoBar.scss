@@ -1,0 +1,77 @@
+/**
+ * Infobar Styling
+ * =================================
+ * A full page width bar that can contain information relevant to the page
+ *
+ * Examples of its use include the cookie banner and the langauge switcher banner
+ */
+
+.c-infoBar {
+    width: 100%;
+    background-color: $grey--offWhite;
+    z-index: 99;
+
+    // &,
+    // & p,
+    // & .btn {
+    //     @include font-size($type-small);
+    // }
+
+    p {
+        margin-top: 0;
+    }
+    // a {
+    //     color: $black;
+    // }
+    & p > a {
+        text-decoration: underline;
+    }
+
+}
+    // .c-infoBar-row {
+    //     padding-top: ($verticalRhythm * 0.25);
+    //     padding-bottom: ($verticalRhythm * 0.25);
+
+    //     @include media('>=mid') {
+    //         padding-top: ($verticalRhythm * 0.5);
+    //         padding-bottom: ($verticalRhythm * 0.5);
+    //     }
+    // }
+    // .c-infoBar-btn {
+    //     float: right;
+    //     margin-left: $horizSpacing;
+    // }
+
+.c-infoBar--hideByDefault {
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 1000ms ease-in-out;
+
+    &.is-active {
+        max-height: 200px;
+
+        transition: 1s all ease-out 1.5s;
+    }
+}
+
+// .c-infoBar--dark {
+//     background-color: $grey--darkest;
+
+//     &,
+//     a {
+//         color: #fff;
+//     }
+//     .btn {
+//         color: initial;
+//     }
+// }
+
+// .c-infoBar--fixed {
+//     position: fixed;
+//     top: $header-height;
+
+//     .is-multiTenant & {
+//         top: $header-height--multiTenant;
+//     }
+// }

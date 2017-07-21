@@ -23,6 +23,7 @@
     "test": "gulp scripts:test"
   },
   "dependencies": {
+    "@justeat/eslint-config-fozzie": "1.1.0",
     "@justeat/fozzie-colour-palette": "^0.1.1",
     "@justeat/gulp-build-fozzie": "3.1.0",
     "@kickoff/utils.scss": "^2.1.1",
