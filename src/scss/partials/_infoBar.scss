@@ -11,36 +11,48 @@
     background-color: $grey--offWhite;
     z-index: 99;
 
-    // &,
-    // & p,
-    // & .btn {
-    //     @include font-size($type-small);
-    // }
+    &,
+    & p,
+    & .btn {
+        @include font-size(base);
+    }
 
     p {
         margin-top: 0;
     }
-    // a {
-    //     color: $black;
-    // }
+    a {
+        color: $black;
+    }
     & p > a {
         text-decoration: underline;
     }
 
 }
-    // .c-infoBar-row {
-    //     padding-top: ($verticalRhythm * 0.25);
-    //     padding-bottom: ($verticalRhythm * 0.25);
+    .c-infoBar-row {
+        padding-top: spacing() * 0.5;
+        padding-bottom: spacing() * 0.5;
 
-    //     @include media('>=mid') {
-    //         padding-top: ($verticalRhythm * 0.5);
-    //         padding-bottom: ($verticalRhythm * 0.5);
-    //     }
-    // }
-    // .c-infoBar-btn {
-    //     float: right;
-    //     margin-left: $horizSpacing;
-    // }
+        @include media('>=mid') {
+            padding-top: spacing();
+            padding-bottom: spacing();
+        }
+    }
+    .c-infoBar-btn {
+        float: right;
+        margin-left: spacing();
+    }
+
+.c-infoBar--dark {
+    background-color: $grey--darkest;
+
+    &,
+    a {
+        color: $white;
+    }
+    .btn {
+        color: initial;
+    }
+}
 
 .c-infoBar--hideByDefault {
     max-height: 0;
@@ -54,24 +66,3 @@
         transition: 1s all ease-out 1.5s;
     }
 }
-
-// .c-infoBar--dark {
-//     background-color: $grey--darkest;
-
-//     &,
-//     a {
-//         color: #fff;
-//     }
-//     .btn {
-//         color: initial;
-//     }
-// }
-
-// .c-infoBar--fixed {
-//     position: fixed;
-//     top: $header-height;
-
-//     .is-multiTenant & {
-//         top: $header-height--multiTenant;
-//     }
-// }
