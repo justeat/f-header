@@ -20,13 +20,14 @@
     p {
         margin-top: 0;
     }
+
     a {
         color: $black;
     }
+
     & p > a {
         text-decoration: underline;
     }
-
 }
     .c-infoBar-row {
         padding-top: spacing() * 0.5;
@@ -37,6 +38,7 @@
             padding-bottom: spacing();
         }
     }
+
     .c-infoBar-btn {
         float: right;
         margin-left: spacing();
@@ -49,6 +51,7 @@
     a {
         color: $white;
     }
+    
     .btn {
         color: initial;
     }
