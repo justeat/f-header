@@ -37,10 +37,10 @@ $header-height          : 76px;
 $header-bg              : $white !default;
 $header-separator       : 4px;
 
-
+@import 'partials/infoBar';
+@import 'partials/languageSwitcher';
 @import 'partials/logo';
 @import 'partials/nav';
-
 
 .c-header {
     border-bottom: $header-separator solid $red;

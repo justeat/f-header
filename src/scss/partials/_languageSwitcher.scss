@@ -1,0 +1,29 @@
+/**
+ * Language Switcher Styling
+ * =================================
+ *
+ */
+
+.languageSwitcher {
+    position: relative;
+    display: block;
+    color: $white;
+    padding: 8px 0;
+    text-align: right;
+
+    a {
+        font-weight: 500;
+    }
+
+    .icon {
+        background-size: 10px 20px;
+    }
+}
+    .languageSwitcher-indicator {
+        position: absolute;
+        left: 14px;
+        padding: 0 5px;
+        border: 1px solid #fff;
+        border-radius: 1px;
+        text-transform: uppercase;
+    }
