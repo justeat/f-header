@@ -5,27 +5,27 @@
  *
  */
 
-$nav-trigger-length: 56px;
-    $nav-text-size                : 'mid';
-    $nav-text-font                : $font-family-headings;
-    $nav-text-color               : $blue;
-    $nav-text-weight              : 500;
-    $nav-text-color--hover        : $blue;
-    $nav-text-subFont             : $font-family-base;
-    $nav-text-color--narrow       : $grey--dark;
-    $nav-toggleIcon-left          : spacing(x2);
-    $nav-toggleIcon-width         : spacing(x3);
-    $nav-toggleIcon-height        : 3px;
-    $nav-toggleIcon-color         : $blue;
-    $nav-toggleIcon-bg            : $white;
-    $nav-toggleIcon-space         : 6px;
-    $nav-transition-duration      : 250ms;
-    $nav-tooltip-width            : 10px;
-    $nav-popover-width            : 300px;
-    $nav-popover-radius           : 3px;
-    $nav-popover-transition-duration: 200ms;
-    $nav-popover-transition-delay : 200ms;
-    $nav-popover-padding          : spacing(x2);
+$nav-trigger-length           : 56px;
+$nav-text-size                : 'mid';
+$nav-text-font                : $font-family-headings;
+$nav-text-color               : $blue;
+$nav-text-weight              : 500;
+$nav-text-color--hover        : $blue;
+$nav-text-subFont             : $font-family-base;
+$nav-text-color--narrow       : $grey--dark;
+$nav-toggleIcon-left          : spacing(x2);
+$nav-toggleIcon-width         : spacing(x3);
+$nav-toggleIcon-height        : 3px;
+$nav-toggleIcon-color         : $blue;
+$nav-toggleIcon-bg            : $white;
+$nav-toggleIcon-space         : 6px;
+$nav-transition-duration      : 250ms;
+$nav-tooltip-width            : 10px;
+$nav-popover-width            : 300px;
+$nav-popover-radius           : 3px;
+$nav-popover-transition-duration: 200ms;
+$nav-popover-transition-delay : 200ms;
+$nav-popover-padding          : spacing(x2);
 
 
 // Global site-wide navigation
@@ -271,6 +271,7 @@ $nav-trigger-length: 56px;
     left: 0;
     width: $nav-trigger-length;
     height: $nav-trigger-length;
+    cursor: pointer;
 
     // hide on wider views
     // TODO – ACCESSIBILITY MAY NOT WANT TO COMPLETELY HIDE THIS
