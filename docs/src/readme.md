@@ -1,1 +1,0 @@
-﻿This is where any documentation for the component will go :construction_worker:

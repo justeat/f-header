@@ -1,6 +1,7 @@
 # `f-header` – Fozzie Header Component
 
-[![Build Status](https://travis-ci.com/justeat/f-header.svg?token=dcwzUq7CHTHZqWbdRCbR&branch=master)](https://travis-ci.com/justeat/f-header)
+[![npm version](https://badge.fury.io/js/%40justeat%2Ff-header.svg)](https://badge.fury.io/js/%40justeat%2Ff-header)
+[![Build Status](https://travis-ci.org/justeat/f-header.svg)](https://travis-ci.org/justeat/f-header)
 
 Fozzie Header Component – allows any project to install and use a variation of the Just Eat header on their project.
 
