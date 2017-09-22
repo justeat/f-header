@@ -54,6 +54,15 @@ $nav-popover-padding          : spacing(x2);
             transition: opacity $nav-transition-duration ease-in-out,
                         z-index 0s linear $nav-transition-duration,
                         left 0s linear ($nav-popover-transition-delay + $nav-popover-transition-duration);
+
+            &.is-visible {
+                overflow-y: scroll;
+                left: 0;
+                opacity: 1;
+                z-index: zIndex(high);
+                transition: opacity $nav-transition-duration ease-in-out,
+                            z-index 0s linear;
+            }
         }
     }
 }
@@ -196,6 +205,7 @@ $nav-popover-padding          : spacing(x2);
             position: absolute;
             pointer-events: none;
         }
+
         & .c-nav-list-item {
             float: none;
             border-bottom: 1px solid $grey--lightest;
@@ -209,6 +219,7 @@ $nav-popover-padding          : spacing(x2);
                 }
             }
         }
+
             & .c-nav-list-link,
             & .c-nav-list-text {
                 font-family: $nav-text-subFont;
@@ -222,6 +233,7 @@ $nav-popover-padding          : spacing(x2);
                     text-decoration: none;
                 }
             }
+
         // display the popover when our parent item is hovered
         .has-sublist:hover &,
         .has-sublist:focus &,
@@ -245,13 +257,16 @@ $nav-popover-padding          : spacing(x2);
     top: -100px;
     left: -100px;
 
+    @include media('>=mid') {
+        display: none;
+    }
+
     &:checked ~ .c-nav-container {
         @include media('<mid') {
             overflow-y: scroll;
             left: 0;
             opacity: 1;
             z-index: zIndex(high);
-
             transition: opacity $nav-transition-duration ease-in-out,
                         z-index 0s linear;
         }

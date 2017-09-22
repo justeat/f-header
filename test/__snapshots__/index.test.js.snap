@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header adds \`is-open\` class to nav label 1`] = `
+"
+            <button data-nav-enhance=\\"\\"></button>
+            <label data-nav-toggle=\\"\\" class=\\"is-open\\">Menu</label>
+        "
+`;
+
+exports[`header adds \`is-visible\` class to nav container 1`] = `
+"
+            <button data-nav-enhance=\\"\\"></button>
+            <div data-nav-container=\\"\\" class=\\"is-visible\\"></div>
+        "
+`;
+
+exports[`header converts nav checkbox to button 1`] = `
+"
+            <button data-nav-enhance=\\"\\"></button>
+        "
+`;
