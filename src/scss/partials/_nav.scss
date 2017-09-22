@@ -241,9 +241,7 @@ $nav-popover-padding          : spacing(x2);
 // Navigation Trigger
 // This is the checkbox that controls the menu active state without JS via :checked
 .c-nav-trigger {
-    position: absolute;
-    top: -100px;
-    left: -100px;
+    display: none;
 
     &:checked ~ .c-nav-container {
         @include media('<mid') {
