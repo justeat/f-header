@@ -1,8 +1,8 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.7.0",
-  "main": "index.js",
+  "version": "0.8.0",
+  "main": "dist/js/index.js",
   "homepage": "https://github.com/justeat/f-header",
   "contributors": [
     "Github contributors <https://github.com/justeat/f-header/graphs/contributors>"
@@ -18,18 +18,17 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "scripts": {
-    "prestart": "yarn",
-    "lint": "gulp scss:lint --prod",
-    "test": "gulp scripts:test"
-  },
   "dependencies": {
     "@justeat/fozzie-colour-palette": "^0.6.0",
-    "@justeat/gulp-build-fozzie": "^5.5.3",
+    "@justeat/gulp-build-fozzie": "^6.1.1",
+    "include-media": "^1.4.9",
+    "lite-ready": "^1.0.4"
+  },
+  "devDependencies": {
     "@kickoff/utils.scss": "^2.1.1",
+    "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
-    "gulp": "^3.9.1",
-    "include-media": "^1.4.9"
+    "gulp": "^3.9.1"
   },
   "keywords": [
     "fozzie",
@@ -40,6 +39,14 @@
     "sassDir": "src/scss",
     "needs": "^1.1.2",
     "exports": false
+  },
+  "scripts": {
+    "prepare": "yarn run lint && yarn run compile",
+    "compile": "babel -d dist src",
+    "lint": "yarn run lint:css && yarn run lint:js",
+    "lint:css": "gulp scss:lint --prod",
+    "lint:js": "gulp scripts:lint --prod",
+    "test": "gulp scripts:test"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"
