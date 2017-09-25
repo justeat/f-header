@@ -12,7 +12,7 @@ describe('module', () => {
 
 describe('header', () => {
 
-    it('converts nav checkbox to button', () => {
+    it('converts nav checkbox to button with correct type attribute', () => {
         // Arrange
         TestUtils.setHtml(`
             <input data-nav-enhance />
@@ -49,6 +49,23 @@ describe('header', () => {
         `);
         header();
         const button = document.querySelector('button[data-nav-enhance]');
+
+        // Act
+        TestUtils.click(button)
+
+        // Assert
+        expect(TestUtils.getHtml()).toMatchSnapshot();
+    });
+
+    it('does nothing if nav input does not exist', () => {
+        // Arrange
+        TestUtils.setHtml(`
+            <button></button>
+            <div data-nav-container></div>
+            <label data-nav-toggle>Menu</label>
+        `);
+        header();
+        const button = document.querySelector('button');
 
         // Act
         TestUtils.click(button)
