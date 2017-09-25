@@ -7,17 +7,26 @@
 import ready from 'lite-ready';
 
 
+/**
+ * Converts an input to a button in order to improve accessibility.
+ *
+ * @param {string} selector
+ */
 const convertInputToButton = selector => {
     const input = document.querySelector(selector);
 
     if (input) {
         const replaceTag = input.outerHTML.replace(/^<input/, '<button');
-
         input.outerHTML = `${replaceTag}</button>`;
 
         // Query the DOM again for this element now it has changed to a button
-        return document.querySelector(selector);
+        const button = document.querySelector(selector);
+        button.setAttribute('type', 'button');
+
+        return button;
     }
+
+    return null;
 };
 
 /**
@@ -49,9 +58,7 @@ const setupHeader = () => {
 };
 
 ready(() => {
-
     setupHeader();
-
 });
 
 export default setupHeader;
