@@ -28,6 +28,16 @@ $nav-popover-transition-delay : 200ms;
 $nav-popover-padding          : spacing(x2);
 
 
+@mixin nav-container-visible () {
+    overflow-y: scroll;
+    left: 0;
+    opacity: 1;
+    z-index: zIndex(high);
+    transition: opacity $nav-transition-duration ease-in-out,
+                z-index 0s linear;
+}
+
+
 // Global site-wide navigation
 .c-nav--global {
     @include media('>=mid') {
@@ -56,12 +66,7 @@ $nav-popover-padding          : spacing(x2);
                         left 0s linear ($nav-popover-transition-delay + $nav-popover-transition-duration);
 
             &.is-visible {
-                overflow-y: scroll;
-                left: 0;
-                opacity: 1;
-                z-index: zIndex(high);
-                transition: opacity $nav-transition-duration ease-in-out,
-                            z-index 0s linear;
+                @include nav-container-visible();
             }
         }
     }
@@ -263,12 +268,7 @@ $nav-popover-padding          : spacing(x2);
 
     &:checked ~ .c-nav-container {
         @include media('<mid') {
-            overflow-y: scroll;
-            left: 0;
-            opacity: 1;
-            z-index: zIndex(high);
-            transition: opacity $nav-transition-duration ease-in-out,
-                        z-index 0s linear;
+            @include nav-container-visible();
         }
     }
 
