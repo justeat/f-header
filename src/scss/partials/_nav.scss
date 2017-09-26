@@ -331,7 +331,8 @@ $nav-popover-padding          : spacing(x2);
 
     // Icon active state
     // Shown when the checkbox is checked
-    .c-nav-trigger:checked ~ .c-nav-toggle {
+    .c-nav-trigger:checked ~ .c-nav-toggle,
+    .c-nav-toggle.is-open {
         & > .c-nav-toggle-icon {
             background-color: $nav-toggleIcon-bg;
 
