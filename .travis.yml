@@ -1,11 +1,16 @@
 language: node_js
 
 node_js:
-  - "8"
   - "6"
+  - "8"
 
 cache: yarn
 
+before_script:
+  - yarn run lint
+
 script:
-  - yarn test
-  - yarn lint
+  - yarn test:cover
+
+after_success:
+  - yarn run test:cover:CI

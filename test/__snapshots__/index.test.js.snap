@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header adds \`is-open\` class to nav label 1`] = `
+"
+            <button data-nav-enhance=\\"\\" type=\\"button\\"></button>
+            <label data-nav-toggle=\\"\\" class=\\"is-open\\">Menu</label>
+        "
+`;
+
+exports[`header adds \`is-visible\` class to nav container 1`] = `
+"
+            <button data-nav-enhance=\\"\\" type=\\"button\\"></button>
+            <div data-nav-container=\\"\\" class=\\"is-visible\\"></div>
+        "
+`;
+
+exports[`header converts nav checkbox to button with correct type attribute 1`] = `
+"
+            <button data-nav-enhance=\\"\\" type=\\"button\\"></button>
+        "
+`;
+
+exports[`header does nothing if nav input does not exist 1`] = `
+"
+            <button></button>
+            <div data-nav-container=\\"\\"></div>
+            <label data-nav-toggle=\\"\\">Menu</label>
+        "
+`;
