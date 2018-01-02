@@ -1,0 +1,8 @@
+.skipTo {
+    .is-visuallyHidden {
+        &.focusable:active,
+        &.focusable:focus {
+            margin: 4px;
+        }
+    }
+}

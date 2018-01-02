@@ -41,6 +41,7 @@ $header-separator       : 4px;
 @import 'partials/languageSwitcher';
 @import 'partials/logo';
 @import 'partials/nav';
+@import 'partials/skipToMain';
 
 .c-header {
     border-bottom: $header-separator solid $red;
