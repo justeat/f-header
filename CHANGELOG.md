@@ -8,6 +8,9 @@ v0.11.2
 ------------------------------
 *January 09, 2018*
 
+### Added
+- Added the changelog.
+
 ### Changed
 - Replaced babel ES2015 preset with env preset.
 
