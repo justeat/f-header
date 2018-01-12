@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -33,6 +33,7 @@
     "@justeat/gulp-build-fozzie": "^6.1.1",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "concurrently": "^3.5.1",
     "coveralls": "^2.13.1",
     "gulp": "^3.9.1",
     "js-test-buddy": "^0.0.3"
@@ -48,11 +49,11 @@
     "exports": false
   },
   "scripts": {
-    "prepare": "yarn run lint && yarn test && yarn run compile",
-    "compile": "babel -d dist src",
+    "prepare": "concurrently -n 'lint,compile,test' -c 'blue,yellow,green' 'yarn lint' 'yarn compile' 'yarn test' --kill-others-on-fail",
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "gulp scss:lint --prod",
     "lint:js": "gulp scripts:lint --prod",
+    "compile": "babel -d dist src",
     "test": "gulp scripts:test",
     "test:cover": "gulp scripts:test:coverage",
     "test:cover:CI": "cat coverage/lcov.info | coveralls"
