@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.11.3
+------------------------------
+*January 12, 2018*
+
+### Added
+- Using concurrently to run npm scripts concurrently...!
+
+
 v0.11.2
 ------------------------------
 *January 09, 2018*
