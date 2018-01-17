@@ -4,6 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.12.0
+------------------------------
+*January 17, 2018*
+
+### Added
+- `dangerfile.js` added to check PRs via Travis
+
+### Changed
+- Updated `gulp-build-fozzie` and `fozzie-colour-palette` versions
+- Updated `js-test-buddy` and associated test references
+
+
 v0.11.4
 ------------------------------
 *January 16, 2018*
