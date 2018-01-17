@@ -14,7 +14,7 @@ describe('header', () => {
 
     it('converts nav checkbox to button with correct type attribute', () => {
         // Arrange
-        TestUtils.setHtml(`
+        TestUtils.setBodyHtml(`
             <input data-nav-enhance />
         `);
 
@@ -22,12 +22,13 @@ describe('header', () => {
         header();
 
         // Assert
-        expect(TestUtils.getHtml()).toMatchSnapshot();
+        const html = TestUtils.getBodyHtml();
+        expect(html).toMatchSnapshot();
     });
 
     it('adds `is-visible` class to nav container', () => {
         // Arrange
-        TestUtils.setHtml(`
+        TestUtils.setBodyHtml(`
             <input data-nav-enhance />
             <div data-nav-container></div>
         `);
@@ -38,12 +39,13 @@ describe('header', () => {
         TestUtils.click(button)
 
         // Assert
-        expect(TestUtils.getHtml()).toMatchSnapshot();
+        const html = TestUtils.getBodyHtml();
+        expect(html).toMatchSnapshot();
     });
 
     it('adds `is-open` class to nav label', () => {
         // Arrange
-        TestUtils.setHtml(`
+        TestUtils.setBodyHtml(`
             <input data-nav-enhance />
             <label data-nav-toggle>Menu</label>
         `);
@@ -54,12 +56,13 @@ describe('header', () => {
         TestUtils.click(button)
 
         // Assert
-        expect(TestUtils.getHtml()).toMatchSnapshot();
+        const html = TestUtils.getBodyHtml();
+        expect(html).toMatchSnapshot();
     });
 
     it('does nothing if nav input does not exist', () => {
         // Arrange
-        TestUtils.setHtml(`
+        TestUtils.setBodyHtml(`
             <button></button>
             <div data-nav-container></div>
             <label data-nav-toggle>Menu</label>
@@ -71,7 +74,8 @@ describe('header', () => {
         TestUtils.click(button)
 
         // Assert
-        expect(TestUtils.getHtml()).toMatchSnapshot();
+        const html = TestUtils.getBodyHtml();
+        expect(html).toMatchSnapshot();
     });
 
 });
