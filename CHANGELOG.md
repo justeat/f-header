@@ -11,6 +11,9 @@ v0.13.0
 ### Added
 - Added `skipTo` SCSS partial.
 
+### Changed
+- Prefixed component classes with `c-`.
+
 
 v0.12.0
 ------------------------------
