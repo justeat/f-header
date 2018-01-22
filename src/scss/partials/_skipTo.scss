@@ -1,4 +1,10 @@
-.skipTo {
+/**
+ * Skip To Styling
+ * =================================
+ * Styles relating to the "skip link" element.
+ */
+
+ .skipTo {
     .is-visuallyHidden {
         &.focusable:active,
         &.focusable:focus {
