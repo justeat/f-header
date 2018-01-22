@@ -1,0 +1,15 @@
+/**
+ * Skip To Styling
+ * =================================
+ * Styles relating to the "skip link" element.
+ */
+
+ .c-skipTo {
+    .is-visuallyHidden {
+        &.focusable:active,
+        &.focusable:focus {
+            display: block;
+            margin: 4px;
+        }
+    }
+}

@@ -4,7 +4,7 @@
  *
  */
 
-.languageSwitcher {
+.c-languageSwitcher {
     position: relative;
     display: block;
     color: $white;
@@ -19,7 +19,8 @@
         background-size: 10px 20px;
     }
 }
-    .languageSwitcher-indicator {
+
+    .c-languageSwitcher-indicator {
         position: absolute;
         left: 14px;
         padding: 0 5px;
