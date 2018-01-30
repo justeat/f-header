@@ -10,8 +10,11 @@ v0.15.0
 
 ### Changed
 - Updated `.gitignore` file.
-- Added `lintPaths` to gulp config.
 - Moved the accessibility related JavaScript out into own module.
+
+### Fixed
+- Fixed JavaScript linting by added `lintPaths` to gulp config.
+
 
 
 v0.14.0
