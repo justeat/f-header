@@ -1,5 +1,5 @@
-import header from '../src/js/index';
 import TestUtils from 'js-test-buddy';
+import header from '../src/js/accessibleHeader';
 
 
 describe('module', () => {
@@ -22,8 +22,7 @@ describe('header', () => {
         header();
 
         // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
+        expect(TestUtils.getBodyHtml()).toMatchSnapshot();
     });
 
     it('adds `is-visible` class to nav container', () => {
@@ -36,11 +35,10 @@ describe('header', () => {
         const button = document.querySelector('button[data-nav-enhance]');
 
         // Act
-        TestUtils.click(button)
+        TestUtils.click(button);
 
         // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
+        expect(TestUtils.getBodyHtml()).toMatchSnapshot();
     });
 
     it('adds `is-open` class to nav label', () => {
@@ -53,11 +51,10 @@ describe('header', () => {
         const button = document.querySelector('button[data-nav-enhance]');
 
         // Act
-        TestUtils.click(button)
+        TestUtils.click(button);
 
         // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
+        expect(TestUtils.getBodyHtml()).toMatchSnapshot();
     });
 
     it('does nothing if nav input does not exist', () => {
@@ -71,11 +68,10 @@ describe('header', () => {
         const button = document.querySelector('button');
 
         // Act
-        TestUtils.click(button)
+        TestUtils.click(button);
 
         // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
+        expect(TestUtils.getBodyHtml()).toMatchSnapshot();
     });
 
 });
