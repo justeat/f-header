@@ -4,7 +4,7 @@
             <a class="c-nav-list-link"
                 data-gtm="header|click - navigation|{{ link.gtmSuffix }}"
                 data-test-id="{{link.dataTestId}}"
-                href="{{ link.href }}">{{#with ../this}}{{ i18n link.label }}{{/with}}</a>
+                href="{{ link.url }}">{{#with ../this}}{{ i18n link.label }}{{/with}}</a>
         </li>
     {{/each}}
 
