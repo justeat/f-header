@@ -41,8 +41,8 @@
         "accountOrderHistory": "Your orders",
         "paymentMethods": "Your saved cards",
         "deliveryAddresses": "Your address book",
-        "RedeemVoucher": "Redeem a voucher",
-        "ContactPreferences": "Contact preference"
+        "redeemVoucher": "Redeem a voucher",
+        "contactPreferences": "Contact preference"
     },
     "en-IE": {
         "companyName": "Just Eat",
