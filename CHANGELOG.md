@@ -11,7 +11,7 @@ v0.16.0
 ### Changed
 - Renamed alternate language links partial.
 
-### Foxed
+### Fixed
 - Fixed variable name for alternate language links.
 
 
