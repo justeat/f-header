@@ -4,10 +4,6 @@
  * @module userAuth/userData
  */
 
-// import { fetchJSON } from '../../helpers/fetchHelper';
-const fetchJSON = require('../../helpers/fetchHelper');
-
-
 const storeLocalAnalyticsBlob = result => {
     window.localStorage.setItem('je-analytics', JSON.stringify(result));
     return result;
@@ -25,7 +21,20 @@ const fetchOrderCountAndSave = userData => {
     const orderCountUrl = orderCountLink && orderCountLink.getAttribute('href');
 
     if (orderCountUrl) {
-        return fetchJSON(orderCountUrl)
+        return fetch(orderCountUrl, {
+            method: 'GET',
+            credentials: 'same-origin'
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response;
+                }
+
+                const error = new Error(response.statusText);
+                error.response = response;
+                throw error;
+            })
+            .then(response => response.json())
             .then(storeLocalAnalyticsBlob)
             .then(result => enrichUserDataWithCount(userData, result))
             .then(pushUserData)
