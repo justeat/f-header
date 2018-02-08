@@ -28,6 +28,8 @@
     "@justeat/fozzie-colour-palette": "^0.9.0",
     "@kickoff/utils.scss": "^2.1.1",
     "include-media": "^1.4.9",
+    "jest-fetch-mock": "^1.4.1",
+    "jest-localstorage-mock": "^2.2.0",
     "lite-ready": "^1.0.4"
   },
   "devDependencies": {
@@ -70,6 +72,7 @@
     "not ie 10"
   ],
   "jest": {
+    "setupTestFrameworkScriptFile": "./jest.setup.js",
     "collectCoverageFrom": [
       "src/js/**/*.{js,jsx}"
     ]

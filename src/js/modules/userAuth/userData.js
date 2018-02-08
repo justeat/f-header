@@ -90,6 +90,4 @@ const saveUserData = authData => {
     return Promise.resolve();
 };
 
-module.exports = {
-    saveUserData
-};
+export default saveUserData;

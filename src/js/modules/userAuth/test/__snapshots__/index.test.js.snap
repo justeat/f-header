@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`if user is authenticated the auth element is shown 1`] = `
+"
+            <div data-auth-wrapper=\\"\\" class=\\"\\"></div>
+            
+        "
+`;
+
+exports[`if user is authenticated the header email is set to user email 1`] = `
+"
+            <div data-auth-wrapper=\\"\\"></div>
+            <div data-email=\\"\\">ronald.mcdonald@just-eat.com</div>
+        "
+`;
+
+exports[`if user is authenticated the header name is set to friendly name 1`] = `
+"
+            <div data-auth-wrapper=\\"\\"></div>
+            <div data-name=\\"\\">Ronald</div>
+        "
+`;
+
+exports[`if user is authenticated the login element is removed 1`] = `
+"
+            <div data-auth-wrapper=\\"\\"></div>
+            
+        "
+`;
+
+exports[`if user is not authenticated the auth element is removed 1`] = `
+"
+            
+        "
+`;
+
+exports[`if user is not authenticated the login element is shown 1`] = `
+"
+            
+            <div data-login=\\"\\" class=\\"\\"></div>
+        "
+`;
