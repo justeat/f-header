@@ -48,22 +48,11 @@ const checkForUser = () => {
             method: 'GET',
             credentials: 'same-origin'
         })
-            .then(response => {
-                if (response.ok) {
-                    return response;
-                }
-
-                const error = new Error(response.statusText);
-                error.response = response;
-                throw error;
-            })
             .then(response => response.json())
             .then(updateDom)
             .then(saveUserData)
             // should send this error to the f-logger but for now, just erroring here inline
-            .catch(err => {
-                console.log(err);
-            });
+            .catch(console.log);
     }
 
     return Promise.resolve();
