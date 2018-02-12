@@ -4,6 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.17.0
+------------------------------
+*February 8, 2018*
+
+### Added
+- userAuth module from GlobalWeb (including `index.js`, `userData.js` and their unit tests).
+- `jest.setup.js` file.
+- Dependencies `jest-fetch-mock` and `jest-localstorage-mock`.
+
+
 v0.16.0
 ------------------------------
 *February 1, 2018*

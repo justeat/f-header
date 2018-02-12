@@ -1,5 +1,5 @@
-import header from '../src/js/index';
 import TestUtils from 'js-test-buddy';
+import header from '../src/js/index';
 
 
 describe('module', () => {
@@ -36,7 +36,7 @@ describe('header', () => {
         const button = document.querySelector('button[data-nav-enhance]');
 
         // Act
-        TestUtils.click(button)
+        TestUtils.click(button);
 
         // Assert
         const html = TestUtils.getBodyHtml();
@@ -53,7 +53,7 @@ describe('header', () => {
         const button = document.querySelector('button[data-nav-enhance]');
 
         // Act
-        TestUtils.click(button)
+        TestUtils.click(button);
 
         // Assert
         const html = TestUtils.getBodyHtml();
@@ -71,7 +71,7 @@ describe('header', () => {
         const button = document.querySelector('button');
 
         // Act
-        TestUtils.click(button)
+        TestUtils.click(button);
 
         // Assert
         const html = TestUtils.getBodyHtml();
