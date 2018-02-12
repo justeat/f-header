@@ -52,7 +52,9 @@ const checkForUser = () => {
             .then(updateDom)
             .then(saveUserData)
             // should send this error to the f-logger but for now, just erroring here inline
-            .catch(console.log);
+            .catch(error => {
+                console.log(error);
+            });
     }
 
     return Promise.resolve();

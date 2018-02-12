@@ -25,15 +25,6 @@ const fetchOrderCountAndSave = userData => {
             method: 'GET',
             credentials: 'same-origin'
         })
-            .then(response => {
-                if (response.ok) {
-                    return response;
-                }
-
-                const error = new Error(response.statusText);
-                error.response = response;
-                throw error;
-            })
             .then(response => response.json())
             .then(storeLocalAnalyticsBlob)
             .then(result => enrichUserDataWithCount(userData, result))
