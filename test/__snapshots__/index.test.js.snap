@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`header adds \`is-navInView\` class to html element 1`] = `
+"<html class=\\"is-navInView\\"><head></head><body>
+            <button data-nav-enhance=\\"\\" type=\\"button\\"></button>
+        </body></html>"
+`;
+
 exports[`header adds \`is-open\` class to nav label 1`] = `
 "
             <button data-nav-enhance=\\"\\" type=\\"button\\"></button>

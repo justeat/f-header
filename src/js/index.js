@@ -53,6 +53,9 @@ const setupHeader = () => {
             if (navLabel) {
                 navLabel.classList.toggle('is-open');
             }
+
+            document.documentElement.classList.toggle('is-navInView');
+
         });
     }
 };

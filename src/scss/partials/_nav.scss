@@ -37,6 +37,12 @@ $nav-popover-padding          : spacing(x2);
                 z-index 0s linear;
 }
 
+// removes scro
+.is-navInView {
+    @include media('<mid') {
+        overflow: hidden;
+    }
+}
 
 // Global site-wide navigation
 .c-nav--global {
