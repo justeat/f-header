@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * @overview Authorisation handler
  *
@@ -38,7 +39,7 @@ const updateDom = authData => {
  * Checks if authorisation details can be found in the current session hits .net
  * endpoint and is returned valid auth details or no details if not logged in
  */
-const checkForUser = () => {
+export const checkForUser = () => {
     const authEl = document.querySelector('[data-auth-wrapper]');
 
     // if our auth wrapper exists, get our user details
@@ -59,5 +60,3 @@ const checkForUser = () => {
 
     return Promise.resolve();
 };
-
-export default checkForUser;
