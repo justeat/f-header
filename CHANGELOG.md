@@ -3,6 +3,14 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.19.0
+------------------------------
+*February 14, 2018*
+
+### Changed
+- Added class `is-navInView` to `nav` partial.
+- Added toggling funcionality of class `is-navInView` to html element to prevent users scrolling page when navigation is in viev.
+- Added tests for the toggling of class to the HTML element.
 
 v0.18.0
 ------------------------------

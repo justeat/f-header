@@ -78,4 +78,19 @@ describe('header', () => {
         expect(html).toMatchSnapshot();
     });
 
+    it('adds `is-navInView` class to html element', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+            <input data-nav-enhance />
+        `);
+        header();
+        const button = document.querySelector('button[data-nav-enhance]');
+
+        // Act
+        TestUtils.click(button);
+
+        // Assert
+        const html = document.documentElement.outerHTML;
+        expect(html).toMatchSnapshot();
+    });
 });
