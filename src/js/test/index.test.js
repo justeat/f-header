@@ -1,16 +1,16 @@
 import TestUtils from 'js-test-buddy';
-import header from '../src/js/index';
+import { setupHeader } from '../';
 
 
 describe('module', () => {
 
     it('is a function', () => {
-        expect(typeof header).toBe('function');
+        expect(typeof setupHeader).toBe('function');
     });
 
 });
 
-describe('header', () => {
+describe('setupHeader', () => {
 
     it('converts nav checkbox to button with correct type attribute', () => {
         // Arrange
@@ -19,7 +19,7 @@ describe('header', () => {
         `);
 
         // Act
-        header();
+        setupHeader();
 
         // Assert
         const html = TestUtils.getBodyHtml();
@@ -32,7 +32,7 @@ describe('header', () => {
             <input data-nav-enhance />
             <div data-nav-container></div>
         `);
-        header();
+        setupHeader();
         const button = document.querySelector('button[data-nav-enhance]');
 
         // Act
@@ -49,7 +49,7 @@ describe('header', () => {
             <input data-nav-enhance />
             <label data-nav-toggle>Menu</label>
         `);
-        header();
+        setupHeader();
         const button = document.querySelector('button[data-nav-enhance]');
 
         // Act
@@ -67,7 +67,7 @@ describe('header', () => {
             <div data-nav-container></div>
             <label data-nav-toggle>Menu</label>
         `);
-        header();
+        setupHeader();
         const button = document.querySelector('button');
 
         // Act
@@ -83,7 +83,7 @@ describe('header', () => {
         TestUtils.setBodyHtml(`
             <input data-nav-enhance />
         `);
-        header();
+        setupHeader();
         const button = document.querySelector('button[data-nav-enhance]');
 
         // Act
