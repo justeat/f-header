@@ -1,5 +1,5 @@
 import TestUtils from 'js-test-buddy';
-import { checkForUser } from '../index';
+import { checkForUser } from '../';
 
 
 jest.mock('../userData');

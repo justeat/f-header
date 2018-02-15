@@ -11,11 +11,7 @@ sudo: false
 notifications:
   email: false
 
-before_script:
-  - yarn run lint
-
 script:
-  - yarn test:cover
   - yarn danger ci
 
 after_success:

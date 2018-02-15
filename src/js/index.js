@@ -5,6 +5,7 @@
  */
 
 import ready from 'lite-ready';
+import { checkForUser } from './modules/userAuth';
 
 
 /**
@@ -64,4 +65,7 @@ ready(() => {
     setupHeader();
 });
 
-export default setupHeader;
+export {
+    setupHeader,
+    checkForUser
+};

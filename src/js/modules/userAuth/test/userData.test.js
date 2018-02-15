@@ -1,5 +1,5 @@
 import TestUtils from 'js-test-buddy';
-import saveUserData from '../userData';
+import { saveUserData } from '../userData';
 
 
 jest.unmock('../userData');

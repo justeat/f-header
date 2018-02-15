@@ -50,7 +50,7 @@ const orderCountSupported = () => {
     return Promise.reject();
 };
 
-const saveUserData = authData => {
+export const saveUserData = authData => {
     if (!authData.isAuthenticated) {
         return Promise.resolve();
     }
@@ -80,5 +80,3 @@ const saveUserData = authData => {
 
     return Promise.resolve();
 };
-
-export default saveUserData;
