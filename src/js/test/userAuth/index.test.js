@@ -1,8 +1,8 @@
 import TestUtils from 'js-test-buddy';
-import { checkForUser } from '../';
+import { checkForUser } from '../../userAuth';
 
 
-jest.mock('../userData');
+jest.unmock('../../userAuth/userData');
 
 describe('module', () => {
 
