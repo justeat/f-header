@@ -5,7 +5,7 @@
  */
 
 import ready from 'lite-ready';
-import { checkForUser } from './modules/userAuth';
+import { checkForUser } from './userAuth';
 
 
 /**

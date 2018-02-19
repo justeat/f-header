@@ -10,6 +10,14 @@ v0.20.3
 ### Changed
 - Made popover style prettier to match consumerweb uk.
 
+v0.20.2
+------------------------------
+*February 19, 2018*
+
+### Changed
+- Moved all JavaScript unit tests under a single directory.
+
+
 v0.20.1
 ------------------------------
 *February 15, 2018*
