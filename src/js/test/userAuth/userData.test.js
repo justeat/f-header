@@ -1,8 +1,8 @@
 import TestUtils from 'js-test-buddy';
-import { saveUserData } from '../userData';
+import { saveUserData } from '../../userAuth/userData';
 
 
-jest.unmock('../userData');
+jest.unmock('../../userAuth/userData');
 
 describe('module', () => {
 
