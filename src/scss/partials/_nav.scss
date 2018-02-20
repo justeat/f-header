@@ -41,6 +41,10 @@ $nav-popover-padding          : spacing(x2);
 .is-navInView {
     @include media('<mid') {
         overflow: hidden;
+        body {
+            position: fixed;
+            width: 100%;
+        }
     }
 }
 
