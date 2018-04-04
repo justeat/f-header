@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.20.5",
+  "version": "0.21.0",
   "main": "dist/js/index.js",
   "files": [
     "dist",
