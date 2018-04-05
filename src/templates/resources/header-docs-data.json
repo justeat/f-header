@@ -22,35 +22,35 @@
         "url":"/account/info",
         "gtmSuffix":"account",
         "dataTestId":"accountInfo",
-        "label":"header-accountInfo",
+        "label":"accountInfo",
         "order":10
       },
       {
         "url":"/order-history",
         "gtmSuffix":"orders",
         "dataTestId":"orders",
-        "label":"header-accountOrderHistory",
+        "label":"accountOrderHistory",
         "order":20
       },
       {
         "url":"/account/credit",
         "gtmSuffix":"credit balance",
         "dataTestId":"accountCredit",
-        "label":"header-accountCredit",
+        "label":"accountCredit",
         "order":30
       },
       {
         "url":"/member/savedcards",
         "gtmSuffix":"payment methods",
         "dataTestId":"paymentMethods",
-        "label":"header-paymentMethods",
+        "label":"paymentMethods",
         "order":40
       },
       {
         "url":"/account/addressbook",
         "gtmSuffix":"address book",
         "dataTestId":"addressBook",
-        "label":"header-deliveryAddresses",
+        "label":"deliveryAddresses",
         "order":50
       }
     ]

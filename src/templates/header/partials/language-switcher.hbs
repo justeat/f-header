@@ -7,9 +7,9 @@
         {{#each alternativeLanguages as | lang |}}
             <a href="{{ lang.changeLanguageUrl }}">
                 <span class="is-visuallyHidden">
-                    {{#with ../this}}{{ i18n "header-languageSwitcherAccessibility" language=lang.name }}{{/with}}
+                    {{#with ../this}}{{ i18n "languageSwitcherAccessibility" language=lang.name }}{{/with}}
                 </span>
-                {{#with ../this}}{{ i18n "header-languageSwitcherName" language=lang.name }}{{/with}}
+                {{#with ../this}}{{ i18n "languageSwitcherName" language=lang.name }}{{/with}}
             </a>
             <i class="icon icon--small icon--chevron--right--light">></i>
         {{/each}}
