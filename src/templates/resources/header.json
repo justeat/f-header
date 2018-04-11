@@ -13,6 +13,20 @@
         "paymentMethods": "",
         "deliveryAddresses": "Leveringsadresse"
     },
+    "en-AU": {
+        "companyName": "Menulog",
+        "openMenuText": "Open Menu",
+        "loginLinkText": "Log-in",
+        "loginNoScriptLinkText": "Account",
+        "helpLinkText": "Help",
+        "logoutLinkText": "Log out",
+        "skipToMainContentText": "Skip to main content",
+        "accountInfo": "Account info",
+        "accountOrderHistory": "Orders",
+        "accountCredit": "Account credit",
+        "paymentMethods": "Payment methods",
+        "deliveryAddresses": "Delivery addresses"
+    },
     "en-CA": {
         "companyName": "Just Eat",
         "openMenuText": "Open Menu",
@@ -71,6 +85,20 @@
         "accountCredit": "Crédito de la cuenta",
         "paymentMethods": "",
         "deliveryAddresses": "Direcciones de reparto"
+    },
+    "en-NZ": {
+        "companyName": "Menulog",
+        "openMenuText": "Open Menu",
+        "loginLinkText": "Log-in",
+        "loginNoScriptLinkText": "Account",
+        "helpLinkText": "Help",
+        "logoutLinkText": "Log out",
+        "skipToMainContentText": "Skip to main content",
+        "accountInfo": "Account info",
+        "accountOrderHistory": "Orders",
+        "accountCredit": "Account credit",
+        "paymentMethods": "Payment methods",
+        "deliveryAddresses": "Delivery addresses"
     },
     "fr-CA": {
         "companyName": "Just Eat",
