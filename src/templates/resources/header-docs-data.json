@@ -1,58 +1,47 @@
 {
-    "language":"en-CA",
-    "isMultiLingual":true,
-    "returnUrl":"%2F",
-    "loginUrl":"/account/login?returnurl=%2F",
-    "logoutUrl":"/account/logout?returnurl=%2F",
-    "helpUrl":"/help",
-    "logoUrl":"/assets/dist/img/logos/je-logo-v1.svg",
-    "languageSwitchText":"EN",
-    "isOrderCountSupported":true,
-    "alternativeLanguageLinks":[
-      {
-        "culture":"fr-CA",
-        "name":"fr-CA",
-        "language":"fr",
-        "isDefault":false,
-        "changeLanguageUrl":"/SetLanguage?newLanguage=fr&returnUrl=/fr%2F"
-      }
-    ],
-    "navigationLinks":[
-      {
-        "url":"/account/info",
-        "gtmSuffix":"account",
-        "dataTestId":"accountInfo",
-        "label":"accountInfo",
-        "order":10
-      },
-      {
-        "url":"/order-history",
-        "gtmSuffix":"orders",
-        "dataTestId":"orders",
-        "label":"accountOrderHistory",
-        "order":20
-      },
-      {
-        "url":"/account/credit",
-        "gtmSuffix":"credit balance",
-        "dataTestId":"accountCredit",
-        "label":"accountCredit",
-        "order":30
-      },
-      {
-        "url":"/member/savedcards",
-        "gtmSuffix":"payment methods",
-        "dataTestId":"paymentMethods",
-        "label":"paymentMethods",
-        "order":40
-      },
-      {
-        "url":"/account/addressbook",
-        "gtmSuffix":"address book",
-        "dataTestId":"addressBook",
-        "label":"deliveryAddresses",
-        "order":50
-      }
-    ]
-  }
-  
+  "language": "en-CA",
+  "isMultiLingual": true,
+  "loginUrl": "#",
+  "logoutUrl": "#",
+  "helpUrl": "#",
+  "logoUrl": "/assets/img/logos/je-logo.v1.svg",
+  "languageSwitchText": "EN",
+  "isOrderCountSupported": true,
+  "alternativeLanguageLinks": [
+    {
+      "changeLanguageUrl": "#"
+    }
+  ],
+  "navigationLinks": [
+    {
+      "url": "#",
+      "gtmSuffix": "account",
+      "dataTestId": "accountInfo",
+      "label": "accountInfo"
+    },
+    {
+      "url": "#",
+      "gtmSuffix": "orders",
+      "dataTestId": "orders",
+      "label": "accountOrderHistory"
+    },
+    {
+      "url": "#",
+      "gtmSuffix": "credit balance",
+      "dataTestId": "accountCredit",
+      "label": "accountCredit"
+    },
+    {
+      "url": "#",
+      "gtmSuffix": "payment methods",
+      "dataTestId": "paymentMethods",
+      "label": "paymentMethods"
+    },
+    {
+      "url": "#",
+      "gtmSuffix": "address book",
+      "dataTestId": "addressBook",
+      "label": "deliveryAddresses"
+    }
+  ]
+}
