@@ -3,12 +3,21 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-v0.21.4
+
+v0.22.1
 ------------------------------
 *April 12, 2018*
 
 ### Added
 - Re-added some properties to docs data to fix the language switcher text.
+
+
+v0.22.0
+------------------------------
+*April 11, 2018*
+
+### Added
+- Added localisation for en-AU and en-NZ.
 
 
 v0.21.3
