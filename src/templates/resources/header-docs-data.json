@@ -9,6 +9,9 @@
   "isOrderCountSupported": true,
   "alternativeLanguageLinks": [
     {
+      "language": "fr",
+      "name": "fr-CA",
+      "culture": "fr-CA",
       "changeLanguageUrl": "#"
     }
   ],
