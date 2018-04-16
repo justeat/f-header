@@ -42,9 +42,15 @@
                     {{> nav-alternate-language-links }}
 
                     <li class="c-nav-list-item c-nav-list-item--support" data-test-id="support">
-                        <a href="{{ helpUrl }}" data-gtm="header|click - navigation|help" class="c-nav-list-link">
-                            {{ i18n "helpLinkText" }}
-                        </a>
+                        {{#if isHelpExternal}}
+                            <a href="{{ helpUrl }}" target="_blank" data-gtm="header|click - navigation|help" class="c-nav-list-link">
+                                {{ i18n "helpLinkText" }}
+                            </a>
+                        {{else}}
+                            <a href="{{ helpUrl }}" data-gtm="header|click - navigation|help" class="c-nav-list-link">
+                                {{ i18n "helpLinkText" }}
+                            </a>
+                        {{/if}}
                     </li>
                 </ul>
             </div>
