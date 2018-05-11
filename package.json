@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -25,22 +25,22 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@justeat/fozzie-colour-palette": "^0.9.0",
+    "@justeat/fozzie-colour-palette": "^1.1.0",
     "@kickoff/utils.scss": "^2.1.1",
     "include-media": "^1.4.9",
     "lite-ready": "^1.0.4"
   },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "^7.7.0",
+    "@justeat/gulp-build-fozzie": "^7.19.0",
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "concurrently": "^3.5.1",
-    "coveralls": "^3.0.0",
-    "danger": "^3.1.3",
+    "coveralls": "^3.0.1",
+    "danger": "^3.6.5",
     "gulp": "^3.9.1",
-    "jest-fetch-mock": "^1.4.1",
+    "jest-fetch-mock": "^1.5.0",
     "jest-localstorage-mock": "^2.2.0",
-    "js-test-buddy": "^0.0.7"
+    "js-test-buddy": "^0.1.0"
   },
   "keywords": [
     "fozzie",
