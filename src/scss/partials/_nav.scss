@@ -8,15 +8,15 @@
 $nav-trigger-length           : 56px;
 $nav-text-size                : 'base--scaleUp';
 $nav-text-font                : $font-family-headings;
-$nav-text-color               : $blue;
+$nav-text-color               : $blue !default;
 $nav-text-weight              : 500;
-$nav-text-color--hover        : $blue;
+$nav-text-color--hover        : $blue !default;
 $nav-text-subFont             : $font-family-base;
 $nav-text-color--narrow       : $grey--dark;
 $nav-toggleIcon-left          : spacing(x2);
 $nav-toggleIcon-width         : spacing(x3);
 $nav-toggleIcon-height        : 3px;
-$nav-toggleIcon-color         : $blue;
+$nav-toggleIcon-color         : $blue !default;
 $nav-toggleIcon-bg            : $white;
 $nav-toggleIcon-space         : 6px;
 $nav-transition-duration      : 250ms;
@@ -67,7 +67,7 @@ $nav-popover-padding          : spacing(x2);
             padding: 0;
             height: 90%; // if calc not supported, just make it 90% height
             height: calc(100% - (#{$header-height--narrow}));
-            border-top: $header-separator solid $red;
+            border-top: $header-separator solid $header-border-color;
             background: #fff;
             z-index: -1;
             opacity: 0;

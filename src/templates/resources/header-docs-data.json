@@ -5,6 +5,7 @@
   "logoutUrl": "#",
   "helpUrl": "#",
   "logoUrl": "/assets/img/logos/je-logo.v1.svg",
+  "logoUrlMenulog": "/assets/img/logos/je-logo.v2.menulog.svg",
   "languageSwitchText": "EN",
   "isOrderCountSupported": true,
   "alternativeLanguageLinks": [

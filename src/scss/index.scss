@@ -36,6 +36,7 @@ $header-height--narrow  : 56px;
 $header-height          : 76px;
 $header-bg              : $white !default;
 $header-separator       : 4px;
+$header-border-color    : $red !default;
 
 @import 'partials/infoBar';
 @import 'partials/languageSwitcher';
@@ -44,7 +45,7 @@ $header-separator       : 4px;
 @import 'partials/skipTo';
 
 .c-header {
-    border-bottom: $header-separator solid $red;
+    border-bottom: $header-separator solid $header-border-color;
     background-color: $header-bg;
     min-width : 300px;
 
