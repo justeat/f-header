@@ -4,6 +4,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.29.0
+------------------------------
+*June 15, 2018*
+
+### Added
+- rimraf dev dependency.
+- Script to clean the `dist` directory before transpiling code which runs before compile script.
+- snyk badge.
+
+### Changed
+- Prevent adding unit test files to the `dist` directory.
+
+### Removed
+- Removed the gemnasium badge from the readme.
+
+
 v0.28.0
 ------------------------------
 *June 15, 2018*

@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.28.0",
+  "version": "0.29.0",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -40,7 +40,8 @@
     "gulp": "^3.9.1",
     "jest-fetch-mock": "^1.5.0",
     "jest-localstorage-mock": "^2.2.0",
-    "js-test-buddy": "^0.1.0"
+    "js-test-buddy": "^0.1.0",
+    "rimraf": "^2.6.2"
   },
   "keywords": [
     "fozzie",
@@ -54,10 +55,11 @@
   },
   "scripts": {
     "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test:cover\" --kill-others-on-fail",
+    "clean": "rimraf dist",
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "gulp scss:lint --prod",
     "lint:js": "gulp scripts:lint --prod",
-    "compile": "babel -d dist src",
+    "compile": "yarn clean && babel -d dist src --ignore test.js",
     "test:cover": "gulp scripts:test:coverage",
     "test:cover:CI": "cat coverage/lcov.info | coveralls"
   },
