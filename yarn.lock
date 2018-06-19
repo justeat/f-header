@@ -157,9 +157,9 @@
     handlebars "^4.0.11"
     handlebars-helper-i18n "^0.1.0"
 
-"@justeat/fozzie-colour-palette@^1.1.0":
+"@justeat/fozzie-colour-palette@^1.2.0":
   version "1.1.0"
-  resolved "https://registry.npmjs.org/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-1.1.0.tgz#05a49eaa55000fa1f0b916603d341eef8bfbf439"
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie-colour-palette/-/fozzie-colour-palette-1.1.0.tgz#05a49eaa55000fa1f0b916603d341eef8bfbf439"
 
 "@justeat/gulp-build-fozzie@^7.19.0":
   version "7.19.0"

@@ -8,15 +8,16 @@
 $nav-trigger-length           : 56px;
 $nav-text-size                : 'base--scaleUp';
 $nav-text-font                : $font-family-headings;
-$nav-text-color               : $blue;
+$nav-text-color               : $blue !default;
 $nav-text-weight              : 500;
-$nav-text-color--hover        : $blue;
+$nav-text-color--hover        : $blue !default;
 $nav-text-subFont             : $font-family-base;
 $nav-text-color--narrow       : $grey--dark;
+$nav-icon-color               : $blue !default;
 $nav-toggleIcon-left          : spacing(x2);
 $nav-toggleIcon-width         : spacing(x3);
 $nav-toggleIcon-height        : 3px;
-$nav-toggleIcon-color         : $blue;
+$nav-toggleIcon-color         : $blue !default;
 $nav-toggleIcon-bg            : $white;
 $nav-toggleIcon-space         : 6px;
 $nav-transition-duration      : 250ms;
@@ -65,10 +66,9 @@ $nav-popover-padding          : spacing(x2);
             left: -99999px;
             width: 100%;
             padding: 0;
-            height: 90%; // if calc not supported, just make it 90% height
             height: calc(100% - (#{$header-height--narrow}));
-            border-top: $header-separator solid $red;
-            background: #fff;
+            border-top: $header-separator solid $header-border-color;
+            background: $white;
             z-index: -1;
             opacity: 0;
             transition: opacity $nav-transition-duration ease-in-out,
@@ -182,7 +182,7 @@ $nav-popover-padding          : spacing(x2);
 
         @include media('>=mid') {
             & path {
-                fill: $blue;
+                fill: $nav-icon-color;
             }
         }
     }
@@ -196,7 +196,7 @@ $nav-popover-padding          : spacing(x2);
         top: 100%;
         right: 99999px; // offscreen, so can’t ever be hovered over by default
         width: $nav-popover-width;
-        background-color: #fff;
+        background-color: $white;
         border: 1px solid $color-border;
         box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
         border-top: 0;
@@ -213,7 +213,7 @@ $nav-popover-padding          : spacing(x2);
             bottom: 100%;
             right: 10%;
             border: $nav-tooltip-width solid transparent;
-            border-bottom: $nav-tooltip-width solid #fff;
+            border-bottom: $nav-tooltip-width solid $white;
             content: '';
             height: 0;
             width: 0;

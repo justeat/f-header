@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.29.0",
+  "version": "0.30.0",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -25,7 +25,7 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@justeat/fozzie-colour-palette": "^1.1.0",
+    "@justeat/fozzie-colour-palette": "^1.2.0",
     "@kickoff/utils.scss": "^2.1.1",
     "include-media": "^1.4.9",
     "lite-ready": "^1.0.4"
