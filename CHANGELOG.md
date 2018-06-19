@@ -7,7 +7,7 @@ v0.30.0
 ------------------------------
 *June 18, 2018*
 
-### Changed
+### Added
 - Added basic menulog support for OrderWeb
 
 v0.29.0
