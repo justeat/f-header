@@ -30,7 +30,7 @@ $nav-popover-padding          : spacing(x2);
 
 
 @mixin nav-container-visible () {
-    overflow-y: scroll;
+    overflow-y: auto;
     left: 0;
     opacity: 1;
     z-index: zIndex(high);
@@ -42,9 +42,15 @@ $nav-popover-padding          : spacing(x2);
 .is-navInView {
     @include media('<mid') {
         overflow: hidden;
+
         body {
             position: fixed;
             width: 100%;
+            padding-top: $header-height--narrow + $header-separator;
+
+            @at-root .is-multiLanguage#{&} {
+                padding-top: $header-height--narrow--multiLang + $header-separator;
+            }
         }
     }
 }
@@ -77,6 +83,11 @@ $nav-popover-padding          : spacing(x2);
 
             &.is-visible {
                 @include nav-container-visible();
+            }
+
+            .is-multiLanguage & {
+                top: $header-height--narrow--multiLang;
+                height: calc(100% - (#{$header-height--narrow--multiLang}));
             }
         }
     }

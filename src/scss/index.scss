@@ -32,11 +32,14 @@ $breakpoints: ko-map-to-em((
 ), 16); // set to 16 as this is default browser size
 /* stylelint-enable */
 
-$header-height--narrow  : 56px;
-$header-height          : 76px;
-$header-bg              : $white !default;
-$header-separator       : 4px;
-$header-border-color    : $red !default;
+$languageSwitcher-height          : 34px;
+
+$header-height--narrow            : 56px;
+$header-height                    : 76px;
+$header-height--narrow--multiLang : $header-height--narrow + $languageSwitcher-height;
+$header-bg                        : $white !default;
+$header-separator                 : 4px;
+$header-border-color              : $red !default;
 
 @import 'partials/infoBar';
 @import 'partials/languageSwitcher';
@@ -49,8 +52,8 @@ $header-border-color    : $red !default;
     background-color: $header-bg;
     min-width : 300px;
 
-    // when the navigation is active on mobile
-    // we fix the page header to the top of the screen
+    // when the off-screen navigation is active (on mobile), it fixes to the top of the screen.
+    // this stops the content being forced upwards when this happens (preventing slight visual glitch)
     .is-navInView & {
         @include media('<mid') {
             position: fixed;
@@ -70,7 +73,4 @@ $header-border-color    : $red !default;
             min-height: $header-height;
         }
     }
-
-
-
 
