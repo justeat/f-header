@@ -3,6 +3,25 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v0.32.0
+------------------------------
+*August 10, 2018*
+
+### Added
+- Peer dependency to `f-icons` added to `package.json`
+- CODEOWNERS file added
+
+### Changed
+- Chevron icon in language switcher now inlined using inlineSVG helper
+- Tidied up some class names in the language switcher
+- Updated PR template with new links and updated browsers
+
+### Fixed
+- The body container now doesn't jump around when the menu is opened.
+- The navigation height is now correct when multi language versions of the site are viewed (it previously overlapped the header/logo when open).
+- Fixed persistent scrollbar which was visible on narrow viewports.
+
+
 v0.31.0
 ------------------------------
 *July 23, 2018*
@@ -10,12 +29,14 @@ v0.31.0
 ### Added
 - Logo alt text added
 
+
 v0.30.0
 ------------------------------
 *June 18, 2018*
 
 ### Added
 - Added basic menulog support for OrderWeb
+
 
 v0.29.0
 ------------------------------
