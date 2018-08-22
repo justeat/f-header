@@ -52,6 +52,7 @@ $header-border-color              : $red !default;
     border-bottom: $header-separator solid $header-border-color;
     background-color: $header-bg;
     min-width : 300px;
+    position: relative;
 
     // when the off-screen navigation is active (on mobile), it fixes to the top of the screen.
     // this stops the content being forced upwards when this happens (preventing slight visual glitch)
@@ -70,6 +71,7 @@ $header-border-color              : $red !default;
         &.is-sticky {
             left: 0;
             top: -60px;
+            position: fixed;
         }
 
         &.is-sticky-scrollingUp {
