@@ -16,7 +16,8 @@ $nav-text-color--narrow       : $grey--dark;
 $nav-icon-color               : $blue !default;
 $nav-toggleIcon-left          : spacing(x2);
 $nav-toggleIcon-width         : spacing(x3);
-$nav-toggleIcon-height        : 3px;
+$nav-toggleIcon-height        : 1px;
+$nav-toggleIcon-borderRadius  : 1px;
 $nav-toggleIcon-color         : $blue !default;
 $nav-toggleIcon-bg            : $white;
 $nav-toggleIcon-space         : 6px;
@@ -333,6 +334,7 @@ $nav-popover-padding          : spacing(x2);
             position: absolute;
             height: $nav-toggleIcon-height;
             background-color: $nav-toggleIcon-color;
+            border-radius: $nav-toggleIcon-borderRadius;
         }
 
         &:before,
@@ -343,10 +345,10 @@ $nav-popover-padding          : spacing(x2);
             transition: all $nav-transition-duration ease-in-out;
         }
         &:before {
-            top: -($nav-toggleIcon-space + $nav-toggleIcon-height);
+            top: -($nav-toggleIcon-space);
         }
         &:after {
-            top: ($nav-toggleIcon-space + $nav-toggleIcon-height);
+            top: $nav-toggleIcon-space;
         }
     }
 
