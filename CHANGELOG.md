@@ -5,11 +5,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.33.0
 ------------------------------
-*August 22, 2018*
+*August 23, 2018*
 
 ### Added
 - `data-sticky-element` attribute to header
-- Addition of `c-headerButton` styles
+- Addition of `c-header-button` styles
 
 v0.32.0
 ------------------------------
