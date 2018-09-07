@@ -3,6 +3,18 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v0.36.0
+------------------------------
+*September 7, 2018*
+
+### Fixed
+- Fixed positioning on `c-header-button`.
+
+### Changed
+- Changed targetting on `c-header-buttonIcon` SVG to apply fill.
+
+
 v0.34.0
 ------------------------------
 *August 23, 2018*
