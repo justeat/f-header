@@ -31,7 +31,7 @@
     "lite-ready": "^1.0.4"
   },
   "peerDependencies": {
-    "@justeat/f-icons": "^1.1.0"
+    "@justeat/f-icons": "^1.9.0"
   },
   "devDependencies": {
     "@justeat/gulp-build-fozzie": "^7.19.0",
