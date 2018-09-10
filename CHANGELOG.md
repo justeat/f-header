@@ -6,13 +6,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.36.0
 ------------------------------
-*September 7, 2018*
+*September 10, 2018*
 
 ### Fixed
 - Fixed positioning on `c-header-button`.
 
 ### Changed
 - Changed targetting on `c-header-buttonIcon` SVG to apply fill.
+- Updates `c-header` border.
 
 
 v0.34.0
