@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.36.0
 ------------------------------
-*September 10, 2018*
+*September 11, 2018*
 
 ### Fixed
 - Fixed positioning on `c-header-button`.
@@ -14,6 +14,14 @@ v0.36.0
 ### Changed
 - Changed targetting on `c-header-buttonIcon` SVG to apply fill.
 - Updates `c-header` border.
+
+
+v0.35.0
+------------------------------
+*August 29, 2018*
+
+### Changed
+- Added pseudo-locale `qps-ploc` for localisation testing on Windows.
 
 
 v0.34.0
