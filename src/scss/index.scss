@@ -38,8 +38,8 @@ $header-height--narrow            : 56px;
 $header-height                    : 76px;
 $header-height--narrow--multiLang : $header-height--narrow + $languageSwitcher-height;
 $header-bg                        : $white !default;
-$header-separator                 : 4px;
-$header-border-color              : $red !default;
+$header-separator                 : 1px;
+$header-border-color              : $grey--lightest !default;
 
 @import 'partials/infoBar';
 @import 'partials/languageSwitcher';
@@ -48,7 +48,6 @@ $header-border-color              : $red !default;
 @import 'partials/skipTo';
 
 .c-header {
-    border-bottom: $header-separator solid $header-border-color;
     background-color: $header-bg;
     min-width : 300px;
     position: relative;
@@ -77,6 +76,10 @@ $header-border-color              : $red !default;
             top: 0;
         }
     }
+
+    @include media('>=mid') {
+        border-bottom: $header-separator solid $header-border-color;
+    }
 }
     .c-header-wrap {
         position: relative;
@@ -89,13 +92,13 @@ $header-border-color              : $red !default;
     }
 
     // Header button Styling
-
+    // Example – searchWeb filter button on mobile.
     .c-header-button {
         border: 0;
         padding: 0;
         background: none;
         appearance: none;
-        top: spacing(x2);
+        top: 18px;
         right: spacing(x2);
         position: absolute;
 
@@ -105,7 +108,10 @@ $header-border-color              : $red !default;
     }
 
     .c-header-buttonIcon {
-        fill: $blue;
         width: 28px;
         height: 28px;
+
+        svg {
+            fill: $blue;
+        }
     }
