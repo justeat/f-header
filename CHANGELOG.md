@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v0.37.0
 ------------------------------
-*September 11, 2018*
+*September 13, 2018*
 
 ### Changed
 - Updated `c-header-button` click area.
