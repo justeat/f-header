@@ -5,15 +5,12 @@ import { checkForUser } from '../../userAuth';
 jest.unmock('../../userAuth/userData');
 
 describe('module', () => {
-
     it('is a function', () => {
         expect(typeof checkForUser).toBe('function');
     });
-
 });
 
 describe('if the account details call fails', () => {
-
     it('the function returns', () => {
         // Arrange
         TestUtils.setBodyHtml(`
@@ -28,11 +25,9 @@ describe('if the account details call fails', () => {
         expect.assertions(1);
         return result.then(response => expect(response).toBeUndefined());
     });
-
 });
 
 describe('if the auth element is not present', () => {
-
     it('the function returns', () => {
         // Act
         const result = checkForUser();
@@ -41,11 +36,9 @@ describe('if the auth element is not present', () => {
         expect.assertions(1);
         return result.then(response => expect(response).toBeUndefined());
     });
-
 });
 
 describe('if user is not authenticated', () => {
-
     beforeEach(() => {
         const authData = { isAuthenticated: false };
         fetch.mockResponseOnce(JSON.stringify(authData), { status: 200 });
@@ -85,11 +78,9 @@ describe('if user is not authenticated', () => {
             expect(html).toMatchSnapshot();
         });
     });
-
 });
 
 describe('if user is authenticated', () => {
-
     it('the header name is set to friendly name', () => {
         // Arrange
         TestUtils.setBodyHtml(`
@@ -171,5 +162,4 @@ describe('if user is authenticated', () => {
             expect(html).toMatchSnapshot();
         });
     });
-
 });

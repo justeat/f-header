@@ -5,15 +5,12 @@ import { saveUserData } from '../../userAuth/userData';
 jest.unmock('../../userAuth/userData');
 
 describe('module', () => {
-
     it('is a function', () => {
         expect(typeof saveUserData).toBe('function');
     });
-
 });
 
 describe('user is not authenticated', () => {
-
     it('promise resolves', () => {
         // Arrange
         const authData = { isAuthenticated: false };
@@ -38,11 +35,9 @@ describe('user is not authenticated', () => {
         expect.assertions(1);
         return result.then(() => expect(window.dataLayer).toEqual(expectedResult));
     });
-
 });
 
 describe('user is authenticated', () => {
-
     let userData;
     let authData;
 
@@ -52,7 +47,6 @@ describe('user is authenticated', () => {
     });
 
     describe('promise rejects', () => {
-
         it('if order count url is not found', () => {
             // Arrange
             TestUtils.setBodyHtml('<input data-order-count-supported type="hidden" value="True" />');
@@ -87,11 +81,9 @@ describe('user is authenticated', () => {
             expect.assertions(1);
             return expect(result).rejects.toBeUndefined();
         });
-
     });
 
     describe('user data is pushed to data layer', () => {
-
         it('if order count is not supported', () => {
             // Arrange
             TestUtils.setBodyHtml(`<link rel="ordercountlink" href="analytics/ordercount" />
@@ -131,11 +123,9 @@ describe('user is authenticated', () => {
             expect.assertions(1);
             return result.then(() => expect(window.dataLayer[0].userData).toEqual(userData));
         });
-
     });
 
     describe('order count is added to', () => {
-
         beforeEach(() => {
             const response = JSON.stringify({ Count: 1 });
             fetch.mockResponseOnce(response, { status: 200 });
@@ -144,7 +134,6 @@ describe('user is authenticated', () => {
         });
 
         describe('local storage', () => {
-
             it('if it is not already present', () => {
                 // Arrange
                 const expectedResult = JSON.stringify({ Count: 1 });
@@ -156,11 +145,9 @@ describe('user is authenticated', () => {
                 expect.assertions(1);
                 return result.then(() => expect(window.localStorage.getItem('je-analytics')).toEqual(expectedResult));
             });
-
         });
 
         describe('user data and pushed to data layer', () => {
-
             it('if analytics is not saved in local storage', () => {
                 // Arrange
                 const expectedResult = {
@@ -174,20 +161,16 @@ describe('user is authenticated', () => {
                 expect.assertions(1);
                 return result.then(() => expect(window.dataLayer[0]).toEqual(expectedResult));
             });
-
         });
-
     });
 
     describe('order count is updated in', () => {
-
         beforeEach(() => {
             TestUtils.setBodyHtml(`<link rel="ordercountlink" href="analytics/ordercount" />
                                     <input data-order-count-supported type="hidden" value="True" />`);
         });
 
         describe('local storage', () => {
-
             it('if local order count has expired', () => {
                 // Arrange
                 const oneYearAgo = new Date(new Date().setFullYear(new Date().getFullYear() - 1));
@@ -210,11 +193,9 @@ describe('user is authenticated', () => {
                 expect.assertions(1);
                 return result.then(() => expect(window.localStorage.getItem('je-analytics')).toEqual(response));
             });
-
         });
 
         describe('user data and pushed to data layer', () => {
-
             it('if analytics is already in local storage and local order count has expired', () => {
                 // Arrange
                 const oneYearAgo = new Date(new Date().setFullYear(new Date().getFullYear() - 1));
@@ -263,9 +244,6 @@ describe('user is authenticated', () => {
                 expect.assertions(1);
                 return result.then(() => expect(window.dataLayer[0]).toEqual(expectedResult));
             });
-
         });
-
     });
-
 });

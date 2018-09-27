@@ -3,6 +3,10 @@
  * =================================
  */
 
+$logo-color                 : $brand--red;
+$logo-color--transparent    : $white;
+
+
 .c-logo {
     text-align: center;
 
@@ -28,5 +32,13 @@
         @include media('>=mid') {
             width: 165px;
             height: 32px;
+        }
+
+        path {
+            fill: $logo-color;
+
+            .c-header--transparent & {
+                fill: $logo-color--transparent;
+            }
         }
     }

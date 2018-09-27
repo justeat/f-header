@@ -56,7 +56,6 @@ const setupHeader = () => {
             }
 
             document.documentElement.classList.toggle('is-navInView');
-
         });
     }
 };

@@ -15,4 +15,8 @@ script:
   - yarn danger ci
 
 after_success:
-  - yarn run test:cover:CI
+  - yarn run test:cover:ci
+
+notifications:
+  slack:
+    secure: WeHAMx40+ZtAYGEE8Oqm6WP7lBdneKBVa7C7vUBBy94ZMu1ZKtsqjXROraYDw55ha/V0LQJrMHFozBewgMxUSzYHBLKTaJs/spbjuMosUxruq6wL2vNREohu05SUQM4VgbaACKKHON8GZq+ZpJjRsCdmGamx0MGp791rMt8XNQolzDOh1ecMiqHzziJZ6Dccx/G+LF5fQXSvV3qv6V6URlvgZLAnGUxMB7ceNYl6NheFT+8eV8CBDzVDyA7vX9B00hbz6/Q+WXKNVI/tMHRiY3lgj48T9ekVleQERZJhd6HRLXNNPD4oP3m+1NgyLTddxJiGfT5XbRtbzkaaKg2LeuMm7TIG69+/MwbYhSQeDn0Hg4DjN3Z9hpngIV67DjMvCVyXYA9ItNBZU+OTyf1NKgcUd1gZKIm0G0oEu+sSZqUhGsOqe25w+3oakN/3Gxq1hwHJHK/gq27l2PCgvVnkhBGWi8uVg+eC6tcMIW8HUL+i14VXf25H0AvW8VekBN7B115sHhpz349pMVkNH9HspTVr2zyM9hCliZNt1/aVDE1/wutagXhD3hbCa+ThdjGIUltBoP21vgv/wu+m/l7xJ2eS2oJ2r6eVqxy+X+53ZlOIZ/QJGBLwpnMAE/KGQAX4aDN4JDbMgOLkMBXzrTtUUwt3HUy8MWJlqrQQAhXnHdo=
