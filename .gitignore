@@ -4,7 +4,7 @@
 
 # Dependencies
 # - Node modules directory. comment this line to commit them.
-node_modules/*
+node_modules
 
 
 # OS or Editor folders
@@ -23,5 +23,5 @@ Thumbs.db
 logs
 *.log
 
-dist/*
+dist
 coverage

@@ -4,6 +4,24 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.38.0
+------------------------------
+*September 27, 2018*
+
+### Added
+- Added transparent header modifier.
+- Slack build notifications from Travis.
+
+### Changed
+- Updated `.gitignore`.
+- Tweaked the unit test npm scripts.
+- Updated readme.
+- eslint auto fixed changes in JS modules.
+
+### Fixed
+- Removed extra padding top from nav which was causing a very slight jump when the nav opened on small screens.
+
+
 v0.37.0
 ------------------------------
 *September 13, 2018*

@@ -1,17 +1,14 @@
 import TestUtils from 'js-test-buddy';
-import { setupHeader } from '../';
+import { setupHeader } from '..';
 
 
 describe('module', () => {
-
     it('is a function', () => {
         expect(typeof setupHeader).toBe('function');
     });
-
 });
 
 describe('setupHeader', () => {
-
     it('converts nav checkbox to button with correct type attribute', () => {
         // Arrange
         TestUtils.setBodyHtml(`
