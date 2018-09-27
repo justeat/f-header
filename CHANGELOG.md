@@ -9,10 +9,11 @@ v0.38.0
 *September 27, 2018*
 
 ### Added
+- Added transparent header modifier.
 - Slack build notifications from Travis.
 
 ### Changed
-- Updated `.giignore`.
+- Updated `.gitignore`.
 - Tweaked the unit test npm scripts.
 - Updated readme.
 - eslint auto fixed changes in JS modules.
