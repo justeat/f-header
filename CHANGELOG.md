@@ -4,6 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.39.0
+------------------------------
+*October 1, 2018*
+
+### Fixed
+- Header `z-index` value updated so that it displays above elements.
+- Transparent header nav text link colour should always be white.
+
+### Added
+- Header CSS class variable to template.
+
+
 v0.38.1
 ------------------------------
 *September 27, 2018*
@@ -389,7 +401,7 @@ v0.11.3
 
 v0.11.2
 ------------------------------
-*January 09, 2018*
+*January 9, 2018*
 
 ### Added
 - Added the changelog.

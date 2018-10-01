@@ -173,6 +173,10 @@ $nav-popover-padding          : spacing(x2);
                 @include media('>=mid') {
                     color: $nav-text-color--hover;
                     text-decoration: underline;
+
+                    .c-header--transparent & {
+                        color: $nav-text-color--transparent;
+                    }
                 }
             }
         }

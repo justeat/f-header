@@ -1,6 +1,7 @@
 {
   "language": "en-CA",
   "isMultiLingual": true,
+  "headerCssClassModifier": "",
   "loginUrl": "#",
   "logoutUrl": "#",
   "logoAltText": "Just Eat - Online Takeaway",
