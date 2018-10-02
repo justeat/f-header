@@ -4,6 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.40.0
+------------------------------
+*October 2, 2018*
+
+### Changed
+- Moved base header styles into `_header.scss` file for better separation
+- Changed utils dependencies onto `@justeat/f-utils` module rather than using `kickoff/utils`
+- Updated package dependencies
+
+
 v0.39.0
 ------------------------------
 *October 1, 2018*

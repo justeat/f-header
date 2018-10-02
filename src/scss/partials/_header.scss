@@ -1,0 +1,107 @@
+$header-height--narrow              : 56px;
+$header-height                      : 76px;
+$header-height--narrow--multiLang   : $header-height--narrow + $languageSwitcher-height;
+$header-bg                          : $white;
+$header-separator                   : 1px;
+$header-separator                   : 4px;
+$header-border-color                : $grey--lightest;
+
+$header--transparent-gradient-color : $black;
+$header--transparent-gradient       : 115px;
+$header--transparent-opacity        : 0.7;
+
+
+.c-header {
+    background-color: $header-bg;
+    min-width : 300px;
+    position: relative;
+    z-index: zIndex(mid);
+
+    // when the off-screen navigation is active (on mobile), it fixes to the top of the screen.
+    // this stops the content being forced upwards when this happens (preventing slight visual glitch)
+    .is-navInView & {
+        @include media('<mid') {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: zIndex(high);
+        }
+    }
+
+    // Styles for a sticky header on mobile
+    @include media('<mid') {
+        &.is-sticky {
+            left: 0;
+            top: -60px;
+            position: fixed;
+        }
+
+        &.is-sticky-scrollingUp {
+            top: 0;
+        }
+    }
+
+    @include media('>=mid') {
+        border-bottom: $header-separator solid $header-border-color;
+    }
+}
+
+    // Adds a border to the header to separate it from the
+    // main content at all widths
+    .c-header--bordered {
+        border-bottom: $header-separator solid $header-border-color;
+    }
+
+    .c-header--transparent {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        width: 100%;
+
+        &:before {
+            content: '';
+            height: $header--transparent-gradient;
+            opacity: $header--transparent-opacity;
+            background-image: linear-gradient(to top, transparent, $header--transparent-gradient-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    .c-header-wrap {
+        position: relative;
+        min-height: $header-height--narrow;
+
+        @include media('>=mid') {
+            display: flex;
+            min-height: $header-height;
+        }
+    }
+
+    // Header button Styling
+    // Example – searchWeb filter button at narrow views
+    .c-header-button {
+        border: 0;
+        top: 14px;
+        background: none;
+        appearance: none;
+        right: spacing();
+        padding: spacing();
+        position: absolute;
+
+        .is-sticky & {
+            top: -47px;
+        }
+    }
+
+    .c-header-buttonIcon {
+        width: 28px;
+        height: 28px;
+
+        svg {
+            fill: $blue;
+        }
+    }

@@ -18,123 +18,23 @@
  *
  */
 
+// Initialise $theme variable
+// Will only do this if we're compiling the f-header CSS without importing the base fozzie module alongside it
+// If importing this module and the base fozzie module, this initialisation will be done by the module @import-ed first
+@import 'fozzie/settings/theme';
+
 @import 'fozzie-colour-palette';
-@import 'kickoff-utils'; // imports a set of helper functions and mixins – https://github.com/TryKickoff/kickoff-utils.scss
+@import 'f-utils'; // imports a set of helper functions and mixins – https://github.com/justeat/f-utils
 @import 'include-media'; // Cleaner media query declarations – http://include-media.com
 
-
-/* stylelint-disable */
-$breakpoints: ko-map-to-em((
-    narrow  : 414px,    // narrow devices
-    mid     : 768px,    // mid bp
-    wide    : 1025px,   // wide bp
-    huge    : 1280px    // huge bp
-), 16); // set to 16 as this is default browser size
-/* stylelint-enable */
-
-$languageSwitcher-height            : 34px;
-
-$header-height--narrow              : 56px;
-$header-height                      : 76px;
-$header-height--narrow--multiLang   : $header-height--narrow + $languageSwitcher-height;
-$header-bg                          : $white !default;
-$header-separator                   : 1px;
-$header-border-color                : $grey--lightest !default;
-$header--transparent-gradient-color : $black;
-$header--transparent-gradient       : 115px;
-$header--transparent-opacity        : 0.7;
+@import 'fozzie/settings/variables'; // pull in variables from base fozzie module
 
 @import 'partials/infoBar';
 @import 'partials/languageSwitcher';
+@import 'partials/header';
 @import 'partials/logo';
 @import 'partials/nav';
 @import 'partials/skipTo';
 
-.c-header {
-    background-color: $header-bg;
-    min-width : 300px;
-    position: relative;
-    z-index: zIndex(mid);
+@import 'fozzie/trumps/utilities'; // pull in utilities (won't do this if already using this module alongside fozzie)
 
-    // when the off-screen navigation is active (on mobile), it fixes to the top of the screen.
-    // this stops the content being forced upwards when this happens (preventing slight visual glitch)
-    .is-navInView & {
-        @include media('<mid') {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: zIndex(high);
-        }
-    }
-
-    // Styles for a sticky header on mobile
-    @include media('<mid') {
-        &.is-sticky {
-            left: 0;
-            top: -60px;
-            position: fixed;
-        }
-
-        &.is-sticky-scrollingUp {
-            top: 0;
-        }
-    }
-
-    @include media('>=mid') {
-        border-bottom: $header-separator solid $header-border-color;
-    }
-}
-
-    .c-header--transparent {
-        background-color: transparent;
-        border: none;
-        position: absolute;
-        width: 100%;
-
-        &:before {
-            content: '';
-            height: $header--transparent-gradient;
-            opacity: $header--transparent-opacity;
-            background-image: linear-gradient(to top, transparent, $header--transparent-gradient-color);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-        }
-    }
-
-    .c-header-wrap {
-        position: relative;
-        min-height: $header-height--narrow;
-
-        @include media('>=mid') {
-            display: flex;
-            min-height: $header-height;
-        }
-    }
-
-    // Header button Styling
-    // Example – searchWeb filter button on mobile.
-    .c-header-button {
-        border: 0;
-        top: 14px;
-        background: none;
-        appearance: none;
-        right: spacing();
-        padding: spacing();
-        position: absolute;
-
-        .is-sticky & {
-            top: -47px;
-        }
-    }
-
-    .c-header-buttonIcon {
-        width: 28px;
-        height: 28px;
-
-        svg {
-            fill: $blue;
-        }
-    }
