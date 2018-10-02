@@ -5,31 +5,31 @@
  *
  */
 
-$nav-trigger-length           : 56px;
-$nav-text-size                : 'base--scaleUp';
-$nav-text-font                : $font-family-headings;
-$nav-text-color               : $blue !default;
-$nav-text-color--transparent  : $white !default;
-$nav-text-weight              : 500;
-$nav-text-color--hover        : $blue !default;
-$nav-text-subFont             : $font-family-base;
-$nav-text-color--narrow       : $grey--dark;
-$nav-icon-color               : $blue !default;
-$nav-toggleIcon-left          : spacing(x2);
-$nav-toggleIcon-width         : spacing(x3);
-$nav-toggleIcon-height        : 2px;
-$nav-toggleIcon-borderRadius  : 1px;
-$nav-toggleIcon-color         : $blue !default;
-$nav-toggleIcon-color--transparent: $white !default;
-$nav-toggleIcon-bg            : transparent;
-$nav-toggleIcon-space         : 5px;
-$nav-transition-duration      : 250ms;
-$nav-tooltip-width            : 10px;
-$nav-popover-width            : 300px;
-$nav-popover-radius           : 3px;
-$nav-popover-transition-duration: 200ms;
-$nav-popover-transition-delay : 200ms;
-$nav-popover-padding          : spacing(x2);
+$nav-trigger-length                : 56px;
+$nav-text-size                     : 'base--scaleUp';
+$nav-text-font                     : $font-family-headings;
+$nav-text-color                    : $blue;
+$nav-text-color--transparent       : $white;
+$nav-text-weight                   : 500;
+$nav-text-color--hover             : $blue;
+$nav-text-subFont                  : $font-family-base;
+$nav-text-color--narrow            : $grey--dark;
+$nav-icon-color                    : $blue;
+$nav-toggleIcon-left               : spacing(x2);
+$nav-toggleIcon-width              : spacing(x3);
+$nav-toggleIcon-height             : 2px;
+$nav-toggleIcon-borderRadius       : 1px;
+$nav-toggleIcon-color              : $blue;
+$nav-toggleIcon-color--transparent : $white;
+$nav-toggleIcon-bg                 : transparent;
+$nav-toggleIcon-space              : 5px;
+$nav-transition-duration           : 250ms;
+$nav-tooltip-width                 : 10px;
+$nav-popover-width                 : 300px;
+$nav-popover-radius                : 3px;
+$nav-popover-transition-duration   : 200ms;
+$nav-popover-transition-delay      : 200ms;
+$nav-popover-padding               : spacing(x2);
 
 
 @mixin nav-container-visible () {
