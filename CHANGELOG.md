@@ -4,6 +4,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.41.0
+------------------------------
+*October 4, 2018*
+
+### Fixed
+- Header button `z-index` value updated so that it displays above elements.
+
 v0.40.0
 ------------------------------
 *October 2, 2018*
