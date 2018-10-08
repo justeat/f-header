@@ -16,7 +16,7 @@ describe('setupHeader', () => {
             <div data-nav-container></div>
         `);
         setupHeader();
-        const button = document.querySelector('[data-nav-enhance]');
+        const button = document.querySelector('[data-nav-button]');
 
         // Act
         TestUtils.click(button);
@@ -33,7 +33,7 @@ describe('setupHeader', () => {
             <label data-nav-toggle>Menu</label>
         `);
         setupHeader();
-        const button = document.querySelector('[data-nav-enhance]');
+        const button = document.querySelector('[data-nav-button]');
 
         // Act
         TestUtils.click(button);
