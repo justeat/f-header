@@ -12,15 +12,8 @@ import { checkForUser } from './userAuth';
  */
 const setupHeader = () => {
     const menuButton = document.querySelector('[data-nav-button]');
-    const accessibleButton = document.querySelector('[data-nav-accessible-button]');
-
-    if (accessibleButton) {
-        accessibleButton.classList.remove('is-shown--noJS');
-        accessibleButton.classList.add('is-hidden');
-    }
 
     if (menuButton) {
-        menuButton.classList.remove('is-hidden--noJS');
         menuButton.addEventListener('click', () => {
             const navContainer = document.querySelector('[data-nav-container]');
             const navLabel = document.querySelector('[data-nav-toggle]');

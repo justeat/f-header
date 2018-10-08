@@ -9,34 +9,6 @@ describe('module', () => {
 });
 
 describe('setupHeader', () => {
-    it('removes `is-shown--noJS` class from the accessible nav button', () => {
-        // Arrange
-        TestUtils.setBodyHtml(`
-            <input data-nav-accessible-button class="is-shown--noJS" />
-        `);
-
-        // Act
-        setupHeader();
-
-        // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
-    });
-
-    it('adds `is-hidden` class to the accessible nav button', () => {
-        // Arrange
-        TestUtils.setBodyHtml(`
-            <input data-nav-accessible-button class="is-shown--noJS" />
-        `);
-
-        // Act
-        setupHeader();
-
-        // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
-    });
-
     it('adds `is-visible` class to nav container', () => {
         // Arrange
         TestUtils.setBodyHtml(`
