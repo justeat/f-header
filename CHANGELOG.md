@@ -4,6 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.42.0
+------------------------------
+*October 5, 2018*
+
+### Changed
+- Updated `data-nav-enhance` to `data-nav-button` and `data-nav-accessible-button` to work with non-js accessible menu markup
+- Updated unit tests to work after removal of `data-nav-enhance`
+
+### Removed
+- Removed JS functionality to convert input to a button as creates a bug in Chrome checkbox selection
+
+
 v0.41.0
 ------------------------------
 *October 4, 2018*
