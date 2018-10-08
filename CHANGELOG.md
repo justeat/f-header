@@ -4,9 +4,22 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.43.0
+------------------------------
+*October 8, 2018*
+
+### Changed
+- Added Menulog theme overrides that will be active when SCSS is compiled with `$theme: ml;`.
+- Updated dependencies to use Babel 7
+
+### Fixed
+- Updated Snapshot files from previous commit (to fix snapshot tests)
+- Added `f-logger` to fix warnings about console logging in userAuth module
+
+
 v0.42.0
 ------------------------------
-*October 5, 2018*
+*October 8, 2018*
 
 ### Changed
 - Updated `data-nav-enhance` to `data-nav-button` and `data-nav-accessible-button` to work with non-js accessible menu markup
@@ -22,6 +35,7 @@ v0.41.0
 
 ### Fixed
 - Header button `z-index` value updated so that it displays above elements.
+
 
 v0.40.0
 ------------------------------

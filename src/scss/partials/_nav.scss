@@ -5,7 +5,6 @@
  *
  */
 
-$nav-trigger-length                : 56px;
 $nav-text-size                     : 'base--scaleUp';
 $nav-text-font                     : $font-family-headings;
 $nav-text-color                    : $blue;
@@ -15,6 +14,11 @@ $nav-text-color--hover             : $blue;
 $nav-text-subFont                  : $font-family-base;
 $nav-text-color--narrow            : $grey--dark;
 $nav-icon-color                    : $blue;
+$nav-transition-duration           : 250ms;
+
+$nav-trigger-length                : 56px;
+$nav-trigger-focus-color           : $blue;
+$nav-trigger-focus-bg              : $blue--offWhite;
 $nav-toggleIcon-left               : spacing(x2);
 $nav-toggleIcon-width              : spacing(x3);
 $nav-toggleIcon-height             : 2px;
@@ -23,13 +27,28 @@ $nav-toggleIcon-color              : $blue;
 $nav-toggleIcon-color--transparent : $white;
 $nav-toggleIcon-bg                 : transparent;
 $nav-toggleIcon-space              : 5px;
-$nav-transition-duration           : 250ms;
+
+
 $nav-tooltip-width                 : 10px;
+
 $nav-popover-width                 : 300px;
 $nav-popover-radius                : 3px;
 $nav-popover-transition-duration   : 200ms;
 $nav-popover-transition-delay      : 200ms;
 $nav-popover-padding               : spacing(x2);
+
+
+
+// Menulog theme overrides
+@if ($theme == 'ml') {
+    $nav-text-color                : $green;
+    $nav-text-color--hover         : $green--dark;
+    $nav-toggleIcon-color          : $brand--green;
+    $nav-icon-color                : $brand--green;
+
+    $nav-trigger-focus-color       : $green;
+    $nav-trigger-focus-bg          : $green--offWhite;
+}
 
 
 @mixin nav-container-visible () {
@@ -305,8 +324,8 @@ $nav-popover-padding               : spacing(x2);
     }
 
     &:focus ~ .c-nav-toggle {
-        background-color: $blue--offWhite;
-        box-shadow: 0 0 6px 0 $blue;
+        background-color: $nav-trigger-focus-bg;
+        box-shadow: 0 0 6px 0 $nav-trigger-focus-color;
 
         .c-header--transparent & {
             background-color: transparent;
