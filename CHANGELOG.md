@@ -4,6 +4,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.44.0
+------------------------------
+*October 9, 2018*
+
+### Fixed
+- Travis build fixed by regenerating the yarn lock file.
+- Lint parsing error fixed by adding "espree" resolution.
+- Added `f-logger` to fix warnings about console logging in userData module.
+
+
 v0.43.0
 ------------------------------
 *October 8, 2018*

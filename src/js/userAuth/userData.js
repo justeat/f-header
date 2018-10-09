@@ -4,6 +4,8 @@
  * @module userAuth/userData
  */
 
+import { logError } from '@justeat/f-logger';
+
 const storeLocalAnalyticsBlob = result => {
     window.localStorage.setItem('je-analytics', JSON.stringify(result));
     return result;
@@ -30,7 +32,7 @@ const fetchOrderCountAndSave = userData => {
             .then(result => enrichUserDataWithCount(userData, result))
             .then(pushUserData)
             .catch(err => {
-                console.log(`Unable to get order count. ${err}`);
+                logError(`Unable to get order count. ${err}`);
                 pushUserData(userData);
             });
     }
