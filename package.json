@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.44.0",
+  "version": "0.45.0",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -27,7 +27,7 @@
   "dependencies": {
     "@justeat/f-logger": "^0.7.1",
     "@justeat/f-utils": "^0.1.0",
-    "@justeat/fozzie": "^1.4.0",
+    "@justeat/fozzie": "^1.6.0",
     "@justeat/fozzie-colour-palette": "^2.1.0",
     "include-media": "^1.4.9",
     "lite-ready": "^1.0.4"
@@ -36,13 +36,10 @@
     "@justeat/f-icons": "^1.9.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "@justeat/gulp-build-fozzie": "^8.0.0",
+    "@justeat/gulp-build-fozzie": "^8.2.0",
     "concurrently": "^4.0.1",
     "coveralls": "^3.0.2",
-    "danger": "^4.3.8",
+    "danger": "^4.4.8",
     "gulp": "^3.9.1",
     "jest-fetch-mock": "^1.6.6",
     "jest-localstorage-mock": "^2.2.0",
@@ -50,7 +47,6 @@
     "rimraf": "^2.6.2"
   },
   "resolutions": {
-    "babel-core": "7.0.0-bridge.0",
     "espree": "3.5.4"
   },
   "keywords": [

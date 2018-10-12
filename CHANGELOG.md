@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.45.0
+------------------------------
+*October 12, 2018*
+
+### Changed
+- Babel config and packages removed from module as now added by `gulp-build-fozzie`.
+- Unfortunately cannot remove the `espree` resolution due to this needing to be locked down on a per package basis.
+
+
 v0.44.0
 ------------------------------
 *October 9, 2018*
