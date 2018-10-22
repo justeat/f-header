@@ -4,6 +4,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v0.46.0
+------------------------------
+*October 22, 2018*
+
+### Changed
+- Changed `z-index` on `c-header-button` to `high - 1` to stop elm showing when popover components are active
+
 v0.45.0
 ------------------------------
 *October 12, 2018*
