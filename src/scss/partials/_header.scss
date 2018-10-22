@@ -98,7 +98,7 @@ $header--transparent-opacity        : 0.7;
         right: spacing();
         padding: spacing();
         position: absolute;
-        z-index: 8999;
+        z-index: zIndex(belowHighest);
 
         .is-sticky & {
             top: -47px;
