@@ -11,6 +11,7 @@ v0.46.0
 ### Changed
 - Changed `z-index` on `c-header-button` to `high - 1` to stop elm showing when popover components are active
 
+
 v0.45.0
 ------------------------------
 *October 12, 2018*
