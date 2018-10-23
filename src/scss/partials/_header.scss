@@ -19,6 +19,8 @@ $header--transparent-opacity        : 0.7;
 // Menulog theme overrides
 @if ($theme == 'ml') {
     $header-buttonIcon-color: $green;
+    $header-buttonIcon-color: $green;
+    $header-buttonCount-bg  : $green;
 }
 
 
