@@ -14,6 +14,7 @@ $nav-text-color--hover             : $blue;
 $nav-text-subFont                  : $font-family-base;
 $nav-text-color--narrow            : $grey--dark;
 $nav-icon-color                    : $blue;
+$nav-icon-color--transparent       : $white;
 $nav-transition-duration           : 250ms;
 
 $nav-trigger-length                : 56px;
@@ -224,6 +225,9 @@ $nav-popover-padding               : spacing(x2);
         @include media('>=mid') {
             & path {
                 fill: $nav-icon-color;
+                .c-header--transparent & {
+                    fill: $nav-icon-color--transparent;
+                }
             }
         }
     }

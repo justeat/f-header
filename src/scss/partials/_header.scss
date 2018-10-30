@@ -70,7 +70,10 @@ $header--transparent-opacity        : 0.7;
         border: none;
         position: absolute;
         width: 100%;
+    }
 
+    .c-header--gradient,
+    %c-header--gradient {
         &:before {
             content: '';
             height: $header--transparent-gradient;
