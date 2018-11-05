@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.0.0
 ------------------------------
-*October 30, 2018*
+*November 5, 2018*
 
 ### Changed
 - Removed gradient effect from `c-header--gradient`. Added the new `c-header--gradient` class for gradient effect.
