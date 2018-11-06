@@ -17,10 +17,18 @@ $logo-color--transparent    : $white;
         height: $header-height--narrow;
         padding-top: 18px;
 
+        @if ($theme == 'ml') {
+            padding-top: 12px;
+        }
+
         @include media('>=mid') {
             justify-content: left;
             height: $header-height;
             padding-top: 24px;
+            
+            @if ($theme == 'ml') {
+                padding-top: 18px;
+            }
         }
     }
 }
@@ -33,13 +41,21 @@ $logo-color--transparent    : $white;
             width: 165px;
             height: 32px;
         }
-        // don't apply this to the Menulog logo, as it has multiple fill values built in
-        @if ($theme != 'ml') {
+       
+        @if ($theme == 'je') {
             path {
                 fill: $logo-color;
 
                 .c-header--transparent & {
                     fill: $logo-color--transparent;
+                }
+            }
+        }
+         // Menulog logo, as it has multiple fill values built in. We just hide the outline on transparent mode.
+        @if ($theme == 'ml') {
+            path:first-child {
+                .c-header--transparent & {
+                    display: none;
                 }
             }
         }
