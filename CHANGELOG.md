@@ -3,6 +3,13 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.0.1
+------------------------------
+*November 6, 2018*
+
+### Fixed
+- Fixed Menulog logo.
+
 v1.0.0
 ------------------------------
 *November 5, 2018*
