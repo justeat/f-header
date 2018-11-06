@@ -33,7 +33,7 @@ $logo-color--transparent    : $white;
             width: 165px;
             height: 32px;
         }
-        // don't apply this to the Menulog logo, as it has multiple fil lvalues built in
+        // don't apply this to the Menulog logo, as it has multiple fill values built in
         @if ($theme != 'ml') {
             path {
                 fill: $logo-color;
