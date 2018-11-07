@@ -1,5 +1,5 @@
 $header-height--narrow              : 56px;
-$header-button--height              : 56px;
+$header-button--height              : $header-height--narrow;
 $header-button--width               : 56px;
 $header-height                      : 76px;
 $header-height--narrow--multiLang   : $header-height--narrow + $languageSwitcher-height;
