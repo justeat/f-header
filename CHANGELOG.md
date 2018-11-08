@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.1.0
 ------------------------------
-*November 7, 2018*
+*November 8, 2018*
 
 ### Changed
 - Updated `.c-header-button` position and increased tap area to size of narrow header.
