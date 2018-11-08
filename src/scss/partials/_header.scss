@@ -1,4 +1,6 @@
 $header-height--narrow              : 56px;
+$header-button--height              : $header-height--narrow;
+$header-button--width               : 56px;
 $header-height                      : 76px;
 $header-height--narrow--multiLang   : $header-height--narrow + $languageSwitcher-height;
 $header-bg                          : $white;
@@ -98,23 +100,27 @@ $header--transparent-opacity        : 0.7;
     // Header button Styling
     // Example – searchWeb filter button at narrow views
     .c-header-button {
+        top: 0;
+        right: 0;
         border: 0;
-        top: 14px;
+        padding: 0;
+        line-height: 1;
         background: none;
         appearance: none;
-        right: spacing();
-        padding: spacing();
         position: absolute;
+        width: $header-button--width;
+        height: $header-button--height;
         z-index: zIndex(belowHighest);
 
         .is-sticky & {
-            top: -47px;
+            top:  -#{$header-button--height};
         }
     }
 
     .c-header-buttonIcon {
         width: 28px;
-        height: 28px;
+        height: 15px;
+        display: inline-block;
 
         svg {
             fill: $header-buttonIcon-color;
