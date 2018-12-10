@@ -199,7 +199,7 @@ $nav-popover-padding               : spacing(x2);
                     }
 
                     .c-header--transparent .c-nav-popoverList & {
-                        color: $grey--dark;
+                        color: inherit;
                     }
                 }
             }
