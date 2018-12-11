@@ -197,6 +197,10 @@ $nav-popover-padding               : spacing(x2);
                     .c-header--transparent & {
                         color: $nav-text-color--transparent;
                     }
+
+                    .c-header--transparent .c-nav-popoverList & {
+                        color: inherit;
+                    }
                 }
             }
         }
