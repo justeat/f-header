@@ -2,7 +2,7 @@
 
 {{> skip-to }}
 
-<header class="c-header {{headerCssClassModifier}}" data-sticky-element>
+<header class="c-header {{#if useTransparentHeader}}c-header--transparent c-header--gradient{{/if}}" data-sticky-element>
     {{> language-switcher }}
 
     <div class="l-container c-header-wrap">
