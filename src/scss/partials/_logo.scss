@@ -41,7 +41,7 @@ $logo-color--transparent    : $white;
             width: 165px;
             height: 32px;
         }
-       
+
         @if ($theme == 'je') {
             path {
                 fill: $logo-color;
