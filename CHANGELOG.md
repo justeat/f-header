@@ -3,9 +3,18 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v1.2.0
+------------------------------
+*January 30, 2019*
+
+### Added
+- Added `useTransparentHeader` flag for transparent header classes.
+
+
 v1.1.1
 ------------------------------
-*December §0, 2018*
+*December 11, 2018*
 
 ### Fixed
 - Fixed text colour of the popover menu, on hover.
