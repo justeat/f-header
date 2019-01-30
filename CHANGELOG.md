@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.2.0
 ------------------------------
-*January 29, 2019*
+*January 30, 2019*
 
 ### Added
 - Added `useTransparentHeader` flag for transparent header classes.
