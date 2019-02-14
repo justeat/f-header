@@ -4,12 +4,29 @@
  * Styles relating to the "skip link" element.
  */
 
+
  .c-skipTo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: zIndex(high);
+
     .is-visuallyHidden {
         &.focusable:active,
         &.focusable:focus {
             display: block;
             margin: 4px;
+            padding: 4px;
+        }
+    }
+}
+
+.c-skipTo--whiteLink {
+    .is-visuallyHidden {
+        &.focusable:active,
+        &.focusable:focus {
+            color: $white;
         }
     }
 }
