@@ -8,7 +8,7 @@ v1.3.0
 *February 15, 2019*
 
 ### Added
-- Added localisation for da-DK, nb-NO, es-ES.
+- Added payment link localisation for da-DK, nb-NO, es-ES.
 
 
 v1.2.1
