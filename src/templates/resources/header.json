@@ -10,7 +10,7 @@
         "accountInfo": "Brugerinformation",
         "accountOrderHistory": "Ordre",
         "accountCredit": "Gavekort saldo",
-        "paymentMethods": "",
+        "paymentMethods": "Betalingsmetoder",
         "deliveryAddresses": "Leveringsadresse"
     },
     "en-AU": {
@@ -83,7 +83,7 @@
         "accountInfo": "Información de la cuenta",
         "accountOrderHistory": "Pedidos",
         "accountCredit": "Crédito de la cuenta",
-        "paymentMethods": "",
+        "paymentMethods": "Métodos de pago",
         "deliveryAddresses": "Direcciones de reparto"
     },
     "en-NZ": {
@@ -141,7 +141,7 @@
         "accountInfo": "Kontoinformasjon",
         "accountOrderHistory": "Ordre",
         "accountCredit": "Gavekort saldo",
-        "paymentMethods": "",
+        "paymentMethods": "Betalingsmetoder",
         "deliveryAddresses": "Leveringsadresse"
     }
 }
