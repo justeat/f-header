@@ -3,6 +3,14 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.3.0
+------------------------------
+*February 15, 2019*
+
+### Added
+- Added localisation for da-DK, nb-NO, es-ES.
+
+
 v1.2.1
 ------------------------------
 *January 30, 2019*
