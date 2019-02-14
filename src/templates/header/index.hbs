@@ -1,6 +1,10 @@
 {{> order-count }}
 
-{{> skip-to }}
+{{#if useTransparentHeader}}
+    {{> skip-to extraClasses="c-skipTo--whiteLink"}}
+{{else}}
+    {{> skip-to }}
+{{/if}}
 
 <header class="c-header {{#if useTransparentHeader}}c-header--transparent c-header--gradient{{/if}}" data-sticky-element>
     {{> language-switcher }}
