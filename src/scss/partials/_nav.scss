@@ -5,31 +5,55 @@
  *
  */
 
-$nav-trigger-length           : 56px;
-$nav-text-size                : 'mid';
-$nav-text-font                : $font-family-headings;
-$nav-text-color               : $blue;
-$nav-text-weight              : 500;
-$nav-text-color--hover        : $blue;
-$nav-text-subFont             : $font-family-base;
-$nav-text-color--narrow       : $grey--dark;
-$nav-toggleIcon-left          : spacing(x2);
-$nav-toggleIcon-width         : spacing(x3);
-$nav-toggleIcon-height        : 3px;
-$nav-toggleIcon-color         : $blue;
-$nav-toggleIcon-bg            : $white;
-$nav-toggleIcon-space         : 6px;
-$nav-transition-duration      : 250ms;
-$nav-tooltip-width            : 10px;
-$nav-popover-width            : 300px;
-$nav-popover-radius           : 3px;
-$nav-popover-transition-duration: 200ms;
-$nav-popover-transition-delay : 200ms;
-$nav-popover-padding          : spacing(x2);
+$nav-text-size                     : 'base--scaleUp';
+$nav-text-font                     : $font-family-headings;
+$nav-text-color                    : $blue;
+$nav-text-color--transparent       : $white;
+$nav-text-weight                   : 500;
+$nav-text-color--hover             : $blue;
+$nav-text-subFont                  : $font-family-base;
+$nav-text-color--narrow            : $grey--dark;
+$nav-icon-color                    : $blue;
+$nav-icon-color--transparent       : $white;
+$nav-transition-duration           : 250ms;
+
+$nav-trigger-length                : 56px;
+$nav-trigger-focus-color           : $blue;
+$nav-trigger-focus-bg              : $blue--offWhite;
+$nav-toggleIcon-left               : spacing(x2);
+$nav-toggleIcon-width              : spacing(x3);
+$nav-toggleIcon-height             : 2px;
+$nav-toggleIcon-borderRadius       : 1px;
+$nav-toggleIcon-color              : $blue;
+$nav-toggleIcon-color--transparent : $white;
+$nav-toggleIcon-bg                 : transparent;
+$nav-toggleIcon-space              : 5px;
+
+
+$nav-tooltip-width                 : 10px;
+
+$nav-popover-width                 : 300px;
+$nav-popover-radius                : 3px;
+$nav-popover-transition-duration   : 200ms;
+$nav-popover-transition-delay      : 200ms;
+$nav-popover-padding               : spacing(x2);
+
+
+
+// Menulog theme overrides
+@if ($theme == 'ml') {
+    $nav-text-color                : $green;
+    $nav-text-color--hover         : $green--dark;
+    $nav-toggleIcon-color          : $brand--green;
+    $nav-icon-color                : $brand--green;
+
+    $nav-trigger-focus-color       : $green;
+    $nav-trigger-focus-bg          : $green--offWhite;
+}
 
 
 @mixin nav-container-visible () {
-    overflow-y: scroll;
+    overflow-y: auto;
     left: 0;
     opacity: 1;
     z-index: zIndex(high);
@@ -41,9 +65,15 @@ $nav-popover-padding          : spacing(x2);
 .is-navInView {
     @include media('<mid') {
         overflow: hidden;
+
         body {
             position: fixed;
             width: 100%;
+            padding-top: $header-height--narrow;
+
+            @at-root .is-multiLanguage#{&} {
+                padding-top: $header-height--narrow--multiLang;
+            }
         }
     }
 }
@@ -65,10 +95,9 @@ $nav-popover-padding          : spacing(x2);
             left: -99999px;
             width: 100%;
             padding: 0;
-            height: 90%; // if calc not supported, just make it 90% height
             height: calc(100% - (#{$header-height--narrow}));
-            border-top: $header-separator solid $red;
-            background: #fff;
+            border-top: $header-separator solid $header-border-color;
+            background: $white;
             z-index: -1;
             opacity: 0;
             transition: opacity $nav-transition-duration ease-in-out,
@@ -77,6 +106,11 @@ $nav-popover-padding          : spacing(x2);
 
             &.is-visible {
                 @include nav-container-visible();
+            }
+
+            .is-multiLanguage & {
+                top: $header-height--narrow--multiLang;
+                height: calc(100% - (#{$header-height--narrow--multiLang}));
             }
         }
     }
@@ -140,6 +174,10 @@ $nav-popover-padding          : spacing(x2);
                 display: flex;
                 align-items: center;
                 height: $header-height;
+
+                .c-header--transparent & {
+                    color: $nav-text-color--transparent;
+                }
             }
         }
             .c-nav-list-text-sub {
@@ -155,6 +193,14 @@ $nav-popover-padding          : spacing(x2);
                 @include media('>=mid') {
                     color: $nav-text-color--hover;
                     text-decoration: underline;
+
+                    .c-header--transparent & {
+                        color: $nav-text-color--transparent;
+                    }
+
+                    .c-header--transparent .c-nav-popoverList & {
+                        color: inherit;
+                    }
                 }
             }
         }
@@ -182,7 +228,10 @@ $nav-popover-padding          : spacing(x2);
 
         @include media('>=mid') {
             & path {
-                fill: $blue;
+                fill: $nav-icon-color;
+                .c-header--transparent & {
+                    fill: $nav-icon-color--transparent;
+                }
             }
         }
     }
@@ -196,7 +245,7 @@ $nav-popover-padding          : spacing(x2);
         top: 100%;
         right: 99999px; // offscreen, so can’t ever be hovered over by default
         width: $nav-popover-width;
-        background-color: #fff;
+        background-color: $white;
         border: 1px solid $color-border;
         box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
         border-top: 0;
@@ -213,7 +262,7 @@ $nav-popover-padding          : spacing(x2);
             bottom: 100%;
             right: 10%;
             border: $nav-tooltip-width solid transparent;
-            border-bottom: $nav-tooltip-width solid #fff;
+            border-bottom: $nav-tooltip-width solid $white;
             content: '';
             height: 0;
             width: 0;
@@ -283,8 +332,12 @@ $nav-popover-padding          : spacing(x2);
     }
 
     &:focus ~ .c-nav-toggle {
-        background-color: $blue--offWhite;
-        box-shadow: 0 0 6px 0 $blue;
+        background-color: $nav-trigger-focus-bg;
+        box-shadow: 0 0 6px 0 $nav-trigger-focus-color;
+
+        .c-header--transparent & {
+            background-color: transparent;
+        }
     }
 }
 
@@ -322,6 +375,11 @@ $nav-popover-padding          : spacing(x2);
             position: absolute;
             height: $nav-toggleIcon-height;
             background-color: $nav-toggleIcon-color;
+            border-radius: $nav-toggleIcon-borderRadius;
+
+            .c-header--transparent & {
+                background-color: $nav-toggleIcon-color--transparent;
+            }
         }
 
         &:before,

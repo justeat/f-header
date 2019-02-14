@@ -3,6 +3,330 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.2.1
+------------------------------
+*January 30, 2019*
+
+### Added
+- Added `babel-core` resolution.
+
+
+v1.2.0
+------------------------------
+*January 30, 2019*
+
+### Added
+- Added `useTransparentHeader` flag for transparent header classes.
+
+
+v1.1.1
+------------------------------
+*December 11, 2018*
+
+### Fixed
+- Fixed text colour of the popover menu, on hover.
+
+
+v1.1.0
+------------------------------
+*November 8, 2018*
+
+### Changed
+- Updated `.c-header-button` position and increased tap area to size of narrow header.
+
+
+v1.0.2
+------------------------------
+*November 6, 2018*
+
+### Fixed
+- Fixed Menulog logo positioning. Also removed the logo outline in transparent mode so if background colour changes we won't need to update the logo. 
+
+
+v1.0.1
+------------------------------
+*November 6, 2018*
+
+### Fixed
+- Fixed Menulog logo.
+
+
+v1.0.0
+------------------------------
+*November 5, 2018*
+
+### Changed
+- Removed gradient effect from `c-header--gradient`. Added the new `c-header--gradient` class for gradient effect.
+
+### Added
+- Added transparency to the header icon.
+
+
+v0.47.1
+------------------------------
+*October 23, 2018*
+
+### Fixed
+- Removed duplicate SCSS variable.
+
+
+v0.47.0
+------------------------------
+*October 23, 2018*
+
+### Added
+- Added styles for `c-header-buttonCount`.
+
+
+v0.46.0
+------------------------------
+*October 22, 2018*
+
+### Changed
+- Changed `z-index` on `c-header-button` to `high - 1` to stop elm showing when popover components are active
+
+
+v0.45.0
+------------------------------
+*October 12, 2018*
+
+### Changed
+- Babel config and packages removed from module as now added by `gulp-build-fozzie`.
+- Unfortunately cannot remove the `espree` resolution due to this needing to be locked down on a per package basis.
+
+
+v0.44.0
+------------------------------
+*October 9, 2018*
+
+### Fixed
+- Travis build fixed by regenerating the yarn lock file.
+- Lint parsing error fixed by adding "espree" resolution.
+- Added `f-logger` to fix warnings about console logging in userData module.
+
+
+v0.43.0
+------------------------------
+*October 8, 2018*
+
+### Changed
+- Added Menulog theme overrides that will be active when SCSS is compiled with `$theme: ml;`.
+- Updated dependencies to use Babel 7
+
+### Fixed
+- Updated Snapshot files from previous commit (to fix snapshot tests)
+- Added `f-logger` to fix warnings about console logging in userAuth module
+
+
+v0.42.0
+------------------------------
+*October 8, 2018*
+
+### Changed
+- Updated `data-nav-enhance` to `data-nav-button` and `data-nav-accessible-button` to work with non-js accessible menu markup
+- Updated unit tests to work after removal of `data-nav-enhance`
+
+### Removed
+- Removed JS functionality to convert input to a button as creates a bug in Chrome checkbox selection
+
+
+v0.41.0
+------------------------------
+*October 4, 2018*
+
+### Fixed
+- Header button `z-index` value updated so that it displays above elements.
+
+
+v0.40.0
+------------------------------
+*October 2, 2018*
+
+### Changed
+- Moved base header styles into `_header.scss` file for better separation
+- Changed utils dependencies onto `@justeat/f-utils` module rather than using `kickoff/utils`
+- Updated package dependencies
+
+
+v0.39.0
+------------------------------
+*October 1, 2018*
+
+### Fixed
+- Header `z-index` value updated so that it displays above elements.
+- Transparent header nav text link colour should always be white.
+
+### Added
+- Header CSS class variable to template.
+
+
+v0.38.1
+------------------------------
+*September 27, 2018*
+
+### Fixed
+- Slack build notifications for Travis.
+
+
+v0.38.0
+------------------------------
+*September 27, 2018*
+
+### Added
+- Added transparent header modifier.
+- Slack build notifications from Travis.
+
+### Changed
+- Updated `.gitignore`.
+- Tweaked the unit test npm scripts.
+- Updated readme.
+- eslint auto fixed changes in JS modules.
+
+### Fixed
+- Removed extra padding top from nav which was causing a very slight jump when the nav opened on small screens.
+
+
+v0.37.0
+------------------------------
+*September 13, 2018*
+
+### Changed
+- Updated `c-header-button` click area.
+
+
+v0.36.0
+------------------------------
+*September 11, 2018*
+
+### Fixed
+- Fixed positioning on `c-header-button`.
+
+### Changed
+- Changed targetting on `c-header-buttonIcon` SVG to apply fill.
+- Updates `c-header` border.
+
+
+v0.35.0
+------------------------------
+*August 29, 2018*
+
+### Changed
+- Added pseudo-locale `qps-ploc` for localisation testing on Windows.
+
+
+v0.34.0
+------------------------------
+*August 23, 2018*
+
+### Changed
+- Updated burger menu icon to be consistent with JustEats current icon pack
+
+v0.33.0
+------------------------------
+*August 23, 2018*
+
+### Added
+- `data-sticky-element` attribute to header
+- Addition of `c-header-button` styles
+
+v0.32.0
+------------------------------
+*August 10, 2018*
+
+### Added
+- Peer dependency to `f-icons` added to `package.json`
+- CODEOWNERS file added
+
+### Changed
+- Chevron icon in language switcher now inlined using inlineSVG helper
+- Tidied up some class names in the language switcher
+- Updated PR template with new links and updated browsers
+
+### Fixed
+- The body container now doesn't jump around when the menu is opened.
+- The navigation height is now correct when multi language versions of the site are viewed (it previously overlapped the header/logo when open).
+- Fixed persistent scrollbar which was visible on narrow viewports.
+
+
+v0.31.0
+------------------------------
+*July 23, 2018*
+
+### Added
+- Logo alt text added
+
+
+v0.30.0
+------------------------------
+*June 18, 2018*
+
+### Added
+- Added basic menulog support for OrderWeb
+
+
+v0.29.0
+------------------------------
+*June 15, 2018*
+
+### Added
+- rimraf dev dependency.
+- Script to clean the `dist` directory before transpiling code which runs before compile script.
+- snyk badge.
+
+### Changed
+- Prevent adding unit test files to the `dist` directory.
+
+### Removed
+- Removed the gemnasium badge from the readme.
+
+
+v0.28.0
+------------------------------
+*June 15, 2018*
+
+### Changed
+- Updated DangerJS config.
+
+
+v0.27.0
+------------------------------
+*May 11, 2018*
+
+### Changed
+- Updating package dependencies
+
+
+v0.26.0
+------------------------------
+*April 25, 2018*
+
+### Changed
+- Support server-side rendering of the user menu without needing to use `checkForUser()` client-side.
+
+
+v0.25.0
+------------------------------
+*April 24, 2018*
+
+### Changed
+- `$nav-text-size` to use new `base--scaleUp` property from the `fozzie` `$type` map.
+
+
+v0.24.0
+------------------------------
+*April 17, 2018*
+
+### Added
+- Render language-switcher partial based on `isMultiLingual` flag
+
+
+v0.23.0
+------------------------------
+*April 16, 2018*
+
+### Added
+- Conditional `target="_blank"` for the help menu link
+
 
 v0.22.1
 ------------------------------
@@ -221,7 +545,7 @@ v0.11.3
 
 v0.11.2
 ------------------------------
-*January 09, 2018*
+*January 9, 2018*
 
 ### Added
 - Added the changelog.

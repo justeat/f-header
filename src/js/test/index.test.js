@@ -1,39 +1,22 @@
 import TestUtils from 'js-test-buddy';
-import { setupHeader } from '../';
+import { setupHeader } from '..';
 
 
 describe('module', () => {
-
     it('is a function', () => {
         expect(typeof setupHeader).toBe('function');
     });
-
 });
 
 describe('setupHeader', () => {
-
-    it('converts nav checkbox to button with correct type attribute', () => {
-        // Arrange
-        TestUtils.setBodyHtml(`
-            <input data-nav-enhance />
-        `);
-
-        // Act
-        setupHeader();
-
-        // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
-    });
-
     it('adds `is-visible` class to nav container', () => {
         // Arrange
         TestUtils.setBodyHtml(`
-            <input data-nav-enhance />
+            <button data-nav-button></button>
             <div data-nav-container></div>
         `);
         setupHeader();
-        const button = document.querySelector('button[data-nav-enhance]');
+        const button = document.querySelector('[data-nav-button]');
 
         // Act
         TestUtils.click(button);
@@ -46,11 +29,11 @@ describe('setupHeader', () => {
     it('adds `is-open` class to nav label', () => {
         // Arrange
         TestUtils.setBodyHtml(`
-            <input data-nav-enhance />
+            <button data-nav-button></button>
             <label data-nav-toggle>Menu</label>
         `);
         setupHeader();
-        const button = document.querySelector('button[data-nav-enhance]');
+        const button = document.querySelector('[data-nav-button]');
 
         // Act
         TestUtils.click(button);
@@ -81,10 +64,10 @@ describe('setupHeader', () => {
     it('adds `is-navInView` class to html element', () => {
         // Arrange
         TestUtils.setBodyHtml(`
-            <input data-nav-enhance />
+            <button data-nav-button></button>
         `);
         setupHeader();
-        const button = document.querySelector('button[data-nav-enhance]');
+        const button = document.querySelector('[data-nav-button]');
 
         // Act
         TestUtils.click(button);

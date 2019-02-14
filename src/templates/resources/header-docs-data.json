@@ -1,8 +1,10 @@
 {
   "language": "en-CA",
   "isMultiLingual": true,
+  "useTransparentHeader": true,
   "loginUrl": "#",
   "logoutUrl": "#",
+  "logoAltText": "Just Eat - Online Takeaway",
   "helpUrl": "#",
   "logoUrl": "/assets/img/logos/je-logo.v1.svg",
   "languageSwitchText": "EN",

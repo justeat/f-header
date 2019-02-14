@@ -4,6 +4,8 @@
  * @module userAuth
  */
 
+import { logError } from '@justeat/f-logger';
+
 import saveUserData from './userData';
 
 const removeElement = element => element && element.remove();
@@ -53,7 +55,7 @@ export const checkForUser = () => {
             .then(saveUserData)
             // should send this error to the f-logger but for now, just erroring here inline
             .catch(error => {
-                console.log(error);
+                logError(error);
             });
     }
 

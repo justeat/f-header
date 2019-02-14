@@ -1,17 +1,15 @@
-<div class="c-infoBar c-infoBar--dark u-showBelowMid" data-test-id="languageToggle">
-    <div class="c-infoBar-row languageSwitcher">
-        <span class="languageSwitcher-indicator">
-            {{ languageSwitchText }}
-        </span>
+{{#if isMultiLingual}}
+    <div class="c-infoBar c-infoBar--dark u-showBelowMid" data-test-id="languageToggle">
+        <div class="c-infoBar-row c-languageSwitcher">
+            <span class="c-languageSwitcher-countryCode">{{ languageSwitchText }}</span>
 
-        {{#each alternativeLanguages as | lang |}}
-            <a href="{{ lang.changeLanguageUrl }}">
-                <span class="is-visuallyHidden">
-                    {{#with ../this}}{{ i18n "languageSwitcherAccessibility" language=lang.name }}{{/with}}
-                </span>
+            {{#each alternativeLanguageLinks as | lang |}}
+            <a class="c-languageSwitcher-action" href="{{ lang.changeLanguageUrl }}">
+                <span class="is-visuallyHidden">{{#with ../this}}{{ i18n "languageSwitcherAccessibility" language=lang.name }}{{/with}}</span>
                 {{#with ../this}}{{ i18n "languageSwitcherName" language=lang.name }}{{/with}}
+                {{inlineSVG '@justeat/f-icons/src/img/icons/arrows/chevron.svg' class='c-languageSwitcher-icon c-icon c-icon--chevron c-icon--chevron--small c-icon--chevron--right c-icon--chevron--light' }}
             </a>
-            <i class="icon icon--small icon--chevron--right--light">></i>
-        {{/each}}
+            {{/each}}
+        </div>
     </div>
-</div>
+{{/if}}

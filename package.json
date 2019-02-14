@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "0.22.1",
+  "version": "1.2.1",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -22,25 +22,33 @@
   },
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.0.0"
   },
   "dependencies": {
-    "@justeat/fozzie-colour-palette": "^0.9.0",
-    "@kickoff/utils.scss": "^2.1.1",
+    "@justeat/f-logger": "^0.7.1",
+    "@justeat/f-utils": "^0.1.0",
+    "@justeat/fozzie": "^1.7.0",
+    "@justeat/fozzie-colour-palette": "^2.1.0",
     "include-media": "^1.4.9",
     "lite-ready": "^1.0.4"
   },
+  "peerDependencies": {
+    "@justeat/f-icons": "^1.9.0"
+  },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "^7.7.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "concurrently": "^3.5.1",
-    "coveralls": "^3.0.0",
-    "danger": "^3.1.3",
+    "@justeat/gulp-build-fozzie": "^8.2.0",
+    "concurrently": "^4.0.1",
+    "coveralls": "^3.0.2",
+    "danger": "^4.4.8",
     "gulp": "^3.9.1",
-    "jest-fetch-mock": "^1.4.1",
+    "jest-fetch-mock": "^1.6.6",
     "jest-localstorage-mock": "^2.2.0",
-    "js-test-buddy": "^0.0.7"
+    "js-test-buddy": "^0.1.0",
+    "rimraf": "^2.6.2"
+  },
+  "resolutions": {
+    "espree": "3.5.4",
+    "babel-core": "7.0.0-bridge.0"
   },
   "keywords": [
     "fozzie",
@@ -53,13 +61,14 @@
     "exports": false
   },
   "scripts": {
-    "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test:cover\" --kill-others-on-fail",
+    "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
+    "clean": "rimraf dist",
     "lint": "yarn run lint:css && yarn run lint:js",
     "lint:css": "gulp scss:lint --prod",
     "lint:js": "gulp scripts:lint --prod",
-    "compile": "babel -d dist src",
-    "test:cover": "gulp scripts:test:coverage",
-    "test:cover:CI": "cat coverage/lcov.info | coveralls"
+    "compile": "yarn clean && babel -d dist src --ignore test.js",
+    "test": "gulp scripts:test",
+    "test:cover:ci": "gulp scripts:test:coverage && cat coverage/lcov.info | coveralls"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"
