@@ -1,23 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`setupHeader adds \`is-navInView\` class to html element 1`] = `
+exports[`setupHeader clicking the navigation label, triggers a click on the navigation button element 1`] = `
 "<html class=\\"is-navInView\\"><head></head><body>
             <button data-nav-button=\\"\\"></button>
+            <label data-nav-toggle=\\"\\" class=\\"is-open\\"></label>
         </body></html>"
-`;
-
-exports[`setupHeader adds \`is-open\` class to nav label 1`] = `
-"
-            <button data-nav-button=\\"\\"></button>
-            <label data-nav-toggle=\\"\\" class=\\"is-open\\">Menu</label>
-        "
-`;
-
-exports[`setupHeader adds \`is-visible\` class to nav container 1`] = `
-"
-            <button data-nav-button=\\"\\"></button>
-            <div data-nav-container=\\"\\" class=\\"is-visible\\"></div>
-        "
 `;
 
 exports[`setupHeader does nothing if nav input does not exist 1`] = `

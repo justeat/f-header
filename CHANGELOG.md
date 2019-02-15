@@ -3,6 +3,17 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.5.0
+------------------------------
+*February 18, 2019*
+
+### Fixed
+- Fixed issue with `is-navInView` class not being applied to narrow header element to stop scrolling of the page.  Also has to add new `is-navInView--noPad` to allow for transparent/fixed headers.
+
+### Changed
+- Tests changed from being snapshots where unnecessary.
+
+
 v1.4.0
 ------------------------------
 *February 15, 2019*
@@ -57,7 +68,7 @@ v1.0.2
 *November 6, 2018*
 
 ### Fixed
-- Fixed Menulog logo positioning. Also removed the logo outline in transparent mode so if background colour changes we won't need to update the logo. 
+- Fixed Menulog logo positioning. Also removed the logo outline in transparent mode so if background colour changes we won't need to update the logo.
 
 
 v1.0.1

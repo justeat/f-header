@@ -25,7 +25,7 @@ $logo-color--transparent    : $white;
             justify-content: left;
             height: $header-height;
             padding-top: 24px;
-            
+
             @if ($theme == 'ml') {
                 padding-top: 18px;
             }
