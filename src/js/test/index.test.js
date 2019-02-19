@@ -9,6 +9,10 @@ describe('module', () => {
 });
 
 describe('setupHeader', () => {
+    beforeEach(() => {
+        document.documentElement.className = '';
+    });
+
     it('adds `is-visible` class to nav container', () => {
         // Arrange
         TestUtils.setBodyHtml(`
@@ -22,8 +26,8 @@ describe('setupHeader', () => {
         TestUtils.click(button);
 
         // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
+        const navContainer = document.querySelector('[data-nav-container]');
+        expect(navContainer.className).toEqual('is-visible');
     });
 
     it('adds `is-open` class to nav label', () => {
@@ -39,8 +43,8 @@ describe('setupHeader', () => {
         TestUtils.click(button);
 
         // Assert
-        const html = TestUtils.getBodyHtml();
-        expect(html).toMatchSnapshot();
+        const label = document.querySelector('[data-nav-toggle]');
+        expect(label.className).toEqual('is-open');
     });
 
     it('does nothing if nav input does not exist', () => {
@@ -71,6 +75,40 @@ describe('setupHeader', () => {
 
         // Act
         TestUtils.click(button);
+
+        // Assert
+        const html = document.documentElement;
+        expect(html.className).toEqual('is-navInView');
+    });
+
+    it('adds `is-navInView--noPad` class to html element if header has `c-header--transparent` class', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+            <button data-nav-button></button>
+            <header data-header class="c-header c-header--transparent"></header>
+        `);
+        setupHeader();
+        const button = document.querySelector('[data-nav-button]');
+
+        // Act
+        TestUtils.click(button);
+
+        // Assert
+        const html = document.documentElement;
+        expect(html.className).toEqual('is-navInView is-navInView--noPad');
+    });
+
+    it('clicking the navigation label, triggers a click on the navigation button element', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+            <button data-nav-button></button>
+            <label data-nav-toggle></label>
+        `);
+        setupHeader();
+        const label = document.querySelector('[data-nav-toggle]');
+
+        // Act
+        TestUtils.click(label);
 
         // Assert
         const html = document.documentElement.outerHTML;

@@ -78,6 +78,15 @@ $nav-popover-padding               : spacing(x2);
     }
 }
 
+// If the header is already fixed/absolute (like when the header is transparent)
+// then the content doesn't need to be padded down when the nav comes into view, as it's already flush with the top of the screen
+// This is added in the f-header JS
+.is-navInView--noPad {
+    body {
+        padding-top: 0;
+    }
+}
+
 // Global site-wide navigation
 .c-nav--global {
     @include media('>=mid') {
