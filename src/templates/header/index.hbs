@@ -34,13 +34,13 @@
 
                     {{#unless user.isAuthenticated}}
                     <li data-login class="c-nav-list-item {{#unless renderUserMenuOnServer}}is-hidden{{/unless}}" data-test-id="login">
-                        <a href="{{ loginUrl }}" class="c-nav-list-link">
+                        <a href="{{ loginUrl }}" rel="nofollow" class="c-nav-list-link">
                             {{ i18n "loginLinkText" }}
                         </a>
                     </li>
 
                     <li class="c-nav-list-item is-hidden is-shown--noJS" data-test-id="noscript-myaccount">
-                        <a href="{{ loginUrl }}" class="c-nav-list-link">
+                        <a href="{{ loginUrl }}" rel="nofollow" class="c-nav-list-link">
                             {{ i18n "loginNoScriptLinkText" }}
                         </a>
                     </li>
