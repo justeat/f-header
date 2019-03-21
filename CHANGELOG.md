@@ -3,9 +3,19 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v1.6.0
+------------------------------
+*March 21, 2019*
+
+### Changed
+- Replace logo svgs with correct aspect ratio ones according to the designs
+- Reduse size of logo for smaller devices
+
+
 v1.5.1
 ------------------------------
-*March 06, 2019*
+*March 6, 2019*
 
 ### Changed
 - Hyperlinks to the login page now include a "rel='nofollow'" html attribute

@@ -15,7 +15,7 @@ $logo-color--transparent    : $white;
         display: flex;
         justify-content: center;
         height: $header-height--narrow;
-        padding-top: 18px;
+        padding-top: 22px;
 
         @if ($theme == 'ml') {
             padding-top: 12px;
@@ -34,8 +34,8 @@ $logo-color--transparent    : $white;
 }
     .c-logo-img {
         // default logo image height and width (as should be an inline SVG)
-        width: 128px;
-        height: 25px;
+        width: 82px;
+        height: 16px;
 
         @include media('>=mid') {
             width: 165px;
