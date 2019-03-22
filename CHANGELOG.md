@@ -10,7 +10,9 @@ v1.6.0
 
 ### Changed
 - Replace logo svgs with correct aspect ratio ones according to the designs
-- Reduse size of logo for smaller devices
+- Reduce size of logo for smaller devices
+
+If you have a config.json with logo url path, be aware that logo svg name now is je-logo--light.v2.svg and je-logo.v2.svg, which needs to be updated in your config
 
 
 v1.5.1
