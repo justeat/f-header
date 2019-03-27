@@ -10,6 +10,7 @@ v1.7.0
 
 ### Added
 - Add a check to make sure that hamburger menu is closed when the user navigates back to the page
+- Unit test for it
 
 
 v1.6.0
