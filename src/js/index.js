@@ -18,6 +18,7 @@ const setupHeader = () => {
     const headerEl = document.querySelector('[data-header]');
     const navButton = document.querySelector('[data-nav-button]');
     const navToggleLabel = document.querySelector('[data-nav-toggle]');
+    const navToggleCheckbox = document.querySelector('[data-nav-accessible-button]');
 
     if (navButton) {
         navButton.addEventListener('click', () => {
@@ -40,6 +41,11 @@ const setupHeader = () => {
                 document.documentElement.classList.toggle('is-navInView--noPad');
             }
         });
+    }
+
+    // make sure that hamburger menu is closed when the user navigates back to the page
+    if (navToggleCheckbox) {
+        navToggleCheckbox.checked = false;
     }
 
     // setup click event on the navigation label, as the button is hidden by default (as used for tabbing only)

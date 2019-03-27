@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v1.7.0
+------------------------------
+*March 27, 2019*
+
+### Added
+- Add a check to make sure that hamburger menu is closed when the user navigates back to the page
+
+
 v1.6.0
 ------------------------------
 *March 21, 2019*
