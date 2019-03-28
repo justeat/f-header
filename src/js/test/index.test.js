@@ -114,4 +114,17 @@ describe('setupHeader', () => {
         const html = document.documentElement.outerHTML;
         expect(html).toMatchSnapshot();
     });
+    it('checks that hamburger menu checkbox is unchecked on every load', () => {
+        // Arrange
+        TestUtils.setBodyHtml(`
+            <input data-nav-accessible-button type="checkbox" checked>
+        `);
+
+        // Act
+        setupHeader();
+
+        // Assert
+        const checkbox = document.querySelector('[data-nav-accessible-button]');
+        expect(checkbox.checked).toEqual(false);
+    });
 });
