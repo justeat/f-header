@@ -140,3 +140,13 @@ $header--transparent-opacity        : 0.7;
         background: $header-buttonCount-bg;
         border: 1px solid $header-buttonCount-borderColor;
     }
+
+    .c-header-button--primary {
+      display: block;
+      width: 40px;
+      padding-right: spacing();
+    }
+
+    .c-header-button--secondary {
+      right: 40px;
+    }
