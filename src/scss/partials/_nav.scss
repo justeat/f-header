@@ -189,9 +189,13 @@ $nav-popover-padding               : spacing(x2);
                 }
             }
         }
-            .c-nav-list-text-sub {
-                display: block;
-            }
+        .c-nav-list-text-sub {
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            max-width: 300px;
+        }
 
         .c-nav-list-link {
             &:hover,

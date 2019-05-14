@@ -25,7 +25,7 @@
                     <li data-auth-wrapper class="c-nav-list-item has-sublist {{#unless user.isAuthenticated}}is-hidden{{/unless}}" data-test-id="navList" tabindex="0">
                         <p class="c-nav-list-text">
                             {{> nav-icon }}
-                            <span data-name class="c-nav-list-text-sub">{{#if user.isAuthenticated}}{{user.friendlyName}}{{/if}}</span>
+                            <span data-name class="c-nav-list-text-sub"{{#if user.isAuthenticated}} title="{{user.friendlyName}}{{/if}}">{{#if user.isAuthenticated}}{{user.friendlyName}}{{/if}}</span>
                             <span data-email class="c-nav-list-text-sub u-showBelowMid">{{#if user.isAuthenticated}}{{user.email}}{{/if}}</span>
                         </p>
 
