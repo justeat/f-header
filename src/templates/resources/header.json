@@ -60,6 +60,7 @@
         "paymentMethods": "Your saved cards",
         "deliveryAddresses": "Your address book",
         "redeemVoucher": "Redeem a voucher",
+        "redeemGiftcard": "Redeem a gift card",
         "contactPreferences": "Contact preferences"
     },
     "en-IE": {

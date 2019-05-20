@@ -47,6 +47,12 @@
       "gtmSuffix": "address book",
       "dataTestId": "addressBook",
       "label": "deliveryAddresses"
+    },
+    {
+      "url": "#",
+      "gtmSuffix": "redeem giftcard",
+      "dataTestId": "redeemGiftCard",
+      "label": "redeemGiftcard"
     }
   ]
 }
