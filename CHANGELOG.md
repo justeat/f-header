@@ -3,6 +3,14 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+v1.9.0
+------------------------------
+*May 21, 2019*
+
+### Removed
+- Fill colour for JE logo css
+
 v1.9.0
 ------------------------------
 *May 16, 2019*
