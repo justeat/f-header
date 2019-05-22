@@ -4,6 +4,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v1.11.0
+------------------------------
+*May 22, 2019*
+
+### Removed
+- Add sizes for AU logo
+
 v1.10.0
 ------------------------------
 *May 21, 2019*
