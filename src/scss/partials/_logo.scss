@@ -42,17 +42,16 @@ $logo-color--transparent    : $white;
             height: 32px;
         }
 
-        @if ($theme == 'je') {
-            path {
-                fill: $logo-color;
-
-                .c-header--transparent & {
-                    fill: $logo-color--transparent;
-                }
-            }
-        }
          // Menulog logo, as it has multiple fill values built in. We just hide the outline on transparent mode.
         @if ($theme == 'ml') {
+            width: 100px;
+            height: 26px;
+
+            @include media('>=mid') {
+                width: 180px;
+                height: 47px;
+            }
+
             path:first-child {
                 .c-header--transparent & {
                     display: none;
