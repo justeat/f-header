@@ -34,8 +34,8 @@ $logo-color--transparent    : $white;
 }
     .c-logo-img {
         // default logo image height and width (as should be an inline SVG)
-        width: 82px;
-        height: 16px;
+        width: 128px;
+        height: 25px;
 
         @include media('>=mid') {
             width: 165px;
