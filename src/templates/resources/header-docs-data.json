@@ -9,6 +9,7 @@
   "logoUrl": "/assets/img/logos/je-logo.v2.svg",
   "languageSwitchText": "EN",
   "isOrderCountSupported": true,
+  "redeemGiftcard": "Redeem a gift card",
   "alternativeLanguageLinks": [
     {
       "language": "fr",
