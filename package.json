@@ -30,7 +30,8 @@
     "@justeat/fozzie": "^1.7.0",
     "@justeat/fozzie-colour-palette": "^2.1.0",
     "include-media": "^1.4.9",
-    "lite-ready": "^1.0.4"
+    "lite-ready": "^1.0.4",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "@justeat/f-icons": "^1.9.0"
@@ -68,7 +69,9 @@
     "lint:js": "gulp scripts:lint --prod",
     "compile": "yarn clean && babel -d dist src --ignore test.js",
     "test": "gulp scripts:test",
-    "test:cover:ci": "gulp scripts:test:coverage && cat coverage/lcov.info | coveralls"
+    "test:cover:ci": "gulp scripts:test:coverage && cat coverage/lcov.info | coveralls",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "stylelint": {
     "extends": "@justeat/stylelint-config-fozzie"
@@ -95,5 +98,6 @@
       "glob": "templates/**/*",
       "dest": "./"
     }
-  ]
+  ],
+  "snyk": true
 }
