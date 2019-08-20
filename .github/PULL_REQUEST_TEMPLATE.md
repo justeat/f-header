@@ -2,6 +2,12 @@ __*This is the standard PR description template.*__
 
 __*Delete the parts of this template that aren’t relevant to the current PR you are submitting – for example, you may not need to amend documentation or testing of the component.*__
 
+To ensure your PR is not auto-rejected:
+
+* Bump the version in package.json
+* Prefix the version number to the PR in the form `v#.#.# - <title>`
+* Edit CHANGELOG.md to describe your changes
+
 ---
 
 _A short description of your PR goes here._
