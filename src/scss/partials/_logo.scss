@@ -16,7 +16,6 @@ $logo-color--transparent    : $white;
         justify-content: center;
         height: $header-height--narrow;
         padding-top: 22px;
-
         @if ($theme == 'ml') {
             padding-top: 12px;
         }
@@ -27,12 +26,12 @@ $logo-color--transparent    : $white;
             padding-top: 24px;
 
             @if ($theme == 'ml') {
-                padding-top: 18px;
+                padding-top: 10px;
             }
         }
     }
 }
-    .c-logo-img {
+    .c-logo-img img {
         // default logo image height and width (as should be an inline SVG)
         width: 82px;
         height: 16px;
@@ -44,18 +43,26 @@ $logo-color--transparent    : $white;
 
          // Menulog logo, as it has multiple fill values built in. We just hide the outline on transparent mode.
         @if ($theme == 'ml') {
-            width: 100px;
-            height: 26px;
+            width: 118px;
+            height: 40px;
+            margin-left: -10.5px; //half of hamburger menu width
+
 
             @include media('>=mid') {
-                width: 180px;
-                height: 47px;
-            }
-
-            path:first-child {
-                .c-header--transparent & {
-                    display: none;
-                }
+              width: 180px;
+              height: 61px;
+              margin-left: 0;
             }
         }
+
+      .c-logo-img {
+        @if ($theme == 'ml') {
+          path:first-child {
+            .c-header--transparent & {
+              display: none;
+            }
+          }
+        }
+      }
+
     }
