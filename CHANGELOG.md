@@ -5,7 +5,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.13.0
 ------------------------------
-*August 28, 2019*
+*September 12, 2019*
 ### Changed
 - Change MenuLog logo to include _by JustEat_.
 
@@ -15,11 +15,6 @@ v1.12.0
 
 ### Fixed
 - Removed mask from logo SVG to stop IE11 issues not rendering the T of JustEat
-
-v1.11.3
-------------------------------
-*August 28, 2019*
-- Change MenuLog logo to include _by JustEat_.
 
 v1.11.2
 ------------------------------
