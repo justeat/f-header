@@ -31,7 +31,7 @@ $logo-color--transparent    : $white;
         }
     }
 }
-    .c-logo-img img {
+    .c-logo-img img, .c-logo-img svg {
         // default logo image height and width (as should be an inline SVG)
         width: 82px;
         height: 16px;

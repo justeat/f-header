@@ -3,6 +3,12 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.13.1
+------------------------------
+*September 18, 2019*
+### Fixed
+- Previous version changed the selector for the logo, which caused it to disapear on MenuWeb, this supports both.
+
 v1.13.0
 ------------------------------
 *September 12, 2019*
