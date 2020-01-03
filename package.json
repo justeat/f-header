@@ -36,7 +36,7 @@
     "@justeat/f-icons": "1.29.1"
   },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "8.4.0",
+    "@justeat/gulp-build-fozzie": "9.0.1",
     "concurrently": "^4.0.1",
     "coveralls": "^3.0.2",
     "danger": "^4.4.8",
