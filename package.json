@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@justeat/gulp-build-fozzie": "8.4.0",
-    "concurrently": "^4.0.1",
+    "concurrently": "^5.0.2",
     "coveralls": "^3.0.2",
     "danger": "^4.4.8",
     "gulp": "^3.9.1",
