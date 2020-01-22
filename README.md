@@ -1,5 +1,7 @@
 <div align="center">
 <h1>f-header</h1>
+  
+## This repo is being deprecated and is only used on sites that cannot currently render Vue components. We recommend switching to using the [Vue.js version of this component as soon as possible](https://github.com/justeat/fozzie-components/tree/master/packages/f-header).
 
 <img width="125" alt="Fozzie Bear" src="bear.png" />
 
@@ -36,5 +38,3 @@ If you are using the [fozzie gulp build tasks](https://www.npmjs.com/package/@ju
     ```
 
 You can then use the `f-header` fozzie header module styling.
-
-## Documentation to be completed once module is in stable state.
