@@ -4,12 +4,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v1.16.0
+------------------------------
+*June 4, 2020*
+
+### Changed
+- Make Menulog orange by updating fozzie and fozzie-colour-palette.
+
+
 v1.15.0
 ------------------------------
 *January 2, 2020*
 
 ### Fixed
-
 - Security package updates
 
 
@@ -18,21 +25,23 @@ v1.14.0
 *October 22, 2019*
 
 ### Changed
-
 - Unpin fozzie package versions
 
 
 v1.13.1
 ------------------------------
 *September 18, 2019*
+
 ### Fixed
 - Previous version changed the selector for the logo, which caused it to disapear on MenuWeb, this supports both.
+
 
 v1.13.0
 ------------------------------
 *September 12, 2019*
 ### Changed
 - Change MenuLog logo to include _by JustEat_.
+
 
 v1.12.0
 ------------------------------
@@ -41,12 +50,14 @@ v1.12.0
 ### Fixed
 - Removed mask from logo SVG to stop IE11 issues not rendering the T of JustEat
 
+
 v1.11.2
 ------------------------------
 *August 20, 2019*
 
 ### Fixed
 - Adds missing translation string (accountCredit) to en-GB
+
 
 v1.11.1
 ------------------------------
@@ -55,12 +66,14 @@ v1.11.1
 ### Added
 - Added redeemGiftCard to header docs
 
+
 v1.11.0
 ------------------------------
 *May 22, 2019*
 
 ### Removed
 - Add sizes for AU logo
+
 
 v1.10.0
 ------------------------------
@@ -69,6 +82,7 @@ v1.10.0
 ### Removed
 - Fill colour for JE logo css
 
+
 v1.9.0
 ------------------------------
 *May 16, 2019*
@@ -76,12 +90,14 @@ v1.9.0
 ### Added
 - Added link to giftcards redemption ahead of UK gift cards release
 
+
 v1.8.0
 ------------------------------
 *May 14, 2019*
 
 ### Added
 - Added CSS to the header to allow for secondary button on the right to be visible in the header
+
 
 v1.7.1
 ------------------------------
