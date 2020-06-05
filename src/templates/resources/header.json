@@ -44,7 +44,8 @@
         "paymentMethods": "Payment methods",
         "deliveryAddresses": "Delivery addresses",
         "languageSwitcherAccessibility": "Change the language to",
-        "languageSwitcherName": "English"
+        "languageSwitcherName": "English",
+        "redeemGiftcard": "Redeem a gift card"
     },
     "en-GB": {
         "companyName": "Just Eat",
