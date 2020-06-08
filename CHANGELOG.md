@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v1.18.0
+------------------------------
+*June 8, 2020*
+
+### Changed
+- Resizing of new logo
+- Reference colour variables where possible
+
+
 v1.17.0
 ------------------------------
 *June 5, 2020*
