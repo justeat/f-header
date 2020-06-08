@@ -44,14 +44,15 @@ $logo-color--transparent    : $white;
          // Menulog logo, as it has multiple fill values built in. We just hide the outline on transparent mode.
         @if ($theme == 'ml') {
             width: 118px;
-            height: 40px;
+            height: 26px;
             margin-left: -10.5px; //half of hamburger menu width
 
 
             @include media('>=mid') {
               width: 180px;
-              height: 61px;
+              height: 47px;
               margin-left: 0;
+              margin-top: 6px;
             }
         }
 

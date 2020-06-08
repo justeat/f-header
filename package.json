@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "1.17.0",
+  "version": "1.18.0",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -36,7 +36,7 @@
     "@justeat/f-icons": "1.29.1"
   },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "8.4.0",
+    "@justeat/gulp-build-fozzie": "8.5.0",
     "concurrently": "^4.0.1",
     "coveralls": "^3.0.2",
     "danger": "^4.4.8",

@@ -42,12 +42,12 @@ $nav-popover-padding               : spacing(x2);
 
 // Menulog theme overrides
 @if ($theme == 'ml') {
-    $nav-text-color                : $violet;
-    $nav-text-color--hover         : $violet--dark;
-    $nav-toggleIcon-color          : $orange-largeText;
-    $nav-icon-color                : $orange-largeText;
+    $nav-text-color                : $color-link-default;
+    $nav-text-color--hover         : $color-link-hover;
+    $nav-toggleIcon-color          : $color-primary;
+    $nav-icon-color                : $color-primary;
 
-    $nav-trigger-focus-color       : $orange-largeText;
+    $nav-trigger-focus-color       : $color-primary;
     $nav-trigger-focus-bg          : $orange--offWhite;
 }
 
