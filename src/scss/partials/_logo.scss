@@ -31,39 +31,28 @@ $logo-color--transparent    : $white;
         }
     }
 }
-    .c-logo-img img, .c-logo-img svg {
-        // default logo image height and width (as should be an inline SVG)
-        width: 82px;
-        height: 16px;
+
+.c-logo-img img, .c-logo-img svg {
+    // default logo image height and width (as should be an inline SVG)
+    width: 82px;
+    height: 16px;
+
+    @include media('>=mid') {
+        width: 165px;
+        height: 32px;
+    }
+
+    @if ($theme == 'ml') {
+        width: 120px;
+        height: 32px;
+        margin-left: -10.5px; // half of hamburger menu width
+
 
         @include media('>=mid') {
-            width: 165px;
-            height: 32px;
+          width: 149px;
+          height: 41px;
+          margin-left: 0;
+          margin-top: 6px;
         }
-
-         // Menulog logo, as it has multiple fill values built in. We just hide the outline on transparent mode.
-        @if ($theme == 'ml') {
-            width: 118px;
-            height: 26px;
-            margin-left: -10.5px; //half of hamburger menu width
-
-
-            @include media('>=mid') {
-              width: 180px;
-              height: 47px;
-              margin-left: 0;
-              margin-top: 6px;
-            }
-        }
-
-      .c-logo-img {
-        @if ($theme == 'ml') {
-          path:first-child {
-            .c-header--transparent & {
-              display: none;
-            }
-          }
-        }
-      }
-
     }
+}
