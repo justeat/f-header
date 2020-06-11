@@ -39,13 +39,12 @@ $nav-popover-transition-delay      : 200ms;
 $nav-popover-padding               : spacing(x2);
 
 
-
 // Menulog theme overrides
 @if ($theme == 'ml') {
     $nav-text-color                : $color-link-default;
     $nav-text-color--hover         : $color-link-hover;
     $nav-toggleIcon-color          : $color-primary;
-    $nav-icon-color                : $color-primary;
+    $nav-icon-color                : $color-secondary;
 
     $nav-trigger-focus-color       : $color-primary;
     $nav-trigger-focus-bg          : $orange--offWhite;
