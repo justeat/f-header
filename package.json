@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "1.21.0",
+  "version": "1.22.0",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -22,29 +22,29 @@
   },
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=10.0.0"
   },
   "dependencies": {
     "@justeat/f-logger": "0.7.2",
     "@justeat/f-utils": "0.3.0",
-    "@justeat/fozzie": "3.0.0-beta.1",
-    "@justeat/fozzie-colour-palette": "3.0.0-beta.1",
-    "include-media": "^1.4.9",
-    "lite-ready": "^1.0.4"
+    "@justeat/fozzie": "3.0.0-beta.5",
+    "@justeat/fozzie-colour-palette": "3.0.0-beta.2",
+    "include-media": "1.4.9",
+    "lite-ready": "1.0.4"
   },
   "peerDependencies": {
     "@justeat/f-icons": "1.29.1"
   },
   "devDependencies": {
     "@justeat/gulp-build-fozzie": "8.5.0",
-    "concurrently": "^4.0.1",
-    "coveralls": "^3.0.2",
-    "danger": "^4.4.8",
-    "gulp": "^3.9.1",
-    "jest-fetch-mock": "^1.6.6",
-    "jest-localstorage-mock": "^2.2.0",
-    "js-test-buddy": "^0.1.0",
-    "rimraf": "^2.6.2"
+    "concurrently": "4.0.1",
+    "coveralls": "3.0.2",
+    "danger": "4.4.8",
+    "gulp": "3.9.1",
+    "jest-fetch-mock": "1.6.6",
+    "jest-localstorage-mock": "2.2.0",
+    "js-test-buddy": "0.1.0",
+    "rimraf": "2.6.2"
   },
   "resolutions": {
     "espree": "3.5.4",

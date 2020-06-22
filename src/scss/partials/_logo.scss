@@ -3,7 +3,7 @@
  * =================================
  */
 
-$logo-color                 : $brand--red;
+$logo-color                 : $brand--orange;
 $logo-color--transparent    : $white;
 
 
@@ -15,43 +15,44 @@ $logo-color--transparent    : $white;
         display: flex;
         justify-content: center;
         height: $header-height--narrow;
-        padding-top: 22px;
+        padding-top: 12px;
+
         @if ($theme == 'ml') {
-            padding-top: 12px;
+            padding-top: 8px;
         }
 
         @include media('>=mid') {
             justify-content: left;
             height: $header-height;
-            padding-top: 24px;
+            padding-top: 20px;
 
             @if ($theme == 'ml') {
-                padding-top: 10px;
+                padding-top: 16px;
             }
         }
     }
 }
 
-.c-logo-img img, .c-logo-img svg {
+.c-logo-img img,
+.c-logo-img svg {
     // default logo image height and width (as should be an inline SVG)
-    width: 82px;
-    height: 16px;
+    width: 98px;
+    height: 24px;
+    margin-left: -10.5px; // half of hamburger menu width
 
     @include media('>=mid') {
-        width: 165px;
-        height: 32px;
+        width: 163px;
+        height: 40px;
+        margin-left: 0;
     }
 
     @if ($theme == 'ml') {
         width: 120px;
         height: 32px;
-        margin-left: -10.5px; // half of hamburger menu width
-
 
         @include media('>=mid') {
           width: 149px;
           height: 41px;
-          margin-left: 0;
           margin-top: 6px;
         }
     }

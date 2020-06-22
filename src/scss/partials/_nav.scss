@@ -7,24 +7,25 @@
 
 $nav-text-size                     : 'base--scaleUp';
 $nav-text-font                     : $font-family-headings;
-$nav-text-color                    : $blue;
+$nav-text-color                    : $color-link-default;
+$nav-text-color--hover             : $color-link-hover;
 $nav-text-color--transparent       : $white;
 $nav-text-weight                   : 500;
-$nav-text-color--hover             : $blue;
 $nav-text-subFont                  : $font-family-base;
 $nav-text-color--narrow            : $grey--dark;
-$nav-icon-color                    : $blue;
+$nav-icon-color                    : $color-secondary;
 $nav-icon-color--transparent       : $white;
 $nav-transition-duration           : 250ms;
 
-$nav-trigger-length                : 56px;
-$nav-trigger-focus-color           : $blue;
-$nav-trigger-focus-bg              : $blue--offWhite;
+$nav-trigger-width                 : 56px;
+$nav-trigger-height                : 48px;
+$nav-trigger-focus-color           : $color-primary;
+$nav-trigger-focus-bg              : $orange--offWhite;
 $nav-toggleIcon-left               : spacing(x2);
 $nav-toggleIcon-width              : 21px;
 $nav-toggleIcon-height             : 2px;
 $nav-toggleIcon-borderRadius       : 1px;
-$nav-toggleIcon-color              : $blue;
+$nav-toggleIcon-color              : $color-primary;
 $nav-toggleIcon-color--transparent : $white;
 $nav-toggleIcon-bg                 : transparent;
 $nav-toggleIcon-space              : 5px;
@@ -37,18 +38,6 @@ $nav-popover-radius                : 3px;
 $nav-popover-transition-duration   : 200ms;
 $nav-popover-transition-delay      : 200ms;
 $nav-popover-padding               : spacing(x2);
-
-
-// Menulog theme overrides
-@if ($theme == 'ml') {
-    $nav-text-color                : $color-link-default;
-    $nav-text-color--hover         : $color-link-hover;
-    $nav-toggleIcon-color          : $color-primary;
-    $nav-icon-color                : $color-secondary;
-
-    $nav-trigger-focus-color       : $color-primary;
-    $nav-trigger-focus-bg          : $orange--offWhite;
-}
 
 
 @mixin nav-container-visible () {
@@ -168,7 +157,7 @@ $nav-popover-padding               : spacing(x2);
             @include font-size('base');
             font-weight: 300;
             text-decoration: none;
-            border-bottom: 1px solid $grey--lightest;
+            border-bottom: 1px solid $grey--lighter;
 
             @include media('>=mid') {
                 font-family: $nav-text-font;
@@ -284,7 +273,7 @@ $nav-popover-padding               : spacing(x2);
 
         & .c-nav-list-item {
             float: none;
-            border-bottom: 1px solid $grey--lightest;
+            border-bottom: 1px solid $grey--lighter;
 
             &:last-child {
                 border-bottom: none;
@@ -359,8 +348,8 @@ $nav-popover-padding               : spacing(x2);
     position: absolute;
     top: 0;
     left: 0;
-    width: $nav-trigger-length;
-    height: $nav-trigger-length;
+    width: $nav-trigger-width;
+    height: $nav-trigger-height;
     cursor: pointer;
 
     // hide on wider views
