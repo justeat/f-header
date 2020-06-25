@@ -41,8 +41,8 @@ $logo-color--transparent    : $white;
     margin-left: -10.5px; // half of hamburger menu width
 
     @include media('>=mid') {
-        width: 163px;
-        height: 40px;
+        width: 130px;
+        height: 32px;
         margin-left: 0;
     }
 
