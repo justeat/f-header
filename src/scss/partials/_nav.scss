@@ -12,20 +12,20 @@ $nav-text-color--hover             : $color-link-hover;
 $nav-text-color--transparent       : $white;
 $nav-text-weight                   : 500;
 $nav-text-subFont                  : $font-family-base;
-$nav-text-color--narrow            : $grey--dark;
+$nav-text-color--narrow            : $color-text;
 $nav-icon-color                    : $color-secondary;
 $nav-icon-color--transparent       : $white;
 $nav-transition-duration           : 250ms;
 
 $nav-trigger-width                 : 56px;
 $nav-trigger-height                : 48px;
-$nav-trigger-focus-color           : $color-primary;
-$nav-trigger-focus-bg              : $orange--offWhite;
+$nav-trigger-focus-color           : $color-focus-outline;
+$nav-trigger-focus-bg              : $blue--offWhite;
 $nav-toggleIcon-left               : spacing(x2);
 $nav-toggleIcon-width              : 21px;
 $nav-toggleIcon-height             : 2px;
 $nav-toggleIcon-borderRadius       : 1px;
-$nav-toggleIcon-color              : $color-primary;
+$nav-toggleIcon-color              : $color-secondary;
 $nav-toggleIcon-color--transparent : $white;
 $nav-toggleIcon-bg                 : transparent;
 $nav-toggleIcon-space              : 5px;
@@ -157,7 +157,7 @@ $nav-popover-padding               : spacing(x2);
             @include font-size('base');
             font-weight: 300;
             text-decoration: none;
-            border-bottom: 1px solid $grey--lighter;
+            border-bottom: 1px solid $color-border;
 
             @include media('>=mid') {
                 font-family: $nav-text-font;
@@ -273,7 +273,7 @@ $nav-popover-padding               : spacing(x2);
 
         & .c-nav-list-item {
             float: none;
-            border-bottom: 1px solid $grey--lighter;
+            border-bottom: 1px solid $color-border;
 
             &:last-child {
                 border-bottom: none;
@@ -289,7 +289,7 @@ $nav-popover-padding               : spacing(x2);
             & .c-nav-list-text {
                 font-family: $nav-text-subFont;
                 font-weight: 300;
-                color: $grey--dark;
+                color: $color-text;
                 height: auto;
 
                 &:hover,
