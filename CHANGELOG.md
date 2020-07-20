@@ -4,6 +4,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v1.26.0
+------------------------------
+*July 20, 2020*
+
+### Changed
+- Just Eat Logo updated to orange (and filename updated for caching).
+- Updated versions of `fozzie` and `fozzie-colour-palette` to pull in latest colour changes.
+
+### Removed
+- Removed duplicate display property.
+
+
 v1.25.1
 ------------------------------
 *July 2, 2020*
