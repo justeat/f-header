@@ -4,6 +4,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v1.27.0
+------------------------------
+*July 22, 2020*
+
+### Changed
+- Updated versions of `fozzie` and `fozzie-colour-palette` to pull in amends to grey palette.
+- Renamed logos to all use v4 suffix (as it's easier when switching between different versions than having complex conditionals).
+
+
 v1.26.0
 ------------------------------
 *July 20, 2020*
