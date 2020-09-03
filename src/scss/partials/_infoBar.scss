@@ -14,7 +14,7 @@
     &,
     & p,
     & .btn {
-        @include font-size(base);
+        @include font-size(body-s);
     }
 
     p {
