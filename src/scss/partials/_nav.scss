@@ -5,8 +5,8 @@
  *
  */
 
-$nav-text-size                     : 'base--scaleUp';
-$nav-text-font                     : $font-family-headings;
+$nav-text-size                     : 'body-l';
+$nav-text-font                     : $font-family-base;
 $nav-text-color                    : $color-link-default;
 $nav-text-color--hover             : $color-link-hover;
 $nav-text-color--transparent       : $white;
@@ -154,7 +154,7 @@ $nav-popover-padding               : spacing(x2);
             margin: 0;
             font-family: $nav-text-subFont;
             color: $nav-text-color--narrow;
-            @include font-size('base');
+            @include font-size(body-s);
             font-weight: 300;
             text-decoration: none;
             border-bottom: 1px solid $color-border;

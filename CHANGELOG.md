@@ -4,6 +4,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v1.28.0
+------------------------------
+*Sept 3, 2020*
+
+### Changed
+- Updated font variables to work in-line with new font updates.
+
+
 v1.27.0
 ------------------------------
 *July 22, 2020*
