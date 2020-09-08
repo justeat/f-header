@@ -10,7 +10,7 @@ $nav-text-font                     : $font-family-base;
 $nav-text-color                    : $color-link-default;
 $nav-text-color--hover             : $color-link-hover;
 $nav-text-color--transparent       : $white;
-$nav-text-weight                   : 500;
+$nav-text-weight                   : $font-weight-bold;
 $nav-text-subFont                  : $font-family-base;
 $nav-text-color--narrow            : $color-text;
 $nav-icon-color                    : $color-secondary;
@@ -155,7 +155,7 @@ $nav-popover-padding               : spacing(x2);
             font-family: $nav-text-subFont;
             color: $nav-text-color--narrow;
             @include font-size(body-s);
-            font-weight: 300;
+            font-weight: $font-weight-base;
             text-decoration: none;
             border-bottom: 1px solid $color-border;
 
@@ -288,13 +288,13 @@ $nav-popover-padding               : spacing(x2);
             & .c-nav-list-link,
             & .c-nav-list-text {
                 font-family: $nav-text-subFont;
-                font-weight: 300;
+                font-weight: $font-weight-base;
                 color: $color-text;
                 height: auto;
 
                 &:hover,
                 &:focus {
-                    font-weight: 500;
+                    font-weight: $font-weight-bold;
                     text-decoration: none;
                 }
             }
