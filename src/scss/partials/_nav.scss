@@ -7,26 +7,26 @@
 
 $nav-text-size                     : 'body-l';
 $nav-text-font                     : $font-family-base;
-$nav-text-color                    : $color-link-default;
-$nav-text-color--hover             : $color-link-hover;
-$nav-text-color--transparent       : $white;
+$nav-text-color                    : $color-content-link;
+$nav-text-color--hover             : darken($color-content-link, $color-hover-01);
+$nav-text-color--transparent       : $color-content-interactive-primary;
 $nav-text-weight                   : $font-weight-bold;
 $nav-text-subFont                  : $font-family-base;
-$nav-text-color--narrow            : $color-text;
-$nav-icon-color                    : $color-secondary;
-$nav-icon-color--transparent       : $white;
+$nav-text-color--narrow            : $color-content-default;
+$nav-icon-color                    : $color-content-link;
+$nav-icon-color--transparent       : $color-content-link-light;
 $nav-transition-duration           : 250ms;
 
 $nav-trigger-width                 : 56px;
 $nav-trigger-height                : 48px;
-$nav-trigger-focus-color           : $color-focus-outline;
-$nav-trigger-focus-bg              : $blue--offWhite;
+$nav-trigger-focus-color           : $color-focus;
+$nav-trigger-focus-bg              : $color-blue-10;
 $nav-toggleIcon-left               : spacing(x2);
 $nav-toggleIcon-width              : 21px;
 $nav-toggleIcon-height             : 2px;
 $nav-toggleIcon-borderRadius       : 1px;
-$nav-toggleIcon-color              : $color-secondary;
-$nav-toggleIcon-color--transparent : $white;
+$nav-toggleIcon-color              : $color-content-link;
+$nav-toggleIcon-color--transparent : $color-content-link-light;
 $nav-toggleIcon-bg                 : transparent;
 $nav-toggleIcon-space              : 5px;
 
@@ -94,7 +94,7 @@ $nav-popover-padding               : spacing(x2);
             padding: 0;
             height: calc(100% - (#{$header-height--narrow}));
             border-top: $header-separator solid $header-border-color;
-            background: $white;
+            background: $color-container-default;
             z-index: -1;
             opacity: 0;
             transition: opacity $nav-transition-duration ease-in-out,
@@ -155,9 +155,9 @@ $nav-popover-padding               : spacing(x2);
             font-family: $nav-text-subFont;
             color: $nav-text-color--narrow;
             @include font-size(body-s);
-            font-weight: $font-weight-base;
+            font-weight: $font-weight-regular;
             text-decoration: none;
-            border-bottom: 1px solid $color-border;
+            border-bottom: 1px solid $color-border-strong;
 
             @include media('>=mid') {
                 font-family: $nav-text-font;
@@ -246,8 +246,8 @@ $nav-popover-padding               : spacing(x2);
         top: 100%;
         right: 99999px; // offscreen, so can’t ever be hovered over by default
         width: $nav-popover-width;
-        background-color: $white;
-        border: 1px solid $color-border;
+        background-color: $color-container-default;
+        border: 1px solid $color-border-strong;
         box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
         border-top: 0;
         border-radius: 0 0 $nav-popover-radius $nav-popover-radius;
@@ -263,7 +263,7 @@ $nav-popover-padding               : spacing(x2);
             bottom: 100%;
             right: 10%;
             border: $nav-tooltip-width solid transparent;
-            border-bottom: $nav-tooltip-width solid $white;
+            border-bottom: $nav-tooltip-width solid $color-white;
             content: '';
             height: 0;
             width: 0;
@@ -273,7 +273,7 @@ $nav-popover-padding               : spacing(x2);
 
         & .c-nav-list-item {
             float: none;
-            border-bottom: 1px solid $color-border;
+            border-bottom: 1px solid $color-border-strong;
 
             &:last-child {
                 border-bottom: none;
@@ -288,8 +288,8 @@ $nav-popover-padding               : spacing(x2);
             & .c-nav-list-link,
             & .c-nav-list-text {
                 font-family: $nav-text-subFont;
-                font-weight: $font-weight-base;
-                color: $color-text;
+                font-weight: $font-weight-regular;
+                color: $color-content-default;
                 height: auto;
 
                 &:hover,

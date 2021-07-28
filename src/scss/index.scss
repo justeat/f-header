@@ -23,8 +23,6 @@
 // If importing this module and the base fozzie module, this initialisation will be done by the module @import-ed first
 @import 'fozzie/settings/theme';
 
-@import 'fozzie-colour-palette';
-@import 'f-utils'; // imports a set of helper functions and mixins – https://github.com/justeat/f-utils
 @import 'include-media'; // Cleaner media query declarations – http://include-media.com
 
 @import 'fozzie/settings/variables'; // pull in variables from base fozzie module
