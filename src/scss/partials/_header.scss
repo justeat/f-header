@@ -3,17 +3,17 @@ $header-button--height              : $header-height--narrow;
 $header-button--width               : 56px;
 $header-height                      : 76px;
 $header-height--narrow--multiLang   : $header-height--narrow + $languageSwitcher-height;
-$header-bg                          : $color-bg--component;
+$header-bg                          : $color-container-default;
 $header-separator                   : 1px;
 $header-separator                   : 4px;
-$header-border-color                : $color-border;
-$header-buttonIcon-color            : $color-primary;
-$header-buttonCount-bg              : $color-primary;
-$header-buttonCount-color           : $white;
-$header-buttonCount-borderColor     : $white;
+$header-border-color                : $color-border-strong;
+$header-buttonIcon-color            : $color-content-brand;
+$header-buttonCount-bg              : $color-support-brand;
+$header-buttonCount-color           : $color-interactive-light;
+$header-buttonCount-borderColor     : $color-white;
 
 
-$header--transparent-gradient-color : $black;
+$header--transparent-gradient-color : $color-black;
 $header--transparent-gradient       : 115px;
 $header--transparent-opacity        : 0.7;
 

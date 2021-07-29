@@ -8,7 +8,7 @@
 
 .c-infoBar {
     width: 100%;
-    background-color: $grey--offWhite;
+    background-color: $color-background-default;
     z-index: 99;
 
     &,
@@ -22,7 +22,7 @@
     }
 
     a {
-        color: $black;
+        color: $color-black;
     }
 
     & p > a {
@@ -45,11 +45,11 @@
     }
 
 .c-infoBar--dark {
-    background-color: $grey--darkest;
+    background-color: $color-grey;
 
     &,
     a {
-        color: $white;
+        color: $color-white;
     }
 
     .btn {
