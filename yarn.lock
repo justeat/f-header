@@ -882,10 +882,10 @@
   resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-2.0.0.tgz#34e34870f20ec85b5d0aca8a87e2bc2225e2f597"
   integrity sha512-fFkNH39Qe6sg6e2YZmbh4l4g4qegvpsaEKnj1grCDRspQQvzpmBQBifx6nkHsdaEhetZTJC3LqwOXybmlVJI/g==
 
-"@justeat/fozzie@6.0.0-beta.7":
-  version "6.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/@justeat/fozzie/-/fozzie-6.0.0-beta.7.tgz#d655385225d069448c61007d1ea04d16e065a830"
-  integrity sha512-4mtm7ZxmhVCu/bcEIxJOoZMLzSgrtoxa6QEqtL1ZaBzzyy/mn4lP854PGnmiUAqc/NhNR+gXvHNC/GeoILjm5w==
+"@justeat/fozzie@6.0.0-beta.8":
+  version "6.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie/-/fozzie-6.0.0-beta.8.tgz#b809fa3f534c8273482781698b9d365ffcc265a2"
+  integrity sha512-CAgeTMo+Fw32mS8eG0Oyr37bVeJmTWyw2Jd26DQnbX77F5XA6bdrcqc3Vi33B5cMvV5lxT8bbcdu3ofKcQ/09w==
   dependencies:
     "@justeat/f-dom" "1.1.0"
     "@justeat/f-logger" "0.8.1"
