@@ -7,14 +7,14 @@
 
 $nav-text-size                     : 'body-l';
 $nav-text-font                     : $font-family-base;
-$nav-text-color                    : $color-content-link;
-$nav-text-color--hover             : darken($color-content-link, $color-hover-01);
+$nav-text-color                    : $color-content-interactive-tertiary;
+$nav-text-color--hover             : darken($nav-text-color, $color-hover-01);
 $nav-text-color--transparent       : $color-content-interactive-primary;
 $nav-text-weight                   : $font-weight-bold;
 $nav-text-subFont                  : $font-family-base;
 $nav-text-color--narrow            : $color-content-default;
-$nav-icon-color                    : $color-content-link;
-$nav-icon-color--transparent       : $color-content-link-light;
+$nav-icon-color                    : $nav-text-color;
+$nav-icon-color--transparent       : $nav-text-color--transparent;
 $nav-transition-duration           : 250ms;
 
 $nav-trigger-width                 : 56px;
@@ -34,7 +34,7 @@ $nav-toggleIcon-space              : 5px;
 $nav-tooltip-width                 : 10px;
 
 $nav-popover-width                 : 300px;
-$nav-popover-radius                : 3px;
+$nav-popover-radius                : $radius-rounded-c;
 $nav-popover-transition-duration   : 200ms;
 $nav-popover-transition-delay      : 200ms;
 $nav-popover-padding               : spacing(x2);
@@ -247,10 +247,8 @@ $nav-popover-padding               : spacing(x2);
         right: 99999px; // offscreen, so can’t ever be hovered over by default
         width: $nav-popover-width;
         background-color: $color-container-default;
-        border: 1px solid $color-border-strong;
         box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
-        border-top: 0;
-        border-radius: 0 0 $nav-popover-radius $nav-popover-radius;
+        border-radius: $nav-popover-radius;
         padding: 0 $nav-popover-padding;
         opacity: 0;
         z-index: -1;
@@ -273,7 +271,7 @@ $nav-popover-padding               : spacing(x2);
 
         & .c-nav-list-item {
             float: none;
-            border-bottom: 1px solid $color-border-strong;
+            border-bottom: 1px solid $color-border-default;
 
             &:last-child {
                 border-bottom: none;
