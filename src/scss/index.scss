@@ -18,11 +18,6 @@
  *
  */
 
-// Initialise $theme variable
-// Will only do this if we're compiling the f-header CSS without importing the base fozzie module alongside it
-// If importing this module and the base fozzie module, this initialisation will be done by the module @import-ed first
-@import 'fozzie/settings/theme';
-
 @import 'include-media'; // Cleaner media query declarations – http://include-media.com
 
 @import 'fozzie/settings/variables'; // pull in variables from base fozzie module
