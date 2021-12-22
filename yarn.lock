@@ -847,24 +847,10 @@
     glob "7.1.2"
     mkdirp "0.5.1"
 
-"@justeat/f-dom@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@justeat/f-dom/-/f-dom-1.1.0.tgz#491ba78240ab73a3c4687d93eb8004415fe8a9c7"
-  integrity sha512-1XNBr7loJ6o6TlWZxSx38jSZld4Q9zAlH+waNe0TXCdf3AgsR+pe5IHCQYgkmdHCXhHq9hLZW6NXZnz42UnORg==
-  dependencies:
-    qwery "4.0.0"
-
 "@justeat/f-logger@0.7.2":
   version "0.7.2"
   resolved "https://registry.yarnpkg.com/@justeat/f-logger/-/f-logger-0.7.2.tgz#7bb117bbca48d910e2c45f3c283688eec3dc01dc"
   integrity sha512-EUB1Vzy4kc0e/K+r3sf+ISvdEd6BtamKaJ9MTsPYQI4vIiAsR0aVgbs5AdGdV9BkA4lUvXByuqiD+Ejb9RvLbA==
-  dependencies:
-    window-or-global "^1.0.1"
-
-"@justeat/f-logger@0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@justeat/f-logger/-/f-logger-0.8.1.tgz#10aef6a3d97b75e1ded2367fa0b69972661f76e6"
-  integrity sha512-owV/JWeve1Bc4HrSu2zFIgXjuAqAD5PYflw2iAMFk7SVbl2gGvewUgKszf61ZOg9qjADdxmCkW5sZPQkRzHmbQ==
   dependencies:
     window-or-global "^1.0.1"
 
@@ -882,16 +868,13 @@
   resolved "https://registry.yarnpkg.com/@justeat/f-utils/-/f-utils-2.0.0.tgz#34e34870f20ec85b5d0aca8a87e2bc2225e2f597"
   integrity sha512-fFkNH39Qe6sg6e2YZmbh4l4g4qegvpsaEKnj1grCDRspQQvzpmBQBifx6nkHsdaEhetZTJC3LqwOXybmlVJI/g==
 
-"@justeat/fozzie@6.0.0-beta.8":
-  version "6.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/@justeat/fozzie/-/fozzie-6.0.0-beta.8.tgz#b809fa3f534c8273482781698b9d365ffcc265a2"
-  integrity sha512-CAgeTMo+Fw32mS8eG0Oyr37bVeJmTWyw2Jd26DQnbX77F5XA6bdrcqc3Vi33B5cMvV5lxT8bbcdu3ofKcQ/09w==
+"@justeat/fozzie@6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie/-/fozzie-6.2.0.tgz#57eec0c2b1d5e37a506e102dd49ed5fb6874250b"
+  integrity sha512-g5ehUOK9hT3U2QXqEqI3r50OwtderBTIl1PLBG77GSsKEtyVYDLFg9s80YnPgGMv7NQZZi9eL2uwh7QIa+2GPg==
   dependencies:
-    "@justeat/f-dom" "1.1.0"
-    "@justeat/f-logger" "0.8.1"
     "@justeat/f-utils" "2.0.0"
-    "@justeat/pie-design-tokens" "1.1.0"
-    fontfaceobserver "2.1.0"
+    "@justeat/pie-design-tokens" "1.2.0"
     include-media "1.4.10"
 
 "@justeat/gulp-build-fozzie@8.5.0":
@@ -975,10 +958,10 @@
     rimraf "^2.6.2"
     vinyl-fs "^2.0.2"
 
-"@justeat/pie-design-tokens@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@justeat/pie-design-tokens/-/pie-design-tokens-1.1.0.tgz#d93ad0411cd0457522d8bd466de521382682e05d"
-  integrity sha512-YtiJ7Uq+JZgYAJAFYr0e0an+p8RRk9MimAtqNnk2MFI5au7eNMFt3lTugwfoRgk4jKQfNg2RwTZe0tuuzzc8nw==
+"@justeat/pie-design-tokens@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@justeat/pie-design-tokens/-/pie-design-tokens-1.2.0.tgz#379b9f25b481405c501afc1960b459fd06459b40"
+  integrity sha512-uMVpHVWM3RORK8DzdXWi2Rey9jPCq4sWt64JL9pqN+f+l4ck61b/rpRRf060WvWCcU0Cy/zihbSrJy1hNG1SQg==
   dependencies:
     jsonc-parser "2.2.0"
     lodash.merge "4.6.2"
@@ -5993,11 +5976,6 @@ follow-redirects@1.5.10:
   integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
   dependencies:
     debug "=3.1.0"
-
-fontfaceobserver@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.1.0.tgz#e2705d293e2c585a6531c2a722905657317a2991"
-  integrity sha512-ReOsO2F66jUa0jmv2nlM/s1MiutJx/srhAe2+TE8dJCMi02ZZOcCTxTCQFr3Yet+uODUtnr4Mewg+tNQ+4V1Ng==
 
 for-in@^0.1.3:
   version "0.1.8"
@@ -12100,11 +12078,6 @@ quick-lru@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-1.1.0.tgz#4360b17c61136ad38078397ff11416e186dcfbb8"
   integrity sha1-Q2CxfGETatOAeDl/8RQW4Ybc+7g=
-
-qwery@4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/qwery/-/qwery-4.0.0.tgz#7d21e3b4f7e9eed7e68728f4dab4de8b7303febe"
-  integrity sha1-fSHjtPfp7tfmhyj02rTei3MD/r4=
 
 randomatic@^3.0.0:
   version "3.1.1"

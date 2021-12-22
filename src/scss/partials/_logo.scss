@@ -15,18 +15,10 @@ $logo-color--transparent    : $color-content-light;
         height: $header-height--narrow;
         padding-top: 12px;
 
-        @if ($theme == 'ml') {
-            padding-top: 8px;
-        }
-
         @include media('>=mid') {
             justify-content: left;
             height: $header-height;
             padding-top: 20px;
-
-            @if ($theme == 'ml') {
-                padding-top: 16px;
-            }
         }
     }
 }
@@ -34,24 +26,12 @@ $logo-color--transparent    : $color-content-light;
 .c-logo-img img,
 .c-logo-img svg {
     // default logo image height and width (as should be an inline SVG)
-    width: 98px;
+    width: auto;
     height: 24px;
     margin-left: -10.5px; // half of hamburger menu width
 
     @include media('>=mid') {
-        width: 163px;
         height: 40px;
         margin-left: 0;
-    }
-
-    @if ($theme == 'ml') {
-        width: 120px;
-        height: 32px;
-
-        @include media('>=mid') {
-          width: 149px;
-          height: 41px;
-          margin-top: 6px;
-        }
     }
 }

@@ -4,6 +4,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+v1.33.0
+------------------------------
+*December 22, 2021*
+
+### Updated
+- fozzie to the latest version (6.2.0).
+
+### Removed
+- theme mixin and theme styles as outdated.
+
+
 v1.32.1
 ------------------------------
 *October 7, 2021*
