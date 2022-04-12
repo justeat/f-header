@@ -1,15 +1,14 @@
-$header-height--narrow              : 48px;
+$header-height--narrow              : 56px;
 $header-button--height              : $header-height--narrow;
 $header-button--width               : 56px;
-$header-height                      : 76px;
+$header-height                      : 80px;
 $header-height--narrow--multiLang   : $header-height--narrow + $languageSwitcher-height;
 $header-bg                          : $color-container-default;
 $header-separator                   : 1px;
-$header-separator                   : 4px;
-$header-border-color                : $color-border-strong;
-$header-buttonIcon-color            : $color-content-brand;
-$header-buttonCount-bg              : $color-support-brand-01;
-$header-buttonCount-color           : $color-interactive-light;
+$header-border-color                : $color-border-subtle;
+$header-buttonIcon-color            : $color-interactive-primary;
+$header-buttonCount-bg              : $color-interactive-primary;
+$header-buttonCount-color           : $color-content-interactive-primary;
 $header-buttonCount-borderColor     : $color-white;
 
 
