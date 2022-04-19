@@ -7,9 +7,9 @@
 
 $nav-text-size                     : 'body-l';
 $nav-text-font                     : $font-family-base;
-$nav-text-color                    : $color-content-interactive-tertiary;
-$nav-text-color--hover             : darken($nav-text-color, $color-hover-01);
-$nav-text-color--transparent       : $color-content-interactive-primary;
+$nav-text-color                    : $color-content-link;
+$nav-text-color--hover             : darken($color-content-link, $color-hover-01);
+$nav-text-color--transparent       : $color-content-link-inverse;
 $nav-text-weight                   : $font-weight-bold;
 $nav-text-subFont                  : $font-family-base;
 $nav-text-color--narrow            : $color-content-default;
@@ -18,15 +18,15 @@ $nav-icon-color--transparent       : $nav-text-color--transparent;
 $nav-transition-duration           : 250ms;
 
 $nav-trigger-width                 : 56px;
-$nav-trigger-height                : 48px;
-$nav-trigger-focus-color           : $color-focus;
-$nav-trigger-focus-bg              : $color-blue-10;
+$nav-trigger-height                : 56px;
+$nav-trigger-focus-color           : $color-content-interactive-secondary;
+$nav-trigger-focus-bg              : $color-interactive-secondary;
 $nav-toggleIcon-left               : spacing(x2);
 $nav-toggleIcon-width              : 21px;
 $nav-toggleIcon-height             : 2px;
 $nav-toggleIcon-borderRadius       : 1px;
-$nav-toggleIcon-color              : $color-content-link;
-$nav-toggleIcon-color--transparent : $color-content-link-light;
+$nav-toggleIcon-color              : $nav-icon-color;
+$nav-toggleIcon-color--transparent : $nav-icon-color--transparent;
 $nav-toggleIcon-bg                 : transparent;
 $nav-toggleIcon-space              : 5px;
 
