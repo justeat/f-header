@@ -5,9 +5,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 v1.34.0
 ------------------------------
-*April 12, 2022*
+*April 19, 2022*
 
-### Updated
+### Changed
 - `_header.scss` & `_nav.scss` to updated header version.
 
 
