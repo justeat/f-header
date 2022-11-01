@@ -4,17 +4,18 @@
  *
  */
 
-$languageSwitcher-height: 34px;
+@use '../fozzie-config' as f;
+@use '../variables-common' as v;
 
 .c-languageSwitcher {
     position: relative;
     display: block;
-    color: $color-content-interactive-primary;
+    color: f.$color-content-interactive-primary;
     padding: 8px 0;
     text-align: right;
 }
     .c-languageSwitcher-action {
-        font-weight: $font-weight-bold;
+        font-weight: f.$font-weight-bold;
     }
 
     .c-languageSwitcher-icon {
@@ -25,7 +26,7 @@ $languageSwitcher-height: 34px;
         position: absolute;
         left: 14px;
         padding: 0 5px;
-        border: 1px solid $color-white;
+        border: 1px solid f.$color-border-subtle;
         border-radius: 1px;
         text-transform: uppercase;
     }

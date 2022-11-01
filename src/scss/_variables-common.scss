@@ -1,0 +1,10 @@
+@use 'fozzie-config' as f;
+
+$languageSwitcher-height            : 34px;
+$header-height--narrow              : 56px;
+$header-height                      : 80px;
+$header-height--narrow--multiLang   : $header-height--narrow + $languageSwitcher-height;
+
+$header-border-color                : f.$color-border-subtle;
+
+$header-separator                   : 1px;

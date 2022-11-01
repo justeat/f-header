@@ -3,8 +3,11 @@
  * =================================
  */
 
-$logo-color                 : $color-orange-30;
-$logo-color--transparent    : $color-content-light;
+ @use '../fozzie-config' as f;
+ @use '../variables-common' as v;
+
+$logo-color                 : f.$color-support-brand-01;
+$logo-color--transparent    : f.$color-content-light;
 
 .c-logo {
     text-align: center;
@@ -12,12 +15,12 @@ $logo-color--transparent    : $color-content-light;
     & > a {
         display: flex;
         justify-content: center;
-        height: $header-height--narrow;
+        height: v.$header-height--narrow;
         padding-top: 12px;
 
-        @include media('>=mid') {
+        @include f.media('>=mid') {
             justify-content: left;
-            height: $header-height;
+            height: v.$header-height;
             padding-top: 20px;
         }
     }
@@ -30,7 +33,7 @@ $logo-color--transparent    : $color-content-light;
     height: 24px;
     margin-left: -10.5px; // half of hamburger menu width
 
-    @include media('>=mid') {
+    @include f.media('>=mid') {
         height: 40px;
         margin-left: 0;
     }
