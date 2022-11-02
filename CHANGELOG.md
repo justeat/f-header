@@ -8,7 +8,7 @@ v1.35.0
 *November 2, 2022*
 
 ### Changed
-- Travis build removed in favour of CircleCI
+- Travis build removed in favour of Github pages
 - Updated fozzie version to v10.8.0
 - Lots of SCSS updates to go along with the above fozzie update.
   - `@import` converted to `@use` and `@forward` syntax

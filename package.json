@@ -54,9 +54,9 @@
     "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
     "build:css": "sass --load-path=node_modules/ src/scss/index.scss:dist/css/f-header.css",
     "clean": "rimraf dist",
-    "lint": "yarn run lint:css && yarn run lint:js",
-    "lint:css": "gulp scss:lint --prod",
-    "lint:js": "gulp scripts:lint --prod",
+    "lint": "yarn run lint:style && yarn run lint:scripts",
+    "lint:style": "gulp scss:lint --prod",
+    "lint:scripts": "gulp scripts:lint --prod",
     "compile": "yarn clean && babel -d dist src --ignore test.js",
     "test": "gulp scripts:test",
     "test:cover:ci": "gulp scripts:test:coverage && cat coverage/lcov.info | coveralls"
@@ -71,7 +71,7 @@
     "not ie 10"
   ],
   "jest": {
-    "setupTestFrameworkScriptFile": "./jest.setup.js",
+    "setupFilesAfterEnv": ["./jest.setup.js"],
     "collectCoverageFrom": [
       "src/js/**/*.{js,jsx}"
     ]
