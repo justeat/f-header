@@ -38,7 +38,7 @@ const fetchOrderCountAndSave = userData => {
     }
 
     pushUserData(userData);
-    return Promise.reject();
+    return Promise.reject(new Error('Order Count URL is not found'));
 };
 
 const getLocalAnalyticsBlob = () => window.localStorage.getItem('je-analytics');
@@ -49,7 +49,7 @@ const orderCountSupported = () => {
         // Case insensitive regex test for value="true"
         return /^true$/i.test(supportedEl.value);
     }
-    return Promise.reject();
+    return false;
 };
 
 export const saveUserData = authData => {
@@ -61,7 +61,7 @@ export const saveUserData = authData => {
 
     if (!orderCountSupported()) {
         pushUserData(userData);
-        return Promise.resolve();
+        return Promise.reject(new Error('Order Count isn‘t supported or has no value.'));
     }
 
     const savedAnalytics = getLocalAnalyticsBlob();
