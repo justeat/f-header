@@ -36,7 +36,7 @@
     "@justeat/gulp-build-fozzie": "11.0.1",
     "concurrently": "7.5.0",
     "coveralls": "3.1.1",
-    "danger": "4.4.8",
+    "danger": "11.1.4",
     "gulp": "4.0.2",
     "jest-fetch-mock": "1.6.6",
     "jest-localstorage-mock": "2.2.0",
@@ -71,7 +71,9 @@
     "not ie 10"
   ],
   "jest": {
-    "setupFilesAfterEnv": ["./jest.setup.js"],
+    "setupFilesAfterEnv": [
+      "./jest.setup.js"
+    ],
     "collectCoverageFrom": [
       "src/js/**/*.{js,jsx}"
     ]
