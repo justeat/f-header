@@ -4,13 +4,14 @@
  * Styles relating to the "skip link" element.
  */
 
+ @use '../fozzie-config' as f;
 
  .c-skipTo {
     position: absolute;
     top: 0;
     left: 0;
     text-align: center;
-    z-index: zIndex(high);
+    z-index: f.zIndex(high);
 
     .is-visuallyHidden {
         &.focusable:active,
@@ -26,7 +27,7 @@
     .is-visuallyHidden {
         &.focusable:active,
         &.focusable:focus {
-            color: $color-white;
+            color: f.$color-content-light;
         }
     }
 }

@@ -3,6 +3,27 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.35.0
+------------------------------
+*November 2, 2022*
+
+### Changed
+- Travis build removed in favour of Github pages
+- Updated fozzie version to v10.8.0
+- Lots of SCSS updates to go along with the above fozzie update.
+  - `@import` converted to `@use` and `@forward` syntax
+  - Namespaced fozzie variables and shared f-header variables now pulled into `variables-common.scss`
+  - Colour variables updates inline with the fozzie v10 changes.
+- `gulp-build-fozzie` updated to `v11.0.1` and gulp to `v4`.
+- Some other dependency updates to packages.
+
+### Added
+- `build:css` NPM script added so that the css build can be tested prior to the packages release.
+
+### Removed
+- Eyeglass support, as this is no longer supported in fozzie (or gulp-build-fozzie).
+
+
 v1.34.0
 ------------------------------
 *April 19, 2022*

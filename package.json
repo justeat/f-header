@@ -1,7 +1,7 @@
 {
   "name": "@justeat/f-header",
   "description": "Fozzie Header – Header Component for Just Eat projects",
-  "version": "1.34.0",
+  "version": "1.35.0",
   "main": "dist/js/index.js",
   "files": [
     "dist",
@@ -22,48 +22,41 @@
   },
   "license": "Apache-2.0",
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=12.0.0"
   },
   "dependencies": {
-    "@justeat/f-logger": "0.7.2",
-    "@justeat/fozzie": "6.2.0",
-    "include-media": "1.4.9",
+    "@justeat/f-logger": "0.8.1",
+    "@justeat/fozzie": "10.8.0",
     "lite-ready": "1.0.4"
   },
   "peerDependencies": {
     "@justeat/f-icons": "1.29.1"
   },
   "devDependencies": {
-    "@justeat/gulp-build-fozzie": "8.5.0",
-    "concurrently": "4.0.1",
-    "coveralls": "3.0.2",
-    "danger": "4.4.8",
-    "gulp": "3.9.1",
+    "@justeat/gulp-build-fozzie": "11.0.1",
+    "concurrently": "7.5.0",
+    "coveralls": "3.1.1",
+    "danger": "11.1.4",
+    "gulp": "4.0.2",
     "jest-fetch-mock": "1.6.6",
     "jest-localstorage-mock": "2.2.0",
-    "js-test-buddy": "0.1.0",
-    "rimraf": "2.6.2"
+    "js-test-buddy": "0.2.0",
+    "rimraf": "3.0.2",
+    "sass": "1.55.0"
   },
   "resolutions": {
-    "espree": "3.5.4",
     "babel-core": "7.0.0-bridge.0"
   },
   "keywords": [
-    "fozzie",
-    "eyeglass-module"
+    "fozzie"
   ],
-  "eyeglass": {
-    "name": "f-header",
-    "sassDir": "src/scss",
-    "needs": "^1.1.2",
-    "exports": false
-  },
   "scripts": {
     "prepare": "concurrently -n \"lint,compile,test\" -c \"blue,yellow,green\" \"yarn lint\" \"yarn compile\" \"yarn test\" --kill-others-on-fail",
+    "build:css": "sass --load-path=node_modules/ src/scss/index.scss:dist/css/f-header.css",
     "clean": "rimraf dist",
-    "lint": "yarn run lint:css && yarn run lint:js",
-    "lint:css": "gulp scss:lint --prod",
-    "lint:js": "gulp scripts:lint --prod",
+    "lint": "yarn run lint:style && yarn run lint:scripts",
+    "lint:style": "gulp scss:lint --prod",
+    "lint:scripts": "gulp scripts:lint --prod",
     "compile": "yarn clean && babel -d dist src --ignore test.js",
     "test": "gulp scripts:test",
     "test:cover:ci": "gulp scripts:test:coverage && cat coverage/lcov.info | coveralls"
@@ -78,7 +71,9 @@
     "not ie 10"
   ],
   "jest": {
-    "setupTestFrameworkScriptFile": "./jest.setup.js",
+    "setupFilesAfterEnv": [
+      "./jest.setup.js"
+    ],
     "collectCoverageFrom": [
       "src/js/**/*.{js,jsx}"
     ]

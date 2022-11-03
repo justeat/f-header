@@ -18,16 +18,14 @@
  *
  */
 
-@import 'include-media'; // Cleaner media query declarations – http://include-media.com
+@use 'fozzie-config' as f;
 
-@import 'fozzie/settings/variables'; // pull in variables from base fozzie module
+@use 'partials/infoBar';
+@use 'partials/languageSwitcher';
+@use 'partials/header';
+@use 'partials/logo';
+@use 'partials/nav';
+@use 'partials/skipTo';
 
-@import 'partials/infoBar';
-@import 'partials/languageSwitcher';
-@import 'partials/header';
-@import 'partials/logo';
-@import 'partials/nav';
-@import 'partials/skipTo';
-
-@import 'fozzie/trumps/utilities'; // pull in utilities (won't do this if already using this module alongside fozzie)
+@include f.trumps-utilities(); // pull in utilities (won't do this if already using this module alongside fozzie)
 

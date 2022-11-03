@@ -6,15 +6,17 @@
  * Examples of its use include the cookie banner and the langauge switcher banner
  */
 
+ @use '../fozzie-config' as f;
+
 .c-infoBar {
     width: 100%;
-    background-color: $color-background-default;
+    background-color: f.$color-background-default;
     z-index: 99;
 
     &,
     & p,
     & .btn {
-        @include font-size(body-s);
+        @include f.font-size(body-s);
     }
 
     p {
@@ -22,7 +24,7 @@
     }
 
     a {
-        color: $color-black;
+        color: f.$color-black;
     }
 
     & p > a {
@@ -30,26 +32,26 @@
     }
 }
     .c-infoBar-row {
-        padding-top: spacing() * 0.5;
-        padding-bottom: spacing() * 0.5;
+        padding-top: f.spacing() * 0.5;
+        padding-bottom: f.spacing() * 0.5;
 
-        @include media('>=mid') {
-            padding-top: spacing();
-            padding-bottom: spacing();
+        @include f.media('>=mid') {
+            padding-top: f.spacing();
+            padding-bottom: f.spacing();
         }
     }
 
     .c-infoBar-btn {
         float: right;
-        margin-left: spacing();
+        margin-left: f.spacing();
     }
 
 .c-infoBar--dark {
-    background-color: $color-grey;
+    background-color: f.$color-container-dark;
 
     &,
     a {
-        color: $color-white;
+        color: f.$color-content-light;
     }
 
     .btn {

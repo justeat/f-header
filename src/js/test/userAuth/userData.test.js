@@ -56,18 +56,14 @@ describe('user is authenticated', () => {
 
             // Assert
             expect.assertions(1);
-            return expect(result).rejects.toBeUndefined();
+            return expect(result).rejects.toThrowError('Order Count URL is not found');
         });
 
         it('if order count supported element is not found', () => {
             // Arrange
 
-            // Act
-            const result = saveUserData(authData);
-
-            // Assert
-            expect.assertions(1);
-            return expect(result).rejects.toBeUndefined();
+            // Act & Assert
+            expect(saveUserData(authData)).rejects.toThrowError('Order Count isn‘t supported or has no value.');
         });
 
         it('if order count supported element has no value', () => {
@@ -75,11 +71,7 @@ describe('user is authenticated', () => {
             TestUtils.setBodyHtml('<input data-order-count-supported type="hidden" value="" />');
 
             // Act
-            const result = saveUserData(authData);
-
-            // Assert
-            expect.assertions(1);
-            return expect(result).rejects.toBeUndefined();
+            expect(saveUserData(authData)).rejects.toThrowError('Order Count isn‘t supported or has no value.');
         });
     });
 
@@ -89,12 +81,8 @@ describe('user is authenticated', () => {
             TestUtils.setBodyHtml(`<link rel="ordercountlink" href="analytics/ordercount" />
             <input data-order-count-supported type="hidden" value="False" />`);
 
-            // Act
-            const result = saveUserData(authData);
-
-            // Assert
-            expect.assertions(1);
-            return result.then(() => expect(window.dataLayer[0].userData).toEqual(userData));
+            expect(saveUserData(authData)).rejects.toThrowError('Order Count isn‘t supported or has no value.');
+            expect(window.dataLayer[0].userData).toEqual(userData);
         });
 
         it('if order count url is not found', () => {

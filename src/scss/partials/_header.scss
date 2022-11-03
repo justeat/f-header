@@ -1,18 +1,16 @@
-$header-height--narrow              : 56px;
-$header-button--height              : $header-height--narrow;
+@use '../fozzie-config' as f;
+@use '../variables-common' as v;
+
+$header-button--height              : v.$header-height--narrow;
 $header-button--width               : 56px;
-$header-height                      : 80px;
-$header-height--narrow--multiLang   : $header-height--narrow + $languageSwitcher-height;
-$header-bg                          : $color-container-default;
-$header-separator                   : 1px;
-$header-border-color                : $color-border-subtle;
-$header-buttonIcon-color            : $color-interactive-primary;
-$header-buttonCount-bg              : $color-interactive-primary;
-$header-buttonCount-color           : $color-content-interactive-primary;
-$header-buttonCount-borderColor     : $color-white;
+$header-bg                          : f.$color-container-default;
 
+$header-buttonIcon-color            : f.$color-interactive-primary;
+$header-buttonCount-bg              : f.$color-interactive-primary;
+$header-buttonCount-color           : f.$color-content-interactive-primary;
+$header-buttonCount-borderColor     : f.$color-border-subtle;
 
-$header--transparent-gradient-color : $color-black;
+$header--transparent-gradient-color : f.$color-black;
 $header--transparent-gradient       : 115px;
 $header--transparent-opacity        : 0.7;
 
@@ -21,22 +19,22 @@ $header--transparent-opacity        : 0.7;
     background-color: $header-bg;
     min-width : 300px;
     position: relative;
-    z-index: zIndex(mid);
+    z-index: f.zIndex(mid);
 
     // when the off-screen navigation is active (on mobile), it fixes to the top of the screen.
     // this stops the content being forced upwards when this happens (preventing slight visual glitch)
     .is-navInView & {
-        @include media('<mid') {
+        @include f.media('<mid') {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: zIndex(high);
+            z-index: f.zIndex(high);
         }
     }
 
     // Styles for a sticky header on mobile
-    @include media('<mid') {
+    @include f.media('<mid') {
         &.is-sticky {
             left: 0;
             top: -60px;
@@ -48,16 +46,16 @@ $header--transparent-opacity        : 0.7;
         }
     }
 
-    @include media('>=mid') {
-        border-bottom: $header-separator solid $header-border-color;
-        border-radius: 0 0 $radius-rounded-d $radius-rounded-d;
+    @include f.media('>=mid') {
+        border-bottom: v.$header-separator solid v.$header-border-color;
+        border-radius: 0 0 f.$radius-rounded-d f.$radius-rounded-d;
     }
 }
 
     // Adds a border to the header to separate it from the
     // main content at all widths
     .c-header--bordered {
-        border-bottom: $header-separator solid $header-border-color;
+        border-bottom: v.$header-separator solid v.$header-border-color;
     }
 
     .c-header--transparent {
@@ -82,11 +80,11 @@ $header--transparent-opacity        : 0.7;
 
     .c-header-wrap {
         position: relative;
-        min-height: $header-height--narrow;
+        min-height: v.$header-height--narrow;
 
-        @include media('>=mid') {
+        @include f.media('>=mid') {
             display: flex;
-            min-height: $header-height;
+            min-height: v.$header-height;
         }
     }
 
@@ -128,7 +126,7 @@ $header--transparent-opacity        : 0.7;
         text-align: center;
         border-radius: 8px;
         position: absolute;
-        @include font-size(caption, false);
+        @include f.font-size(caption, false);
         color: $header-buttonCount-color;
         background: $header-buttonCount-bg;
         border: 1px solid $header-buttonCount-borderColor;
@@ -137,7 +135,7 @@ $header--transparent-opacity        : 0.7;
     .c-header-button--primary {
         display: block;
         width: 40px;
-        padding-right: spacing();
+        padding-right: f.spacing();
     }
 
     .c-header-button--secondary {

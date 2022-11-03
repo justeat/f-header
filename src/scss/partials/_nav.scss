@@ -5,23 +5,26 @@
  *
  */
 
+ @use '../fozzie-config' as f;
+ @use '../variables-common' as v;
+
 $nav-text-size                     : 'body-l';
-$nav-text-font                     : $font-family-base;
-$nav-text-color                    : $color-content-link;
-$nav-text-color--hover             : darken($color-content-link, $color-hover-01);
-$nav-text-color--transparent       : $color-content-link-inverse;
-$nav-text-weight                   : $font-weight-bold;
-$nav-text-subFont                  : $font-family-base;
-$nav-text-color--narrow            : $color-content-default;
+$nav-text-font                     : f.$font-family-base;
+$nav-text-color                    : f.$color-content-link;
+$nav-text-color--hover             : darken(f.$color-content-link, f.$color-hover-01);
+$nav-text-color--transparent       : f.$color-content-link-inverse;
+$nav-text-weight                   : f.$font-weight-bold;
+$nav-text-subFont                  : f.$font-family-base;
+$nav-text-color--narrow            : f.$color-content-default;
 $nav-icon-color                    : $nav-text-color;
 $nav-icon-color--transparent       : $nav-text-color--transparent;
 $nav-transition-duration           : 250ms;
 
 $nav-trigger-width                 : 56px;
 $nav-trigger-height                : 56px;
-$nav-trigger-focus-color           : $color-content-interactive-secondary;
-$nav-trigger-focus-bg              : $color-interactive-secondary;
-$nav-toggleIcon-left               : spacing(x2);
+$nav-trigger-focus-color           : f.$color-content-interactive-secondary;
+$nav-trigger-focus-bg              : f.$color-interactive-secondary;
+$nav-toggleIcon-left               : f.spacing(d);
 $nav-toggleIcon-width              : 21px;
 $nav-toggleIcon-height             : 2px;
 $nav-toggleIcon-borderRadius       : 1px;
@@ -34,10 +37,10 @@ $nav-toggleIcon-space              : 5px;
 $nav-tooltip-width                 : 10px;
 
 $nav-popover-width                 : 300px;
-$nav-popover-radius                : $radius-rounded-c;
+$nav-popover-radius                : f.$radius-rounded-c;
 $nav-popover-transition-duration   : 200ms;
 $nav-popover-transition-delay      : 200ms;
-$nav-popover-padding               : spacing(x2);
+$nav-popover-padding               : f.spacing(d);
 
 
 @mixin nav-container-visible () {
@@ -51,16 +54,16 @@ $nav-popover-padding               : spacing(x2);
 
 // removes scroll
 .is-navInView {
-    @include media('<mid') {
+    @include f.media('<mid') {
         overflow: hidden;
 
         body {
             position: fixed;
             width: 100%;
-            padding-top: $header-height--narrow;
+            padding-top: v.$header-height--narrow;
 
             @at-root .is-multiLanguage#{&} {
-                padding-top: $header-height--narrow--multiLang;
+                padding-top: v.$header-height--narrow--multiLang;
             }
         }
     }
@@ -77,7 +80,7 @@ $nav-popover-padding               : spacing(x2);
 
 // Global site-wide navigation
 .c-nav--global {
-    @include media('>=mid') {
+    @include f.media('>=mid') {
         display: flex;
         justify-content: flex-end;
         flex-grow: 1;
@@ -86,15 +89,15 @@ $nav-popover-padding               : spacing(x2);
     // we have a nav container so that we don’t have to make the inner list 100% height
     // this is so we can position the logout button last on mobile
     & .c-nav-container {
-        @include media('<mid') {
+        @include f.media('<mid') {
             position: fixed;
-            top: $header-height--narrow;
+            top: v.$header-height--narrow;
             left: -99999px;
             width: 100%;
             padding: 0;
-            height: calc(100% - (#{$header-height--narrow}));
-            border-top: $header-separator solid $header-border-color;
-            background: $color-container-default;
+            height: calc(100% - (#{v.$header-height--narrow}));
+            border-top: v.$header-separator solid v.$header-border-color;
+            background: f.$color-container-default;
             z-index: -1;
             opacity: 0;
             transition: opacity $nav-transition-duration ease-in-out,
@@ -106,8 +109,8 @@ $nav-popover-padding               : spacing(x2);
             }
 
             .is-multiLanguage & {
-                top: $header-height--narrow--multiLang;
-                height: calc(100% - (#{$header-height--narrow--multiLang}));
+                top: v.$header-height--narrow--multiLang;
+                height: calc(100% - (#{v.$header-height--narrow--multiLang}));
             }
         }
     }
@@ -120,7 +123,7 @@ $nav-popover-padding               : spacing(x2);
 .c-nav-popoverList {
     @extend %u-unstyled;
 
-    @include media('<mid') {
+    @include f.media('<mid') {
         display: flex;
         flex-direction: column;
     }
@@ -131,7 +134,7 @@ $nav-popover-padding               : spacing(x2);
         // TODO: MAKE THIS NOT USE FLOATS
         // global modifier for list items horizontally aligned
         .c-nav--global & {
-            @include media('>=mid') {
+            @include f.media('>=mid') {
                 float: left;
             }
         }
@@ -141,7 +144,7 @@ $nav-popover-padding               : spacing(x2);
     // As an example, this is used on the logout link on the global site
     // Logout is in the popover list, but at the bottom of the
     .c-nav-list-item--forceLast {
-        @include media('<mid') {
+        @include f.media('<mid') {
             position: absolute;
             top: 100%;
             width: 100%;
@@ -150,18 +153,18 @@ $nav-popover-padding               : spacing(x2);
         .c-nav-list-link,
         .c-nav-list-text {
             display: block;
-            padding: spacing(x1.5) spacing(x2);
+            padding: f.spacing(c) f.spacing(d);
             margin: 0;
             font-family: $nav-text-subFont;
             color: $nav-text-color--narrow;
-            @include font-size(body-s);
-            font-weight: $font-weight-regular;
+            @include f.font-size(body-s);
+            font-weight: f.$font-weight-regular;
             text-decoration: none;
-            border-bottom: 1px solid $color-border-strong;
+            border-bottom: 1px solid f.$color-border-strong;
 
-            @include media('>=mid') {
+            @include f.media('>=mid') {
                 font-family: $nav-text-font;
-                @include font-size($nav-text-size);
+                @include f.font-size($nav-text-size);
                 font-weight: $nav-text-weight;
                 color: $nav-text-color;
                 border-bottom: none;
@@ -170,7 +173,7 @@ $nav-popover-padding               : spacing(x2);
                 // don’t need a fallback, as it degrades gracefully
                 display: flex;
                 align-items: center;
-                height: $header-height;
+                height: v.$header-height;
 
                 .c-header--transparent & {
                     color: $nav-text-color--transparent;
@@ -191,7 +194,7 @@ $nav-popover-padding               : spacing(x2);
             &:active {
                 text-decoration: none;
 
-                @include media('>=mid') {
+                @include f.media('>=mid') {
                     color: $nav-text-color--hover;
                     text-decoration: underline;
 
@@ -208,7 +211,7 @@ $nav-popover-padding               : spacing(x2);
 
     .has-sublist {
         // ensures the dropdown/popover is relative to the hover element, on wider views
-        @include media('>=mid') {
+        @include f.media('>=mid') {
             position: relative;
             cursor: pointer;
 
@@ -225,9 +228,9 @@ $nav-popover-padding               : spacing(x2);
     // Icons, such as the profile icon
     .c-nav-icon {
         float: left;
-        margin-right: spacing();
+        margin-right: f.spacing();
 
-        @include media('>=mid') {
+        @include f.media('>=mid') {
             & path {
                 fill: $nav-icon-color;
                 .c-header--transparent & {
@@ -241,12 +244,12 @@ $nav-popover-padding               : spacing(x2);
 // Used for a list of navigation items that drops down when hovering over a list item in the navigation
 // (only appears on wider views, so all wrapped in media query)
 .c-nav-popoverList {
-    @include media('>=mid') {
+    @include f.media('>=mid') {
         position: absolute;
         top: 100%;
         right: 99999px; // offscreen, so can’t ever be hovered over by default
         width: $nav-popover-width;
-        background-color: $color-container-default;
+        background-color: f.$color-container-default;
         box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
         border-radius: $nav-popover-radius;
         padding: 0 $nav-popover-padding;
@@ -261,7 +264,7 @@ $nav-popover-padding               : spacing(x2);
             bottom: 100%;
             right: 10%;
             border: $nav-tooltip-width solid transparent;
-            border-bottom: $nav-tooltip-width solid $color-white;
+            border-bottom: $nav-tooltip-width solid f.$color-container-default;
             content: '';
             height: 0;
             width: 0;
@@ -271,7 +274,7 @@ $nav-popover-padding               : spacing(x2);
 
         & .c-nav-list-item {
             float: none;
-            border-bottom: 1px solid $color-border-default;
+            border-bottom: 1px solid f.$color-border-default;
 
             &:last-child {
                 border-bottom: none;
@@ -286,13 +289,13 @@ $nav-popover-padding               : spacing(x2);
             & .c-nav-list-link,
             & .c-nav-list-text {
                 font-family: $nav-text-subFont;
-                font-weight: $font-weight-regular;
-                color: $color-content-default;
+                font-weight: f.$font-weight-regular;
+                color: f.$color-content-default;
                 height: auto;
 
                 &:hover,
                 &:focus {
-                    font-weight: $font-weight-bold;
+                    font-weight: f.$font-weight-bold;
                     text-decoration: none;
                 }
             }
@@ -320,12 +323,12 @@ $nav-popover-padding               : spacing(x2);
     top: -100px;
     left: -100px;
 
-    @include media('>=mid') {
+    @include f.media('>=mid') {
         display: none;
     }
 
     &:checked ~ .c-nav-container {
-        @include media('<mid') {
+        @include f.media('<mid') {
             @include nav-container-visible();
         }
     }
@@ -352,7 +355,7 @@ $nav-popover-padding               : spacing(x2);
 
     // hide on wider views
     // TODO – ACCESSIBILITY MAY NOT WANT TO COMPLETELY HIDE THIS
-    @include media('>=mid') {
+    @include f.media('>=mid') {
         display: none;
     }
 }
