@@ -3,6 +3,17 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.36.0
+------------------------------
+*November 29, 2022*
+
+### Changed
+- Removed utility call as it causes issues when pulled in alongside fozzie in legacy sites.
+
+### Added
+- Note to README for including utility classes.
+
+
 v1.35.0
 ------------------------------
 *November 2, 2022*
