@@ -27,5 +27,3 @@
 @use 'partials/nav';
 @use 'partials/skipTo';
 
-@include f.trumps-utilities(); // pull in utilities (won't do this if already using this module alongside fozzie)
-
