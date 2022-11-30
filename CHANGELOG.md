@@ -3,6 +3,14 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.37.0
+------------------------------
+*November 30, 2022*
+
+### Changed
+- Updated to latest fozzie `v10.10.1`
+
+
 v1.36.0
 ------------------------------
 *November 29, 2022*
