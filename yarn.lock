@@ -1105,10 +1105,10 @@
     handlebars-helper-i18n "^0.1.0"
     handlebars-helper-inlinesvg "^1.0.4"
 
-"@justeat/fozzie@10.8.0":
-  version "10.8.0"
-  resolved "https://registry.yarnpkg.com/@justeat/fozzie/-/fozzie-10.8.0.tgz#e12c3bd83d43cc7ea41c26ec3eababaec86ff398"
-  integrity sha512-WC87rttesbheycY2QJmHiEE4UrpmAJsXxsac5NpppEt4gtWKULDc/iwJR66EVR1bkFGiZUOE3BJrd37Qy73AqA==
+"@justeat/fozzie@10.10.1":
+  version "10.10.1"
+  resolved "https://registry.yarnpkg.com/@justeat/fozzie/-/fozzie-10.10.1.tgz#d9936e94b378060a81531588febe62e9e412fce3"
+  integrity sha512-YTs/g30h+uzJJH+OPKQO0ZthpTP6lqeDS7P5TJYNWe8C+GzJnFRJmRfD4fxpNWSOaXYKS0L4IZ38juCeSF0Y+A==
   dependencies:
     "@justeat/pie-design-tokens" "3.2.0"
     include-media eduardoboucas/include-media#2.0-release
