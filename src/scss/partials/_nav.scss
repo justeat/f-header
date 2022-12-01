@@ -121,7 +121,19 @@ $nav-popover-padding               : f.spacing(d);
 }
 .c-nav-list,
 .c-nav-popoverList {
-    @extend %u-unstyled;
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+
+    & > li {
+        margin-bottom: 0;
+
+        &:before {
+            content: none;
+        }
+    }
 
     @include f.media('<mid') {
         display: flex;

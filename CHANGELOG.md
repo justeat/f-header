@@ -3,6 +3,14 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+v1.37.1
+------------------------------
+*December 1, 2022*
+
+### Fixed
+- Unstyled placeholder extends not coming through correctly since move to `@use`, so hard-coding it instead here.
+
+
 v1.37.0
 ------------------------------
 *November 30, 2022*
